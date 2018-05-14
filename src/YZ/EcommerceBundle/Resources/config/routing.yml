@@ -1,0 +1,3 @@
+yz_ecommerce_homepage:
+    path:     /
+    defaults: { _controller: YZEcommerceBundle:Default:index }
