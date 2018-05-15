@@ -10,4 +10,9 @@ class EcommerceController extends Controller
     {
         return $this->render('YZEcommerceBundle:Ecommerce:index.html.twig');
     }
+
+    public function shopAction()
+    {
+      return $this->render('YZEcommerceBundle:Ecommerce:shop.html.twig');
+    }
 }
