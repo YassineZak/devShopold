@@ -28,6 +28,10 @@
         <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
     </div>
 
+    <div class="form-group">
+      <small><a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié ?</a></small>
+    </div>
+
     <input type="submit"
            class="btn btn-primary"
            id="_submit"
