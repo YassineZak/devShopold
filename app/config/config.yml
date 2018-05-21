@@ -71,6 +71,7 @@ doctrine:
             ApplicationSonataUserBundle: ~
             SonataUserBundle: ~
             FOSUserBundle: ~
+            YZUserBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -101,13 +102,20 @@ sonata_user:
 fos_user:
   db_driver:      orm
   firewall_name:  main
-  user_class:     Application\Sonata\UserBundle\Entity\User
+  user_class:  Application\Sonata\UserBundle\Entity\User
+
+  registration:
+    form:
+      name: yz_user_registration
+      type: YZ\UserBundle\Form\Type\RegistrationFormType
+
+
 
   group:
     group_class:   Application\Sonata\UserBundle\Entity\Group
     group_manager: sonata.user.orm.group_manager
 
-  
+
 
   service:
     user_manager: sonata.user.orm.user_manager
