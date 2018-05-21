@@ -21,4 +21,35 @@ class User extends BaseUser
      */
     protected $id;
 
+    /* @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank(message="Veuillez saisir votre adresse postale.", groups={"Registration", "Profile"})
+     *
+     */
+    protected $adresse;
+
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     *
+     * @return User
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return string
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
   }

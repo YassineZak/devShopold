@@ -22,50 +22,35 @@ class User extends BaseUser
     protected $id;
 
     /**
-       * @ORM\Column(type="string", length=255)
-       *
-       * @Assert\NotBlank(message="Veuillez saisir votre nom.", groups={"Registration", "Profile"})
-       * @Assert\Length(
-       *     min=3,
-       *     max=25,
-       *     minMessage="un minimum de 3 caractéres.",
-       *     maxMessage="Votre nom doit contenir moins de 25 caractéres.",
-       *     groups={"Registration", "Profile"}
-       * )
-       */
-      protected $nom;
+     * @var string
+     *
+     * @Assert\NotBlank(message ="le champ contenu est vide")
+     * @ORM\Column(name="adresse_postale", type="text")
+     */
+    protected $adresse;
 
-      /**
-         * @ORM\Column(type="string", length=255)
-         *
-         * @Assert\NotBlank(message="Veuillez saisir votre prénom.", groups={"Registration", "Profile"})
-         * @Assert\Length(
-         *     min=3,
-         *     max=25,
-         *     minMessage="un minimum de 3 caractéres.",
-         *     maxMessage="Votre prénom doit contenir moins de 25 caractéres.",
-         *     groups={"Registration", "Profile"}
-         * )
-         */
-        protected $prenom;
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     *
+     * @return User
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
 
-        /**
-         * @var \DateTime
-         * @Assert\Date()
-         * @ORM\Column(name="datebirth", type="date")
-         */
-          protected $dateNaissance;
+        return $this;
+    }
 
-          /**
-           * @var \DateTime
-           * @Assert\Length(
-           *     min=10,
-           *     max=10,
-           *     minMessage="Numéro de téléphone invalide,
-           *     maxMessage="Numéro de téléphone invalide",
-           *     groups={"Registration", "Profile"}
-           * )
-           * @ORM\Column(name="phone", type="integer")
-           */
-            protected $telephone;
-}
+    /**
+     * Get adresse
+     *
+     * @return string
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+  }

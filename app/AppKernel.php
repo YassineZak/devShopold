@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
             new YZ\UserBundle\YZUserBundle(),
+            new \Ivory\CKEditorBundle\IvoryCKEditorBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

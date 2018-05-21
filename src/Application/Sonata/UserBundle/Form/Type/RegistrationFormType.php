@@ -1,5 +1,5 @@
 <?php
-namespace YZ\UserBundle\Form\Type;
+namespace Application\Sonata\UserBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -9,7 +9,6 @@ class RegistrationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-      parent::buildForm($builder, $options);
         $builder
         ->add('gender', ChoiceType::class, array(
           'choices' =>array(
@@ -30,7 +29,7 @@ class RegistrationFormType extends AbstractType
 
     public function getName()
     {
-        return 'yz_user_registration';
+        return 'sonata_user_registration';
     }
 }
 

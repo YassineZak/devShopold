@@ -3704,3 +3704,17 @@ select option
 .btn-length a, .edit_container a{
 	color: white;
 }
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 16px);
+}
+.global-form{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.right-column, .left-column{
+	width: 45%;
+}
+.form-group select {
+	margin-left: 0px;
+}

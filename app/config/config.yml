@@ -106,8 +106,9 @@ fos_user:
 
   registration:
     form:
-      name: yz_user_registration
-      type: YZ\UserBundle\Form\Type\RegistrationFormType
+      name: sonata_user_registration
+      type: Application\Sonata\UserBundle\Form\Type\RegistrationFormType
+
 
 
 
