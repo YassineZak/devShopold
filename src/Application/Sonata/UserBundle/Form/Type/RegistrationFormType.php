@@ -19,7 +19,7 @@ class RegistrationFormType extends AbstractType
         ->add('firstname', null, array('label' => 'Prénom'))
         ->add('lastname', null, array('label' => 'Nom'))
         ->add('phone', 'integer', array('label' => 'Téléphone'))
-        ->add('adresse', null);
+        ->add('biography', null, array('label' => 'Adresse Postale'));
     }
 
     public function getParent()
