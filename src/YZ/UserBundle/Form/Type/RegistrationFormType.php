@@ -11,21 +11,15 @@ class RegistrationFormType extends AbstractType
     {
       parent::buildForm($builder, $options);
         $builder
-        ->add('gender', ChoiceType::class, array(
-          'choices' =>array(
-            'homme' => 'm',
-            'femme' => 'f'
-          ),
-          'label' => 'Civilité'))
-        ->add('firstname', null, array('label' => 'Prénom'))
-        ->add('lastname', null, array('label' => 'Nom'))
-        ->add('phone', 'integer', array('label' => 'Téléphone'))
-        ->add('biography', null, array('label' => 'Téléphone'));
+        ->add('prenom')
+        ->add('nom')
+        ->add('adresse')
+        ->add('telephone');
     }
 
     public function getParent()
     {
-        return 'fos_user_registration';
+        return 'FOS\UserBundle\Form\Type\RegistrationFormType';
     }
 
     public function getName()

@@ -23,38 +23,145 @@ class User extends BaseUser
   /**
      * @ORM\Column(type="string", length=255)
      *
-     * @Assert\NotBlank(message="Please enter your name.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Veuillez saisir votre nom.", groups={"Registration", "Profile"})
      * @Assert\Length(
      *     min=3,
-     *     max=255,
-     *     minMessage="The name is too short.",
-     *     maxMessage="The name is too long.",
+     *     max=20,
+     *     minMessage="Votre nom doit contenir plus de 3 caractères.",
+     *     maxMessage="Votre nom ne doit pas contenir plus de 20 caractéres.",
      *     groups={"Registration", "Profile"}
      * )
      */
-    protected $name;
+    protected $nom;
 
     /**
-     * Set name.
+       * @ORM\Column(type="string", length=255)
+       *
+       * @Assert\NotBlank(message="Veuillez saisir votre prénom.", groups={"Registration", "Profile"})
+       * @Assert\Length(
+       *     min=3,
+       *     max=20,
+       *     minMessage="Votre nom doit contenir plus de 3 caractères.",
+       *     maxMessage="Votre nom ne doit pas contenir plus de 20 caractéres.",
+       *     groups={"Registration", "Profile"}
+       * )
+       */
+      protected $prenom;
+
+
+      /**
+         * @ORM\Column(type="text")
+         *
+         * @Assert\NotBlank(message="Veuillez saisir votre adresse.", groups={"Registration", "Profile"})
+         */
+        protected $adresse;
+
+
+        /**
+           * @ORM\Column(type="integer")
+           *
+           * @Assert\NotBlank(message="Veuillez saisir votre adresse.", groups={"Registration", "Profile"})
+           * @Assert\Type(
+           * type="integer",
+           * message="Veuillez saisir un numéro de téléphone")
+           */
+          protected $telephone;
+
+
+
+    /**
+     * Set nom.
      *
-     * @param string $name
+     * @param string $nom
      *
      * @return User
      */
-    public function setName($name)
+    public function setNom($nom)
     {
-        $this->name = $name;
+        $this->nom = $nom;
 
         return $this;
     }
 
     /**
-     * Get name.
+     * Get nom.
      *
      * @return string
      */
-    public function getName()
+    public function getNom()
     {
-        return $this->name;
+        return $this->nom;
+    }
+
+    /**
+     * Set prenom.
+     *
+     * @param string $prenom
+     *
+     * @return User
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom.
+     *
+     * @return string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * Set adresse.
+     *
+     * @param string $adresse
+     *
+     * @return User
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    /**
+     * Get adresse.
+     *
+     * @return string
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * Set telephone.
+     *
+     * @param int $telephone
+     *
+     * @return User
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    /**
+     * Get telephone.
+     *
+     * @return int
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
     }
 }

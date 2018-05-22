@@ -23,14 +23,49 @@ class User extends BaseUser
   /**
      * @ORM\Column(type="string", length=255)
      *
-     * @Assert\NotBlank(message="Please enter your name.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Veuillez saisir votre nom.", groups={"Registration", "Profile"})
      * @Assert\Length(
      *     min=3,
-     *     max=255,
-     *     minMessage="The name is too short.",
-     *     maxMessage="The name is too long.",
+     *     max=20,
+     *     minMessage="Votre nom doit contenir plus de 3 caractères.",
+     *     maxMessage="Votre nom ne doit pas contenir plus de 20 caractéres.",
      *     groups={"Registration", "Profile"}
      * )
      */
-    protected $name;
+    protected $nom;
+
+    /**
+       * @ORM\Column(type="string", length=255)
+       *
+       * @Assert\NotBlank(message="Veuillez saisir votre prénom.", groups={"Registration", "Profile"})
+       * @Assert\Length(
+       *     min=3,
+       *     max=20,
+       *     minMessage="Votre nom doit contenir plus de 3 caractères.",
+       *     maxMessage="Votre nom ne doit pas contenir plus de 20 caractéres.",
+       *     groups={"Registration", "Profile"}
+       * )
+       */
+      protected $prenom;
+
+
+      /**
+         * @ORM\Column(type="text")
+         *
+         * @Assert\NotBlank(message="Veuillez saisir votre adresse.", groups={"Registration", "Profile"})
+         */
+        protected $adresse;
+
+
+        /**
+           * @ORM\Column(type="integer")
+           *
+           * @Assert\NotBlank(message="Veuillez saisir votre adresse.", groups={"Registration", "Profile"})
+           * @Assert\Type(
+           * type="integer",
+           * message="Veuillez saisir un numéro de téléphone")
+           */
+          protected $telephone;
+
+
 }

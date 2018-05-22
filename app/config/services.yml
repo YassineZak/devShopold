@@ -4,13 +4,7 @@ parameters:
 #    parameter_name: value
 
 services:
-  sonata.form.registration:
-          class: Application\Sonata\UserBundle\Form\Type\RegistrationFormType
+  yz.form.registration:
+          class: YZ\UserBundle\Form\Type\RegistrationFormType
           tags:
-              - { name: form.type, alias: sonata_user_registration }
-
-  sonata.handler.registration:
-          class: Application\Sonata\UserBundle\Form\Handler\RegistrationFormHandler
-          arguments: ["@fos_user.registration.form", "@request", "@fos_user.user_manager", "@fos_user.mailer", "@fos_user.util.token_generator"]
-          scope: request
-          public: false
+              - { name: form.type, alias: yz_user_registration }
