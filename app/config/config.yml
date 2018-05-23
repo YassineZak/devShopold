@@ -98,3 +98,13 @@ fos_user:
   from_email:
     address: "yassine.zakari@hotmail.fr"
     sender_name: "Yassine zakari"
+
+easy_admin:
+    entities:
+        # change the following to the namespaces of your own entities
+        - YZ\UserBundle\Entity\User
+    site_name: DevShop
+    design:
+      brand_color: '#0e8ce4'
+    list:
+      title: 'La liste des %%entity_label%%'

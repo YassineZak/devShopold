@@ -22,3 +22,11 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /easyadmin
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
