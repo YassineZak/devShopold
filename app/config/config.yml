@@ -101,10 +101,11 @@ fos_user:
 
 easy_admin:
     entities:
-        # change the following to the namespaces of your own entities
-        - YZ\UserBundle\Entity\User
+      User:
+        class: YZ\UserBundle\Entity\User
+        label: Membres
+        list:
+          title: 'liste des membres'
     site_name: DevShop
     design:
       brand_color: '#0e8ce4'
-    list:
-      title: 'La liste des %%entity_label%%'
