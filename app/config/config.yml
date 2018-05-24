@@ -104,8 +104,22 @@ easy_admin:
       User:
         class: YZ\UserBundle\Entity\User
         label: Membres
+        show:
+          title: '%%entity_label%%'
         list:
           title: 'liste des membres'
+          actions:
+            - { name: show}
+          fields:
+            - { property: username, label: Pseudo}
+            - { property: fullName, label: Utilisateur}
+            - { property: enabled, label: actif, type: toggle }
+            - { property: email, type: email }
+            - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'ROLE_USER': 'ROLE_USER', 'ROLE_SUPER_ADMIN': 'ROLE_SUPER_ADMIN' } } }
+      Administrateur:
+        class: YZ\UserBundle\Entity\User
+        Label: Administrateur
+
     site_name: DevShop
     design:
       brand_color: '#0e8ce4'

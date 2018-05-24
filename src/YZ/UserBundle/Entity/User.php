@@ -117,6 +117,10 @@ class User extends BaseUser
         return $this->prenom;
     }
 
+    public function getFullName(){
+      return trim($this->getNom(). ' '.$this->getPrenom());
+    }
+
     /**
      * Set adresse.
      *
