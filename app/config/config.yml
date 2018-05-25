@@ -106,6 +106,9 @@ easy_admin:
         label: Membres
         show:
           title: '%%entity_label%%'
+          templates:
+            show.html.twig: 'admin/_show.html.twig'
+
         list:
           title: 'liste des membres'
           actions:
@@ -115,7 +118,9 @@ easy_admin:
             - { property: fullName, label: Utilisateur}
             - { property: enabled, label: actif, type: toggle }
             - { property: email, type: email }
+            - { property: lastLogin, label: Dernière Connexion, type: datetimetz, format: 'd M Y h:m:i'}
             - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'ROLE_USER': 'ROLE_USER', 'ROLE_SUPER_ADMIN': 'ROLE_SUPER_ADMIN' } } }
+
       Administrateur:
         class: YZ\UserBundle\Entity\User
         Label: Administrateur
@@ -123,3 +128,5 @@ easy_admin:
     site_name: DevShop
     design:
       brand_color: '#0e8ce4'
+      templates:
+        field_datetimetz: 'admin/fields/_datetimetz.html.twig'
