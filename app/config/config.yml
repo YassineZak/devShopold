@@ -103,6 +103,9 @@ easy_admin:
     entities:
       User:
         class: YZ\UserBundle\Entity\User
+        acme_project:
+          export_path: '%kernel.root_dir/../var/export/user'
+          password_encoding: { algorithm: 'bcrypt', cost: 12 }
         label: Membres
         show:
           title: '%%entity_label%%'
@@ -119,7 +122,25 @@ easy_admin:
             - { property: enabled, label: actif, type: toggle }
             - { property: email, type: email }
             - { property: lastLogin, label: Dernière Connexion, type: datetimetz, format: 'd M Y h:m:i'}
-            - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'ROLE_USER': 'ROLE_USER', 'ROLE_SUPER_ADMIN': 'ROLE_SUPER_ADMIN' } } }
+            - { property: 'roles', template: 'admin/fields/tag_collection.html.twig',
+                        label_colors: ['primary', 'success', 'info'] }
+
+        form:
+          fields:
+            - { property: username, label: Pseudo}
+            - nom
+            - prenom
+            - email
+            - { property: adresse, type: text }
+            - { property: telephone, type: integer }
+            - { property: enabled, label: actif }
+            - { property: 'roles', type: 'choice', type_options: { multiple: true, expanded: true, choices: { 'Utilisateur': 'ROLE_USER', 'Administrateur': 'ROLE_SUPER_ADMIN' } } }
+          form_options: { validation_groups: ['Profile'] }
+        new:
+          fields:
+            - '-id'
+            - { property: 'plainPassword', type: 'repeated' }
+
 
       Administrateur:
         class: YZ\UserBundle\Entity\User
