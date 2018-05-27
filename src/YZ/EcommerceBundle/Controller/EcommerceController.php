@@ -17,9 +17,16 @@ class EcommerceController extends Controller
     {
       return $this->render('YZEcommerceBundle:Ecommerce:shop.html.twig');
     }
-    public function productAction()
+    public function productAction($id)
     {
-      return $this->render('YZEcommerceBundle:Ecommerce:product.html.twig');
+      $repository = $this->getDoctrine()
+      ->getManager()
+      ->getRepository('YZEcommerceBundle:Product');
+      $product = $repository->find($id);
+      if (null === $product) {
+      throw new NotFoundHttpException("Erreur page");
+    }
+      return $this->render('YZEcommerceBundle:Ecommerce:product.html.twig', array('product' => $product));
     }
     public function cartAction()
     {

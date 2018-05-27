@@ -9,8 +9,10 @@ yz_ecommerce_shoppage:
 
 yz_ecommerce_productpage:
 
-    path:     /product
+    path:     /product/{id}
     defaults: { _controller: YZEcommerceBundle:Ecommerce:product }
+    requirements:
+        id: \d+
 
 yz_ecommerce_cartpage:
 

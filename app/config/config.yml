@@ -101,6 +101,9 @@ fos_user:
 
 easy_admin:
     entities:
+      Product:
+        class: YZ\EcommerceBundle\Entity\Product
+        label: Produits
       User:
         class: YZ\UserBundle\Entity\User
         acme_project:
