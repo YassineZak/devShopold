@@ -13,8 +13,7 @@
 {% block content_title %}
 {% spaceless %}
     {% set _default_title = 'show.page_title'|trans(_trans_parameters, 'EasyAdminBundle') %}
-    {{ dump()}}{{ entity.nom }}
-    {{ _entity_config.show.title is defined ? _entity_config.show.title|trans(_trans_parameters) : _default_title }}
+  <h2>{{ entity.nom is defined ? entity.nom|capitalize : _default_title }}</h2>
 {% endspaceless %}
 {% endblock %}
 
