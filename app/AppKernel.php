@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new YZ\UserBundle\YZUserBundle(),
             new \Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
