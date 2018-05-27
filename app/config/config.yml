@@ -106,11 +106,22 @@ easy_admin:
         class: YZ\EcommerceBundle\Entity\Product
         label: Produits
         list:
+          actions: ['show']
           fields:
             - { property: 'titre', label: 'Titre' }
             - { property: 'resume', label: 'Resume', type: text }
-            - { property: 'prix', label: 'Prix', type: price }
+            - { property: 'prix', label: 'Prix', type: decimal }
             - { property: 'imageProduit', type: 'image', base_path: '%app.path.product_images%' }
+        form:
+          fields:
+            - { property: 'titre', label: 'Titre', type: text }
+            - { property: 'resume', label: 'Resume', type: textarea }
+            - { property: 'description', label: 'Description', type: textarea }
+            - { property: 'prix', label: 'Prix', type: integer }
+            - { property: 'stock', label: 'Stock', type: integer }
+            - { property: 'reference', label: 'Reférence', type: text }
+            - { property: 'imageFile', type: 'file' }
+
       User:
         class: YZ\UserBundle\Entity\User
         acme_project:
@@ -177,3 +188,4 @@ vich_uploader:
       product_images:
         uri_prefix:         '%app.path.product_images%'
         upload_destination: '%kernel.root_dir%/../web/uploads/images/products'
+        namer: vich_uploader.namer_uniqid
