@@ -3718,3 +3718,13 @@ select.form-control:not([size]):not([multiple]) {
 .form-group select {
 	margin-left: 0px;
 }
+.product_price{
+	margin-top: 5px !important;
+	margin-left: 40px;
+}
+.order_info{
+	margin-top: 5px !important;
+}
+.button_container{
+	margin-top: 30px !important;
+}

@@ -103,6 +103,10 @@ fos_user:
 easy_admin:
     entities:
       Product:
+        templates:
+          field_datetimetz: 'admin/fields/_datetimetz.html.twig'
+          show: 'admin/_show.html.twig'
+          field_text: 'admin/fields/_text.html.twig'
         class: YZ\EcommerceBundle\Entity\Product
         label: Produits
         list:
@@ -111,16 +115,29 @@ easy_admin:
             - { property: 'titre', label: 'Titre' }
             - { property: 'resume', label: 'Resume', type: text }
             - { property: 'prix', label: 'Prix', type: decimal }
-            - { property: 'imageProduit', type: 'image', base_path: '%app.path.product_images%' }
-        form:
+            - { property: 'imageProduit', type: 'image', base_path: '/devshop/web%app.path.product_images%'}
+        show:
           fields:
-            - { property: 'titre', label: 'Titre', type: text }
-            - { property: 'resume', label: 'Resume', type: textarea }
-            - { property: 'description', label: 'Description', type: textarea }
+            - { property: 'titre', label: 'Titre' }
+            - { property: 'description', label: 'Description', type: text }
+            - { property: 'resume', label: 'Resume', type: text }
             - { property: 'prix', label: 'Prix', type: integer }
             - { property: 'stock', label: 'Stock', type: integer }
             - { property: 'reference', label: 'Reférence', type: text }
-            - { property: 'imageFile', type: 'file' }
+            - { property: 'imageProduit', type: 'image', base_path: '/devshop/web%app.path.product_images%', label: 'Image principale'}
+            - { property: 'imageProduit2', type: 'image', base_path: '/devshop/web%app.path.product_images%', label: 'Images additionnelles'}
+            - { property: 'imageProduit3', type: 'image', base_path: '/devshop/web%app.path.product_images%', label: 'Images additionnelles'}
+        form:
+          fields:
+            - { property: 'titre', label: 'Titre', type: text }
+            - { property: 'resume', label: 'Resume', type: ckeditor, toolbar: full }
+            - { property: 'description', label: 'Description', type: ckeditor }
+            - { property: 'prix', label: 'Prix', type: integer }
+            - { property: 'stock', label: 'Stock', type: integer }
+            - { property: 'reference', label: 'Reférence', type: text }
+            - { property: 'imageFile', type: 'file', label: 'Photo Principale' }
+            - { property: 'imageFile2', type: 'file', label: 'photos additionnelles' }
+            - { property: 'imageFile3', type: 'file', label: 'photos additionnelles' }
 
       User:
         class: YZ\UserBundle\Entity\User
@@ -189,3 +206,11 @@ vich_uploader:
         uri_prefix:         '%app.path.product_images%'
         upload_destination: '%kernel.root_dir%/../web/uploads/images/products'
         namer: vich_uploader.namer_uniqid
+ivory_ck_editor:
+    default_config: default
+    configs:
+        default:
+            # default toolbar plus Format button
+            toolbar:
+            - [Bold, Italic, Underline, FontSize, -, Cut, Copy, Paste, PasteText, PasteFromWord, -, Undo, Redo, -, NumberedList, BulletedList, -, Outdent, Indent, -, Blockquote, -, Link, Unlink, Table]
+            - [Format, Maximize, Source]
