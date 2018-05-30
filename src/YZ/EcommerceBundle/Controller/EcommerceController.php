@@ -11,7 +11,11 @@ class EcommerceController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('YZEcommerceBundle:Ecommerce:index.html.twig');
+      $repository = $this->getDoctrine()
+      ->getManager()
+      ->getRepository('YZEcommerceBundle:Category');
+      $categories = $repository->findAll();
+        return $this->render('YZEcommerceBundle:Ecommerce:index.html.twig', array('categories' => $categories));
     }
 
     public function shopAction()

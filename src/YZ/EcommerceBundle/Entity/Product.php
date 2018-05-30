@@ -74,6 +74,12 @@ class Product
     private $reference;
 
     /**
+     * @ORM\ManyToOne(targetEntity="YZ\EcommerceBundle\Entity\Category")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $category;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="image_produit", type="string", length=255)
@@ -424,5 +430,40 @@ class Product
     public function getImageFile3()
     {
         return $this->imageFile3;
+    }
+
+
+
+    /**
+     * Set category.
+     *
+     * @param \YZ\EcommerceBundle\Entity\Category $category
+     *
+     * @return Product
+     */
+    public function setCategory(\YZ\EcommerceBundle\Entity\Category $category)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category.
+     *
+     * @return \YZ\EcommerceBundle\Entity\Category
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * toString
+     * @return string
+     */
+    public function __toString()
+    {
+            return (string) $this->getCategory();
     }
 }
