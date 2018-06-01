@@ -104,13 +104,13 @@
                             <span class="custom_dropdown_placeholder clc">All Categories</span>
                             <i class="fas fa-chevron-down"></i>
                             <ul class="custom_list clc">
-
+                                {% if categories is defined %}
                                 {% for category in categories %}
                                 <li>
                                   <a class="clc" href="#">{{category.name}}</a>
                                 </li>
                                 {% endfor %}
-
+                                {% endif %}
                             </ul>
                           </div>
                         </div>
@@ -177,12 +177,14 @@
                     </div>
 
                     <ul class="cat_menu">
+                      {% if categories is defined %}
                       {% for category in categories %}
                       <li>
                         <a href="#">{{category.name|capitalize}}<i class="fas fa-chevron-right"></i>
                         </a>
                       </li>
                       {% endfor %}
+                      {% endif %}
                   </div>
 
                   <!-- Main Nav Menu -->
