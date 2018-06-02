@@ -53,6 +53,13 @@ class Product
     private $prix;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="promo", type="integer", nullable=true)
+     */
+    private $promo;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="date_creation", type="datetime")
@@ -433,4 +440,39 @@ class Product
     }
 
 
+
+    /**
+     * Set category.
+     *
+     * @param \YZ\EcommerceBundle\Entity\Category $category
+     *
+     * @return Product
+     */
+    public function setCategory(\YZ\EcommerceBundle\Entity\Category $category)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category.
+     *
+     * @return \YZ\EcommerceBundle\Entity\Category
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * toString
+     * @return string
+     */
+    public function __toString()
+    {
+            return (string) $this->getCategory();
+    }
+
+  
 }

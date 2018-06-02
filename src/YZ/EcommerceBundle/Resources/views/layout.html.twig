@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
       <link href="{{ asset('plugins/fontawesome-free-5.0.1/css/fontawesome-all.css') }}  " rel="stylesheet" type="text/css">
       <link rel="stylesheet" type="text/css" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
@@ -104,13 +105,13 @@
                             <span class="custom_dropdown_placeholder clc">All Categories</span>
                             <i class="fas fa-chevron-down"></i>
                             <ul class="custom_list clc">
-
+                              {% if categories is defined %}
                                 {% for category in categories %}
                                 <li>
                                   <a class="clc" href="#">{{category.name}}</a>
                                 </li>
                                 {% endfor %}
-
+                                {% endif %}
                             </ul>
                           </div>
                         </div>
@@ -177,12 +178,14 @@
                     </div>
 
                     <ul class="cat_menu">
+                      {% if categories is defined %}
                       {% for category in categories %}
                       <li>
                         <a href="#">{{category.name|capitalize}}<i class="fas fa-chevron-right"></i>
                         </a>
                       </li>
                       {% endfor %}
+                      {% endif %}
                   </div>
 
                   <!-- Main Nav Menu -->

@@ -35,9 +35,9 @@
       <!-- Description -->
       <div class="col-lg-5 order-3">
         <div class="product_description">
-          <div class="product_category">Laptops</div>
+          <div class="product_category">{{product.category.name}}</div>
           <div class="product_name">{{product.titre|capitalize}}</div>
-          <div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="rating_r rating_r_4 product_rating"><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span></div>
           <div class="product_text"><p>{% autoescape false %}{{product.description}}{% endautoescape %}</p></div>
           <div class="order_info d-flex flex-row">
             <form action="#">
@@ -70,7 +70,7 @@
 
               </div>
 
-              <div class="product_price">{{product.prix}} €</div>
+              <div class="product_price">{{product.promo}} €<span>{{product.prix}} €</span></div>
               <div class="button_container">
                 <button type="button" class="button cart_button">Add to Cart</button>
                 <div class="product_fav"><i class="fas fa-heart"></i></div>

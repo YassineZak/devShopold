@@ -3728,3 +3728,6 @@ select.form-control:not([size]):not([multiple]) {
 .button_container{
 	margin-top: 30px !important;
 }
+.star{
+	color: Gold;
+}

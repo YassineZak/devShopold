@@ -88,12 +88,12 @@ Accueil - {{ parent() }}
     <div class="row">
       <div class="col-lg-3">
         <div class="popular_categories_content">
-          <div class="popular_categories_title">Popular Categories</div>
+          <div class="popular_categories_title">Categories populaires</div>
           <div class="popular_categories_slider_nav">
             <div class="popular_categories_prev popular_categories_nav"><i class="fas fa-angle-left ml-auto"></i></div>
             <div class="popular_categories_next popular_categories_nav"><i class="fas fa-angle-right ml-auto"></i></div>
           </div>
-          <div class="popular_categories_link"><a href="#">full catalog</a></div>
+          <div class="popular_categories_link"><a href="#">Catalogue complet</a></div>
         </div>
       </div>
 
@@ -106,40 +106,40 @@ Accueil - {{ parent() }}
             <!-- Popular Categories Item -->
             <div class="owl-item">
               <div class="popular_category d-flex flex-column align-items-center justify-content-center">
-                <div class="popular_category_image"><img src="images/popular_1.png" alt=""></div>
-                <div class="popular_category_text">Smartphones & Tablets</div>
+                <div class="popular_category_image"><img src="{{asset('images/popular_1.png')}}" alt=""></div>
+                <div class="popular_category_text">Telephonie</div>
               </div>
             </div>
 
             <!-- Popular Categories Item -->
             <div class="owl-item">
               <div class="popular_category d-flex flex-column align-items-center justify-content-center">
-                <div class="popular_category_image"><img src="images/popular_2.png" alt=""></div>
-                <div class="popular_category_text">Computers & Laptops</div>
+                <div class="popular_category_image"><img src="{{asset('images/popular_2.png')}}" alt=""></div>
+                <div class="popular_category_text">Ordinateur bureau</div>
               </div>
             </div>
 
             <!-- Popular Categories Item -->
             <div class="owl-item">
               <div class="popular_category d-flex flex-column align-items-center justify-content-center">
-                <div class="popular_category_image"><img src="images/popular_3.png" alt=""></div>
-                <div class="popular_category_text">Gadgets</div>
+                <div class="popular_category_image"><img src="{{asset('images/popular_3.png')}}" alt=""></div>
+                <div class="popular_category_text">Accessoires</div>
               </div>
             </div>
 
             <!-- Popular Categories Item -->
             <div class="owl-item">
               <div class="popular_category d-flex flex-column align-items-center justify-content-center">
-                <div class="popular_category_image"><img src="images/popular_4.png" alt=""></div>
-                <div class="popular_category_text">Video Games & Consoles</div>
+                <div class="popular_category_image"><img src="{{asset('images/popular_4.png')}}" alt=""></div>
+                <div class="popular_category_text">Jeux vidéos & consoles</div>
               </div>
             </div>
 
             <!-- Popular Categories Item -->
             <div class="owl-item">
               <div class="popular_category d-flex flex-column align-items-center justify-content-center">
-                <div class="popular_category_image"><img src="images/popular_5.png" alt=""></div>
-                <div class="popular_category_text">Accessories</div>
+                <div class="popular_category_image"><img src="{{asset('images/popular_5.png')}}" alt=""></div>
+                <div class="popular_category_text">Casques</div>
               </div>
             </div>
 
@@ -270,8 +270,8 @@ Accueil - {{ parent() }}
                   <div class="bestsellers_content">
                     <div class="bestsellers_category"><a href="#">{{product.category.name}}</a></div>
                     <div class="bestsellers_name"><a href="product.html">{{product.titre}}</a></div>
-                    <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                    <div class="bestsellers_price discount">{{product.prix}}</div>
+                    <div class="rating_r rating_r_4 bestsellers_rating"><i class="fa fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i></div>
+                    <div class="bestsellers_price discount">{{product.promo}}€<span>{{product.prix}}€</span></div>
                   </div>
                 </div>
                 <div class="bestsellers_fav active"><i class="fa fa-heart"></i></div>

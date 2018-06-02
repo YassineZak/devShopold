@@ -141,6 +141,7 @@ easy_admin:
             - { property: 'description', label: 'Description', type: ckeditor }
             - { property: 'category', label: 'Categorie'}
             - { property: 'prix', label: 'Prix', type: integer }
+            - { property: 'promo', label: 'Prix Promo', type: integer }
             - { property: 'stock', label: 'Stock', type: integer }
             - { property: 'reference', label: 'Reférence', type: text }
             - { property: 'imageFile', type: 'file', label: 'Photo Principale' }

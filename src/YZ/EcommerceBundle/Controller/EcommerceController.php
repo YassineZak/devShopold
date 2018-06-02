@@ -32,10 +32,14 @@ class EcommerceController extends Controller
       ->getManager()
       ->getRepository('YZEcommerceBundle:Product');
       $product = $repository->find($id);
+      $repository = $this->getDoctrine()
+      ->getManager()
+      ->getRepository('YZEcommerceBundle:Category');
+      $categories = $repository->findAll();
       if (null === $product) {
       throw new NotFoundHttpException("Erreur page");
     }
-      return $this->render('YZEcommerceBundle:Ecommerce:product.html.twig', array('product' => $product));
+      return $this->render('YZEcommerceBundle:Ecommerce:product.html.twig', array('product' => $product, 'categories' => $categories));
     }
     public function cartAction()
     {

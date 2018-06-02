@@ -53,6 +53,13 @@ class Product
     private $prix;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="promo", type="integer", nullable=true)
+     */
+    private $promo;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="date_creation", type="datetime")
@@ -465,5 +472,31 @@ class Product
     public function __toString()
     {
             return (string) $this->getCategory();
+    }
+
+  
+
+    /**
+     * Set promo.
+     *
+     * @param int|null $promo
+     *
+     * @return Product
+     */
+    public function setPromo($promo = null)
+    {
+        $this->promo = $promo;
+
+        return $this;
+    }
+
+    /**
+     * Get promo.
+     *
+     * @return int|null
+     */
+    public function getPromo()
+    {
+        return $this->promo;
     }
 }
