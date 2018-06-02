@@ -26,12 +26,12 @@ class EcommerceController extends Controller
     {
       return $this->render('YZEcommerceBundle:Ecommerce:shop.html.twig');
     }
-    public function productAction($id)
+    public function productAction($slug)
     {
       $repository = $this->getDoctrine()
       ->getManager()
       ->getRepository('YZEcommerceBundle:Product');
-      $product = $repository->find($id);
+      $product = $repository->findProduct($slug);
       $repository = $this->getDoctrine()
       ->getManager()
       ->getRepository('YZEcommerceBundle:Category');

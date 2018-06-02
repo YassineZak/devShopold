@@ -223,3 +223,7 @@ ivory_ck_editor:
             toolbar:
             - [Bold, Italic, Underline, FontSize, -, Cut, Copy, Paste, PasteText, PasteFromWord, -, Undo, Redo, -, NumberedList, BulletedList, -, Outdent, Indent, -, Blockquote, -, Link, Unlink, Table]
             - [Format, Maximize, Source]
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable: true

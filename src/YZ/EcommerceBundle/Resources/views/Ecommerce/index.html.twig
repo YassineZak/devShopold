@@ -167,17 +167,17 @@ Accueil - {{ parent() }}
             <div class="row fill_height">
               <div class="col-lg-4 col-md-6 fill_height">
                 <div class="banner_2_content">
-                  <div class="banner_2_category">Laptops</div>
-                  <div class="banner_2_title">MacBook Air 13</div>
+                  <div class="banner_2_category">Ordinateur portable</div>
+                  <div class="banner_2_title">MacBook Air</div>
                   <div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</div>
-                  <div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                  <div class="button banner_2_button"><a href="#">Explore</a></div>
+                  <div class="rating_r rating_r_4 banner_2_rating"><i class="far fa-star"></i><i class="far fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                  <div class="button banner_2_button"><a href="#">Découvrir</a></div>
                 </div>
 
               </div>
               <div class="col-lg-8 col-md-6 fill_height">
                 <div class="banner_2_image_container">
-                  <div class="banner_2_image"><img src="images/banner_2_product.png" alt=""></div>
+                  <div class="banner_2_image"><img src="{{ asset('images/banner_2_product.png') }}" alt=""></div>
                 </div>
               </div>
             </div>
@@ -269,9 +269,13 @@ Accueil - {{ parent() }}
                   <div class="bestsellers_image"><img src="/devshop/web{{ vich_uploader_asset(product, 'imageFile') }}" alt=""></div>
                   <div class="bestsellers_content">
                     <div class="bestsellers_category"><a href="#">{{product.category.name}}</a></div>
-                    <div class="bestsellers_name"><a href="product.html">{{product.titre}}</a></div>
+                    <div class="bestsellers_name"><a href="{{ path('yz_ecommerce_productpage', {'slug': product.slug}) }}">{{product.titre}}</a></div>
                     <div class="rating_r rating_r_4 bestsellers_rating"><i class="fa fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i></div>
-                    <div class="bestsellers_price discount">{{product.promo}}€<span>{{product.prix}}€</span></div>
+                    <div class="bestsellers_price discount">{% if product.promo is null %}
+                    {{product.prix}} €
+                  {% else %}
+                      {{product.promo}} €<span>{{product.prix}} €</span>
+                  {% endif %}</div>
                   </div>
                 </div>
                 <div class="bestsellers_fav active"><i class="fa fa-heart"></i></div>

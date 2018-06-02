@@ -10,4 +10,11 @@ namespace YZ\EcommerceBundle\Repository;
  */
 class ProductRepository extends \Doctrine\ORM\EntityRepository
 {
+  public function findProduct($slug)
+  {
+    $qb = $this->createQueryBuilder('p')
+    ->where('p.slug = :slug')
+    ->setParameter('slug', $slug);
+   return $qb->getQuery()->getSingleResult();
+  }
 }

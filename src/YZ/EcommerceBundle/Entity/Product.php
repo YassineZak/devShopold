@@ -5,6 +5,7 @@ namespace YZ\EcommerceBundle\Entity;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Product
@@ -30,6 +31,13 @@ class Product
      * @ORM\Column(name="titre", type="string", length=255)
      */
     private $titre;
+
+    /**
+     * @Gedmo\Slug(fields={"titre"})
+     * @ORM\Column(name="slug", type="string", length=255, unique=true)
+     */
+
+  private $slug;
 
     /**
      * @var string|null
@@ -474,7 +482,7 @@ class Product
             return (string) $this->getCategory();
     }
 
-  
+
 
     /**
      * Set promo.
@@ -498,5 +506,29 @@ class Product
     public function getPromo()
     {
         return $this->promo;
+    }
+
+    /**
+     * Set slug.
+     *
+     * @param string $slug
+     *
+     * @return Product
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug.
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
