@@ -1,8 +1,6 @@
 <?php
 
 namespace YZ\EcommerceBundle\Repository;
-use Doctrine\ORM\EntityRepository;
-use Doctrine\ORM\QueryBuilder;
 
 /**
  * CategoryRepository
@@ -12,11 +10,4 @@ use Doctrine\ORM\QueryBuilder;
  */
 class CategoryRepository extends \Doctrine\ORM\EntityRepository
 {
-  public function findCategory($limit)
-  {
-    $qb = $this->createQueryBuilder('c')
-    ->orderBy('c.name')
-    ->setMaxResults($limit);
-   return $qb->getQuery()->getResult();
-  }
 }

@@ -11,18 +11,9 @@
       <td>{{ user.email }}</td>
     </tr>
     <tr>
-      <th>Nom complet</th>
-      <td>{{ user.nom }} {{ user.prenom }}</td>
+      <th>{{ 'profile.show.name'|trans }}</th>
+      <td>{{ user.firstname }}</td>
     </tr>
-    <tr>
-      <th>Adresse</th>
-      <td>{{ user.adresse}}</td>
-    </tr>
-    <tr>
-      <th>telephone</th>
-      <td>{{ user.telephone}}</td>
-    </tr>
-
     </table>
     <a href="{{path('fos_user_profile_edit')}}"><button class="btn btn-primary btn-length" type="button" name="button">Editer profil</button></a>
   </div>
