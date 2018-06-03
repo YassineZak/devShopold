@@ -3737,3 +3737,6 @@ select.form-control:not([size]):not([multiple]) {
 .promoShop{
 	color: red !important;
 }
+.fontawesome-star{
+	color: #f9f087;
+}
