@@ -108,6 +108,11 @@ easy_admin:
         list:
           fields:
             - { property: 'name', label: 'Nom de Categorie' }
+            - { property: 'slug' }
+        form:
+          fields:
+            - { property: 'name', label: 'Nom de Categorie' }
+
       Product:
         templates:
           field_datetimetz: 'admin/fields/_datetimetz.html.twig'

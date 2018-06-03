@@ -18,12 +18,33 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
     ->setParameter('slug', $slug);
    return $qb->getQuery()->getSingleResult();
   }
+  public function findByCategory($slug)
+  {
+    $qb = $this->createQueryBuilder('p')
+      ->leftJoin('p.category', 'c')
+      ->addSelect('c')
+    ->where('c.slug = :slug')
+    ->setParameter('slug', $slug);
+   return $qb->getQuery()->getResult();
+  }
   public function getProducts($page, $nbPerPage)
   {
     $products = $this->createQueryBuilder('p')
       ->leftJoin('p.category', 'c')
       ->addSelect('c')
       ->orderBy('p.dateCreation', 'DESC')
+      ->getQuery();
+    $products
+    ->setFirstResult(($page-1) * $nbPerPage)
+    ->setMaxResults($nbPerPage);
+    return new Paginator($products, true);
+  }
+  public function getProductsByPrice($page, $nbPerPage)
+  {
+    $products = $this->createQueryBuilder('p')
+      ->leftJoin('p.category', 'c')
+      ->addSelect('c')
+      ->orderBy('p.prix', 'DESC')
       ->getQuery();
     $products
     ->setFirstResult(($page-1) * $nbPerPage)

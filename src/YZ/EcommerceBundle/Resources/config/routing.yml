@@ -20,3 +20,8 @@ yz_ecommerce_cartpage:
 
     path:     /cart
     defaults: { _controller: YZEcommerceBundle:Ecommerce:cart }
+
+yz_ecommerce_categorypage:
+
+    path:     /category/{slug}
+    defaults: { _controller: YZEcommerceBundle:Ecommerce:category}

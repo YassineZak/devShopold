@@ -27,7 +27,7 @@ class EcommerceController extends Controller
       if ($page < 1) {
       throw $this->createNotFoundException("La page ".$page." n'existe pas.");
     }
-    $nbPerPage = 15;
+    $nbPerPage = 10;
       $repository = $this->getDoctrine()
       ->getManager()
       ->getRepository('YZEcommerceBundle:Category');
@@ -60,5 +60,40 @@ class EcommerceController extends Controller
     public function cartAction()
     {
       return $this->render('YZEcommerceBundle:Ecommerce:cart.html.twig');
+    }
+    public function categoryAction($slug)
+    {
+      $repository = $this->getDoctrine()
+      ->getManager()
+      ->getRepository('YZEcommerceBundle:Product');
+      $products = $repository->findByCategory($slug);
+      $repository = $this->getDoctrine()
+      ->getManager()
+      ->getRepository('YZEcommerceBundle:Category');
+      $categories = $repository->findAll();
+      if (null === $products) {
+      throw new NotFoundHttpException("Erreur page");
+    }
+      return $this->render('YZEcommerceBundle:Ecommerce:shop.html.twig', array('products' => $products, 'categories' => $categories));
+    }
+    public function priceFilterAction($page)
+    {
+      if ($page < 1) {
+      throw $this->createNotFoundException("La page ".$page." n'existe pas.");
+    }
+    $nbPerPage = 15;
+      $repository = $this->getDoctrine()
+      ->getManager()
+      ->getRepository('YZEcommerceBundle:Category');
+      $categories = $repository->findAll();
+      $repository = $this->getDoctrine()
+      ->getManager()
+      ->getRepository('YZEcommerceBundle:Product');
+      $products = $repository->getProductsByPrice($page, $nbPerPage);
+      $nbPages = ceil(count($products) / $nbPerPage);
+      if ($page > $nbPages) {
+      throw $this->createNotFoundException("La page ".$page." n'existe pas.");
+    }
+      return $this->render('YZEcommerceBundle:Ecommerce:shop.html.twig', array('categories' => $categories, 'products' => $products,'nbPages'=> $nbPages,'page'=> $page,));
     }
 }
