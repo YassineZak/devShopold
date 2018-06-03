@@ -3734,3 +3734,6 @@ select.form-control:not([size]):not([multiple]) {
 .promo{
 	color: red !important;
 }
+.promoShop{
+	color: red !important;
+}

@@ -1,6 +1,7 @@
 <?php
 
 namespace YZ\EcommerceBundle\Repository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * ProductRepository
@@ -16,5 +17,17 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
     ->where('p.slug = :slug')
     ->setParameter('slug', $slug);
    return $qb->getQuery()->getSingleResult();
+  }
+  public function getProducts($page, $nbPerPage)
+  {
+    $products = $this->createQueryBuilder('p')
+      ->leftJoin('p.category', 'c')
+      ->addSelect('c')
+      ->orderBy('p.dateCreation', 'DESC')
+      ->getQuery();
+    $products
+    ->setFirstResult(($page-1) * $nbPerPage)
+    ->setMaxResults($nbPerPage);
+    return new Paginator($products, true);
   }
 }
