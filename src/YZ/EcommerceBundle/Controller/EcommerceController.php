@@ -14,7 +14,9 @@ class EcommerceController extends Controller
       $repository = $this->getDoctrine()
       ->getManager()
       ->getRepository('YZEcommerceBundle:Category');
-      $categories = $repository->findAll();
+      $categories = $repository->findCategory(2);
+      dump($categories);
+      die;
       $repository = $this->getDoctrine()
       ->getManager()
       ->getRepository('YZEcommerceBundle:Product');
