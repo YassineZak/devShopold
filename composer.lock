@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc5f6002f33e3013898b1873e280afd5",
+    "content-hash": "19672a072b0fa7c5c751ac687c302755",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1543,6 +1543,66 @@
                 "minification"
             ],
             "time": "2016-11-11T18:43:20+00:00"
+        },
+        {
+            "name": "lexik/form-filter-bundle",
+            "version": "v5.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lexik/LexikFormFilterBundle.git",
+                "reference": "c8014b678c8872dfc045c18b159d0b4b85cf7be3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lexik/LexikFormFilterBundle/zipball/c8014b678c8872dfc045c18b159d0b4b85cf7be3",
+                "reference": "c8014b678c8872dfc045c18b159d0b4b85cf7be3",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": "^2.4.8",
+                "php": ">=5.5.9",
+                "symfony/form": "~2.8|~3.0|^4.0",
+                "symfony/framework-bundle": "~2.8|~3.0|^4.0"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm-bundle": "~3.0",
+                "phpunit/phpunit": "^5.7|~6.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lexik\\Bundle\\FormFilterBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dev Lexik",
+                    "email": "dev@lexik.fr"
+                },
+                {
+                    "name": "Cedric Girard",
+                    "email": "c.girard@lexik.fr"
+                }
+            ],
+            "description": "This bundle aim to provide classes to build some form filters and then build a doctrine query from this form filter.",
+            "homepage": "https://github.com/lexik/LexikFormFilterBundle",
+            "keywords": [
+                "bundle",
+                "doctrine",
+                "filter",
+                "form",
+                "symfony"
+            ],
+            "time": "2018-04-04T11:14:22+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3355,6 +3415,61 @@
     ],
     "packages-dev": [
         {
+            "name": "moneyphp/money",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moneyphp/money.git",
+                "reference": "1926c54143da8eec322ae4985014cd73a98b0792"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moneyphp/money/zipball/1926c54143da8eec322ae4985014cd73a98b0792",
+                "reference": "1926c54143da8eec322ae4985014cd73a98b0792",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "Sylius/SyliusMoneyBundle": "Sylius' Symfony2 integration with Money library",
+                "TheBigBrainsCompany/TbbcMoneyBundle": "Very complete Symfony2 bundle with support for Twig, Doctrine, Forms, ...",
+                "pink-tie/money-bundle": "Pink-Tie's Symfony2 integration with Money library"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Money": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mathias Verraes",
+                    "email": "mathias@verraes.net"
+                }
+            ],
+            "description": "PHP implementation of Fowler's Money pattern",
+            "homepage": "http://verraes.net/2011/04/fowler-money-pattern-in-php/",
+            "keywords": [
+                "Generic Sub-domain",
+                "Value Object",
+                "money"
+            ],
+            "time": "2016-01-16T22:03:46+00:00"
+        },
+        {
             "name": "sensio/generator-bundle",
             "version": "v3.1.7",
             "source": {
@@ -3473,6 +3588,79 @@
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
             "time": "2018-05-16T12:49:49+00:00"
+        },
+        {
+            "name": "tbbc/money-bundle",
+            "version": "v3.1.4",
+            "target-dir": "Tbbc/MoneyBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TheBigBrainsCompany/TbbcMoneyBundle.git",
+                "reference": "e65dbdfc55de897e378fc0ac2cd20bf1bba3ed3d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TheBigBrainsCompany/TbbcMoneyBundle/zipball/e65dbdfc55de897e378fc0ac2cd20bf1bba3ed3d",
+                "reference": "e65dbdfc55de897e378fc0ac2cd20bf1bba3ed3d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "moneyphp/money": "^1.2.1",
+                "php": ">=5.3.9",
+                "symfony/console": "~2.8|~3.0",
+                "symfony/dom-crawler": "~2.8|~3.0",
+                "symfony/form": "~2.8|~3.0",
+                "symfony/framework-bundle": "~2.8|~3.0",
+                "symfony/twig-bundle": "~2.8|~3.0"
+            },
+            "require-dev": {
+                "beberlei/doctrineextensions": "0.3.*",
+                "doctrine/doctrine-bundle": "~1.1",
+                "doctrine/orm": "~2.3",
+                "ext-sqlite3": "*",
+                "m6web/symfony2-coding-standard": "^3.3",
+                "phpunit/dbunit": "~1.4",
+                "phpunit/phpunit": "~4|~5",
+                "squizlabs/php_codesniffer": "^2.7",
+                "symfony/browser-kit": "~2.8|~3.0",
+                "symfony/class-loader": "~2.8|~3.0",
+                "symfony/finder": "~2.8|~3.0",
+                "symfony/phpunit-bridge": "~2.8|~3.0",
+                "symfony/yaml": "~2.8|~3.0"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "~1.1",
+                "doctrine/orm": "~2.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Tbbc\\MoneyBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastien Lefebvre"
+                },
+                {
+                    "name": "Philippe Le Van",
+                    "homepage": "https://twitter.com/plv"
+                }
+            ],
+            "description": "This is a Symfony2 bundle that integrates the php money library from Mathias Verraes (Fowler pattern): https://github.com/mathiasverraes/money.",
+            "homepage": "https://github.com/TheBigBrainsCompany/TbbcMoneyBundle",
+            "keywords": [
+                "conversion",
+                "currency",
+                "fowler",
+                "money"
+            ],
+            "time": "2017-11-08T08:14:53+00:00"
         }
     ],
     "aliases": [],
