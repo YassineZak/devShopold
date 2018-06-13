@@ -19,7 +19,21 @@ yz_ecommerce_productpage:
 yz_ecommerce_cartpage:
 
     path:     /cart
-    defaults: { _controller: YZEcommerceBundle:Ecommerce:cart }
+    defaults: { _controller: YZEcommerceBundle:Cart:cart }
+
+yz_ecommerce_addcart:
+
+    path:   /cart/{id}
+    defaults: { _controller: YZEcommerceBundle:Cart:addToCart }
+    requirements:
+        id: \d+
+
+yz_ecommerce_removecart:
+
+    path:   /cart/remove/{id}
+    defaults: { _controller: YZEcommerceBundle:Cart:removeCart }
+    requirements:
+        id: \d+
 
 yz_ecommerce_categorypage:
 

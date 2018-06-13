@@ -3740,3 +3740,15 @@ select.form-control:not([size]):not([multiple]) {
 .fontawesome-star{
 	color: #f9f087;
 }
+.cart_list{
+	text-align: center;
+}
+.miniature img{
+	width: 50px;
+}
+.miniature{
+	margin-top: 10px !important;
+}
+.cart_item_name{
+	margin-left: 0px !important;
+}

@@ -61,13 +61,6 @@ class EcommerceController extends Controller
       return $this->render('YZEcommerceBundle:Ecommerce:product.html.twig', array('product' => $product, 'categories' => $categories));
     }
 
-
-    public function cartAction()
-    {
-      return $this->render('YZEcommerceBundle:Ecommerce:cart.html.twig');
-    }
-
-
     public function categoryAction($slug)
     {
       $repository = $this->getDoctrine()

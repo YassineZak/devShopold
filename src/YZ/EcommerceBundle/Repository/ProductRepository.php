@@ -51,4 +51,12 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
     ->setMaxResults($nbPerPage);
     return new Paginator($products, true);
   }
+  public function findByArray(array $array){
+    $qb = $this->createQueryBuilder('p')
+      ->leftJoin('p.category', 'c')
+      ->addSelect('c')
+      ->Where('p.id IN (:array)')
+      ->setParameter('array', $array);
+      return $qb->getQuery()->getResult();
+  }
 }

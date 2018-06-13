@@ -10,50 +10,72 @@ Panier - {{ parent() }}
 <div class="cart_section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 offset-lg-1">
+      <div class="col-lg-12">
         <div class="cart_container">
-          <div class="cart_title">Shopping Cart</div>
+          <div class="cart_title">Panier d'achat</div>
           <div class="cart_items">
-            <ul class="cart_list">
-              <li class="cart_item clearfix">
-                <div class="cart_item_image"><img src="images/shopping_cart.jpg" alt=""></div>
+            {% if app.session.get('panier') is empty %}
+
+                <div class="">
+                  Votre Panier est Vide !!
+                </div>
+                {% else %}
+                <ul class="cart_list">
+                  <li class="cart_item clearfix">
                 <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
                   <div class="cart_item_name cart_info_col">
-                    <div class="cart_item_title">Name</div>
-                    <div class="cart_item_text">MacBook Air 13</div>
+                    <div class="cart_item_title">Produit</div>
+                    {% for cartProduct in cartProducts %}
+                    <div class="cart_item_text miniature"><img src="/devshop/web{{ vich_uploader_asset(cartProduct, 'imageFile') }}" alt=""></div>
+                    {% endfor %}
                   </div>
-                  <div class="cart_item_color cart_info_col">
-                    <div class="cart_item_title">Color</div>
-                    <div class="cart_item_text"><span style="background-color:#999999;"></span>Silver</div>
+                  <div class="cart_item_name cart_info_col">
+                    <div class="cart_item_title">Produit</div>
+                    {% for cartProduct in cartProducts %}
+                    <div class="cart_item_text">{{cartProduct.titre}}</div>
+                    {% endfor %}
                   </div>
                   <div class="cart_item_quantity cart_info_col">
-                    <div class="cart_item_title">Quantity</div>
-                    <div class="cart_item_text">1</div>
+                    <div class="cart_item_title">Quantitée</div>
+                    {% for cartProduct in cartProducts %}
+                    <div class="cart_item_text">{{app.session.get('panier')[cartProduct.id]}}</div>
+                    {% endfor %}
+                  </div>
+                  <div class="cart_item_quantity cart_info_col">
+                    <div class="cart_item_title">Supprimer</div>
+                    {% for cartProduct in cartProducts %}
+                    <div class="cart_item_text"><a href="{{ path('yz_ecommerce_removecart', {'id': cartProduct.id}) }}"><i class="fas fa-trash-alt"></i></a></div>
+                    {% endfor %}
                   </div>
                   <div class="cart_item_price cart_info_col">
-                    <div class="cart_item_title">Price</div>
-                    <div class="cart_item_text">$2000</div>
+                    <div class="cart_item_title">Prix</div>
+                    {% for cartProduct in cartProducts %}
+                    <div class="cart_item_text">{{cartProduct.prix}} €</div>
+                    {% endfor %}
                   </div>
                   <div class="cart_item_total cart_info_col">
                     <div class="cart_item_title">Total</div>
-                    <div class="cart_item_text">$2000</div>
+                    {% for cartProduct in cartProducts %}
+                    <div class="cart_item_text">{{cartProduct.prix * app.session.get('panier')[cartProduct.id]}} €</div>
+                    {% endfor %}
                   </div>
                 </div>
               </li>
             </ul>
+            {% endif %}
           </div>
 
           <!-- Order Total -->
           <div class="order_total">
             <div class="order_total_content text-md-right">
-              <div class="order_total_title">Order Total:</div>
+              <div class="order_total_title">Commande TTC:</div>
               <div class="order_total_amount">$2000</div>
             </div>
           </div>
 
           <div class="cart_buttons">
-            <button type="button" class="button cart_button_clear">Add to Cart</button>
-            <button type="button" class="button cart_button_checkout">Add to Cart</button>
+            <button type="button" class="button cart_button_clear">Continuer vos achats</button>
+            <button type="button" class="button cart_button_checkout">Passer Commande</button>
           </div>
         </div>
       </div>
