@@ -38,7 +38,21 @@ Panier - {{ parent() }}
                   <div class="cart_item_quantity cart_info_col">
                     <div class="cart_item_title">Quantitée</div>
                     {% for cartProduct in cartProducts %}
-                    <div class="cart_item_text">{{app.session.get('panier')[cartProduct.id]}}</div>
+                    <form action="{{ path('yz_ecommerce_addcart', {'id': cartProduct.id}) }}" method="get">
+                      {% set qte = app.session.get('panier')[cartProduct.id] %}
+                    <select class="" name="qte" onchange="submit()">
+                      {% for i in 1.. qte %}
+                        {% if i == qte %}
+                        <option value="{{qte}}" selected>{{i}}</option>
+                        {% else %}
+                        <option value="{{i}}">{{i}}</option>
+                      {% endif %}
+
+                      </form>
+                      {% endfor %}
+
+                    </select>
+                    <div class="cart_item_text"></div>
                     {% endfor %}
                   </div>
                   <div class="cart_item_quantity cart_info_col">

@@ -103,15 +103,7 @@
                           <div class="custom_dropdown_list">
                             <span class="custom_dropdown_placeholder clc">All Categories</span>
                             <i class="fas fa-chevron-down"></i>
-                            <ul class="custom_list clc">
-                              {% if categories is defined %}
-                                {% for category in categories %}
-                                <li>
-                                  <a class="clc" href="{{ path('yz_ecommerce_categorypage', {'slug': category.slug}) }}">{{category.name}}</a>
-                                </li>
-                                {% endfor %}
-                                {% endif %}
-                            </ul>
+                            
                           </div>
                         </div>
                         <button type="submit" class="header_search_button trans_300" value="Submit"><img src="{{ asset('images/search.png')}}" alt=""></button>
