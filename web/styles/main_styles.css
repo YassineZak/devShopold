@@ -3749,6 +3749,3 @@ select.form-control:not([size]):not([multiple]) {
 .miniature{
 	margin-top: 10px !important;
 }
-.cart_item_name{
-	margin-left: 0px !important;
-}
