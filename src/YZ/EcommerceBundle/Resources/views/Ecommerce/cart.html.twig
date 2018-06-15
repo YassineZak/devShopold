@@ -40,18 +40,15 @@ Panier - {{ parent() }}
                     {% for cartProduct in cartProducts %}
                     <form action="{{ path('yz_ecommerce_addcart', {'id': cartProduct.id}) }}" method="get">
                       {% set qte = app.session.get('panier')[cartProduct.id] %}
-                    <select class="" name="qte" onchange="submit()">
-                      {% for i in 1.. qte %}
-                        {% if i == qte %}
-                        <option value="{{qte}}" selected>{{i}}</option>
-                        {% else %}
+                      <div class="form-group">
+                    <select id="selectCart" name="qte" onchange="submit()">
+                      <option value="{{qte}}" selected style="display: none;">{{qte}}</option>
+                      {% for i in 1.. 9 %}
                         <option value="{{i}}">{{i}}</option>
-                      {% endif %}
-
                       </form>
                       {% endfor %}
-
-                    </select>
+                    </select><i id="fontAwesome" class="fas fa-angle-down"></i>
+                    </div>
                     <div class="cart_item_text"></div>
                     {% endfor %}
                   </div>

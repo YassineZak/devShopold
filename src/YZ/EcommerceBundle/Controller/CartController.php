@@ -36,15 +36,14 @@ class CartController extends Controller
     }
 
     if (isset($panier[$id])) {
-      $panier[$id] = $panier[$id] + $get;
+      $panier[$id] = $get;
     }
     else {
-      $panier[$id] = $get;
+      $panier[$id] = 1;
     }
     $session->set('panier', $panier);
     return $this->redirect($this->generateUrl('yz_ecommerce_cartpage'));
   }
-
   public function removeCartAction($id, Request $request){
     $session = $request->getSession();
     $panier = $session->get('panier');

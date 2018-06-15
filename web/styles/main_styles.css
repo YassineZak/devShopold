@@ -3747,5 +3747,17 @@ select.form-control:not([size]):not([multiple]) {
 	width: 50px;
 }
 .miniature{
-	margin-top: 10px !important;
+	margin-top: 20px !important;
+}
+#selectCart{
+	border: 0px;
+	margin-top: 25px;
+	font-size: 20px;
+	color: #4286f4;
+}
+#fontAwesome{
+margin-left: -16px;
+position: absolute;
+margin-top: 44px;
+color: #4286f4;
 }
