@@ -28,6 +28,9 @@ class CartController extends Controller
     $getRequest = Request::createFromGlobals();
     $session = $request->getSession();
     $get = $request->query->get('qte');
+    if ($get == 0) {
+      $get = 1;
+    }
     if (!$session->has('panier')) {
     $panier = $session->set('panier', array());
     }
@@ -35,12 +38,8 @@ class CartController extends Controller
       $panier = $session->get('panier');
     }
 
-    if (isset($panier[$id])) {
-      $panier[$id] = $get;
-    }
-    else {
-      $panier[$id] = 1;
-    }
+    $panier[$id] = $get;
+
     $session->set('panier', $panier);
     return $this->redirect($this->generateUrl('yz_ecommerce_cartpage'));
   }

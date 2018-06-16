@@ -20,59 +20,44 @@ Panier - {{ parent() }}
                   Votre Panier est Vide !!
                 </div>
                 {% else %}
-                <ul class="cart_list">
-                  <li class="cart_item clearfix">
-                <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
-                  <div class="cart_item_name cart_info_col">
-                    <div class="cart_item_title">Produit</div>
+                  <table id="cart_table" class="table">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">Miniature</th>
+                        <th scope="col">Produit</th>
+                        <th scope="col">Quantitée</th>
+                        <th scope="col">Supprimer</th>
+                        <th scope="col">Prix Unitaire</th>
+                        <th scope="col">Prix Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
                     {% for cartProduct in cartProducts %}
-                    <div class="cart_item_text miniature"><img src="/devshop/web{{ vich_uploader_asset(cartProduct, 'imageFile') }}" alt=""></div>
-                    {% endfor %}
-                  </div>
-                  <div class="cart_item_name cart_info_col">
-                    <div class="cart_item_title">Produit</div>
-                    {% for cartProduct in cartProducts %}
-                    <div class="cart_item_text">{{cartProduct.titre}}</div>
-                    {% endfor %}
-                  </div>
-                  <div class="cart_item_quantity cart_info_col">
-                    <div class="cart_item_title">Quantitée</div>
-                    {% for cartProduct in cartProducts %}
-                    <form action="{{ path('yz_ecommerce_addcart', {'id': cartProduct.id}) }}" method="get">
+                    <td class=" miniature"><a href="{{ path('yz_ecommerce_productpage', {'slug': cartProduct.slug}) }}"><img src="/devshop/web{{ vich_uploader_asset(cartProduct, 'imageFile') }}" alt=""></a></td>
+
+                    <td>{{cartProduct.titre}}</td>
+                    <td><form action="{{ path('yz_ecommerce_addcart', {'id': cartProduct.id}) }}" method="get">
                       {% set qte = app.session.get('panier')[cartProduct.id] %}
-                      <div class="form-group">
-                    <select id="selectCart" name="qte" onchange="submit()">
-                      <option value="{{qte}}" selected style="display: none;">{{qte}}</option>
-                      {% for i in 1.. 9 %}
-                        <option value="{{i}}">{{i}}</option>
-                      </form>
-                      {% endfor %}
-                    </select><i id="fontAwesome" class="fas fa-angle-down"></i>
-                    </div>
-                    <div class="cart_item_text"></div>
-                    {% endfor %}
-                  </div>
-                  <div class="cart_item_quantity cart_info_col">
-                    <div class="cart_item_title">Supprimer</div>
-                    {% for cartProduct in cartProducts %}
-                    <div class="cart_item_text"><a href="{{ path('yz_ecommerce_removecart', {'id': cartProduct.id}) }}"><i class="fas fa-trash-alt"></i></a></div>
-                    {% endfor %}
-                  </div>
-                  <div class="cart_item_price cart_info_col">
-                    <div class="cart_item_title">Prix</div>
-                    {% for cartProduct in cartProducts %}
-                    <div class="cart_item_text">{{cartProduct.prix}} €</div>
-                    {% endfor %}
-                  </div>
-                  <div class="cart_item_total cart_info_col">
-                    <div class="cart_item_title">Total</div>
-                    {% for cartProduct in cartProducts %}
-                    <div class="cart_item_text">{{cartProduct.prix * app.session.get('panier')[cartProduct.id]}} €</div>
-                    {% endfor %}
-                  </div>
+                      <div id="customSelect"class="form-group">
+                        <select id="selectCart" name="qte" onchange="submit()">
+                          {% for i in 1.. 9 %}
+                          {% if i == qte %}
+                          <option value="{{qte}}" selected style="">{{qte}}</option>
+                          {% endif %}
+                          <option value="{{i}}" {% if i == qte %}{% endif %}>{{i}}</option>
+                          {% endfor %}
+                        </select><i id="fontAwesome" class="fas fa-angle-down"></i>
+                      </div>
+                    </form></td>
+                    <td><a href="{{ path('yz_ecommerce_removecart', {'id': cartProduct.id}) }}"><i class="fas fa-trash-alt"></i></a></td>
+                    <td>{{cartProduct.prix}} €</td>
+                    <td>{{cartProduct.prix * app.session.get('panier')[cartProduct.id]}} €</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
                 </div>
-              </li>
-            </ul>
             {% endif %}
           </div>
 
@@ -85,7 +70,8 @@ Panier - {{ parent() }}
           </div>
 
           <div class="cart_buttons">
-            <button type="button" class="button cart_button_clear">Continuer vos achats</button>
+
+            <a href="{{ path('yz_ecommerce_shoppage')}}"><button type="button" class="button cart_button_clear">Continuer vos achats</button></a>
             <button type="button" class="button cart_button_checkout">Passer Commande</button>
           </div>
         </div>

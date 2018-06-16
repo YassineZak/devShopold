@@ -3747,17 +3747,29 @@ select.form-control:not([size]):not([multiple]) {
 	width: 50px;
 }
 .miniature{
-	margin-top: 20px !important;
 }
 #selectCart{
 	border: 0px;
-	margin-top: 25px;
-	font-size: 20px;
+	font-size: 18px;
 	color: #4286f4;
 }
 #fontAwesome{
-margin-left: -16px;
-position: absolute;
-margin-top: 44px;
+margin-left: -14px;
+margin-top: 18px;
 color: #4286f4;
+}
+.cartProduct{
+	margin-top: 1px !important;
+}
+#cart_table td:not(:first-child) {
+	padding-top: 20px;
+}
+#cart_table th, #cart_table td {
+	text-align: center;
+}
+#customSelect{
+	margin-top: -14px !important;
+}
+.fa-trash-alt{
+	color: red;
 }
