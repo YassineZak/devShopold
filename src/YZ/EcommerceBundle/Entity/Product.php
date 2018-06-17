@@ -178,6 +178,11 @@ class Product
 
         return $this;
     }
+    /**
+     * @ORM\ManyToOne(targetEntity="YZ\EcommerceBundle\Entity\Tva")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $tva;
 
     /**
      * Get resume.
@@ -530,5 +535,29 @@ class Product
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set tva.
+     *
+     * @param \YZ\EcommerceBundle\Entity\Tva $tva
+     *
+     * @return Product
+     */
+    public function setTva(\YZ\EcommerceBundle\Entity\Tva $tva)
+    {
+        $this->tva = $tva;
+
+        return $this;
+    }
+
+    /**
+     * Get tva.
+     *
+     * @return \YZ\EcommerceBundle\Entity\Tva
+     */
+    public function getTva()
+    {
+        return $this->tva;
     }
 }
