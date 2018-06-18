@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Tva
  *
  * @ORM\Table(name="tva")
+ * @ORM\HasLifecycleCallbacks()
  * @ORM\Entity(repositoryClass="YZ\EcommerceBundle\Repository\TvaRepository")
  */
 class Tva
@@ -35,7 +36,7 @@ class Tva
      */
     private $multiplicate;
 
-
+    
     /**
      * Get id.
      *
@@ -84,6 +85,8 @@ class Tva
         return $this;
     }
 
+
+
     /**
      * Get multiplicate.
      *
@@ -101,4 +104,6 @@ class Tva
     {
             return (string) $this->getName();
     }
+
+
 }

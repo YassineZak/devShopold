@@ -5,6 +5,7 @@ Panier - {{ parent() }}
 {% endblock %}
 {% block body %}
 
+
 <!-- Cart -->
 
 <div class="cart_section">
@@ -51,8 +52,8 @@ Panier - {{ parent() }}
                       </div>
                     </form></td>
                     <td><a href="{{ path('yz_ecommerce_removecart', {'id': cartProduct.id}) }}"><i class="fas fa-trash-alt"></i></a></td>
-                    <td>{{cartProduct.prix}} €</td>
-                    <td>{{cartProduct.prix * app.session.get('panier')[cartProduct.id]}} €</td>
+                    <td>{{cartProduct.prixTtc}} €</td>
+                    <td>{{cartProduct.prixTtc * app.session.get('panier')[cartProduct.id]}} €</td>
                   </tr>
                   {% endfor %}
                 </tbody>

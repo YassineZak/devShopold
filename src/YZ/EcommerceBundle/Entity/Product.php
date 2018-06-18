@@ -12,6 +12,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  *
  * @ORM\Table(name="product")
  * @ORM\Entity(repositoryClass="YZ\EcommerceBundle\Repository\ProductRepository")
+ * @ORM\HasLifecycleCallbacks()
  * @Vich\Uploadable
  */
 class Product
@@ -63,9 +64,23 @@ class Product
     /**
      * @var int
      *
+     * @ORM\Column(name="prix_ttc", type="integer")
+     */
+    private $prixTtc;
+
+    /**
+     * @var int
+     *
      * @ORM\Column(name="promo", type="integer", nullable=true)
      */
     private $promo;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="promo_ttc", type="integer", nullable=true)
+     */
+    private $promoTtc;
 
     /**
      * @var \DateTime
@@ -127,6 +142,14 @@ class Product
     private $imageProduit3;
 
     /**
+     * @var float
+     *
+     * @ORM\Column(name="tva_price", type="float")
+     */
+    private $prixTva;
+
+
+    /**
      * @Vich\UploadableField(mapping="product_images", fileNameProperty="imageProduit3")
      * @var File
      */
@@ -183,6 +206,8 @@ class Product
      * @ORM\JoinColumn(nullable=false)
      */
     private $tva;
+
+
 
     /**
      * Get resume.
@@ -559,5 +584,83 @@ class Product
     public function getTva()
     {
         return $this->tva;
+    }
+    /**
+     * Set prixTva.
+     * @ORM\PrePersist
+     * @param float $prixTva
+     *
+     * @return Product
+     */
+    public function setPrixTva($prixTva)
+    {
+      if ($this->getPromo() !== null ) {
+        $prixPromo = $this->getPromo();
+        $tva = $this->getTva()->getMultiplicate();
+        $this->prixTva = ($prixPromo*$tva)/100;
+      }
+      else {
+        $prix = $this->getPrix();
+        $tva = $this->getTva()->getMultiplicate();
+        $this->prixTva = ($prix*$tva)/100;
+      }
+        return $this;
+    }
+
+    /**
+     * Get prixTva.
+     *
+     * @return float
+     */
+    public function getPrixTva()
+    {
+        return $this->prixTva;
+    }
+
+
+    /**
+     * Get prixTtc.
+     *
+     * @return int
+     */
+    public function getPrixTtc()
+    {
+        return $this->prixTtc;
+    }
+
+    /**
+     * Set promoTtc.
+     *
+     * @param int $promoTtc
+     * @ORM\PrePersist
+     *
+     * @return Product
+     */
+    public function setPromoTtc($promoTtc)
+    {
+        $this->promoTtc = $this->getPrixTva() + $this->getPromo();
+
+        return $this;
+    }
+
+    /**
+     * Get promoTtc.
+     *
+     * @return int
+     */
+    public function getPromoTtc()
+    {
+        return $this->promoTtc;
+    }
+
+    /**
+    * @ORM\PrePersist
+    * @return Product
+    */
+    public function setPrixTtc($prixTtc)
+    {
+
+      $this->prixTtc = $this->getPrixTva() + $this->getPrix();
+      return $this;
     }
 }

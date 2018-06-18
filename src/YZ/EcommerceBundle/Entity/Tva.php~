@@ -3,15 +3,15 @@
 namespace YZ\EcommerceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * Category
+ * Tva
  *
- * @ORM\Table(name="category")
- * @ORM\Entity(repositoryClass="YZ\EcommerceBundle\Repository\CategoryRepository")
+ * @ORM\Table(name="tva")
+ * @ORM\HasLifecycleCallbacks()
+ * @ORM\Entity(repositoryClass="YZ\EcommerceBundle\Repository\TvaRepository")
  */
-class Category
+class Tva
 {
     /**
      * @var int
@@ -25,18 +25,18 @@ class Category
     /**
      * @var string
      *
-     * @Gedmo\Slug(fields={"name"})
-     * @ORM\Column(name="slug", type="string", length=255, unique=true)
-     */
-    private $slug;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
     private $name;
 
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="multiplicate", type="float")
+     */
+    private $multiplicate;
+
+    
     /**
      * Get id.
      *
@@ -52,7 +52,7 @@ class Category
      *
      * @param string $name
      *
-     * @return Category
+     * @return Tva
      */
     public function setName($name)
     {
@@ -72,6 +72,31 @@ class Category
     }
 
     /**
+     * Set multiplicate.
+     *
+     * @param float $multiplicate
+     *
+     * @return Tva
+     */
+    public function setMultiplicate($multiplicate)
+    {
+        $this->multiplicate = $multiplicate;
+
+        return $this;
+    }
+
+
+
+    /**
+     * Get multiplicate.
+     *
+     * @return float
+     */
+    public function getMultiplicate()
+    {
+        return $this->multiplicate;
+    }
+    /**
      * toString
      * @return string
      */
@@ -79,4 +104,6 @@ class Category
     {
             return (string) $this->getName();
     }
+
+
 }

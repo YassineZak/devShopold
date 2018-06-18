@@ -136,6 +136,9 @@ easy_admin:
             - { property: 'resume', label: 'Resume', type: text }
             - { property: 'category', label: 'Categorie', type: 'text' }
             - { property: 'prix', label: 'Prix HT', type: integer }
+            - { property: 'prixTtc', label: 'Prix TTC', type: integer }
+            - { property: 'promo', label: 'Promo HT', type: integer }
+            - { property: 'promoTtc', label: 'Promo TTC', type: integer }
             - { property: 'tva', label: 'Tva' }
             - { property: 'stock', label: 'Stock', type: integer }
             - { property: 'reference', label: 'Reférence', type: text }

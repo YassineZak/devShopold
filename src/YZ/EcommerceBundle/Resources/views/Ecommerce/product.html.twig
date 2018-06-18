@@ -57,9 +57,9 @@
 
               <div class="product_price">
                 {% if product.promo is null %}
-                {{product.prix}} €
+                {{product.prixTtc}} €
               {% else %}
-                  {{product.promo}} €<span class="promo">{{product.prix}} €</span>
+                  {{product.promoTtc}} €<span class="promo">{{product.prixTtc}} €</span>
               {% endif %}
             </div>
               <div class="button_container">

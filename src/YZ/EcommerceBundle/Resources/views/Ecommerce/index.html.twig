@@ -271,9 +271,9 @@ Accueil - {{ parent() }}
                     <div class="bestsellers_name"><a href="{{ path('yz_ecommerce_productpage', {'slug': product.slug}) }}">{{product.titre}}</a></div>
                     <div class="fontawesome-star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                     <div class="bestsellers_price discount">{% if product.promo is null %}
-                    {{product.prix}} €
+                    {{product.prixTtc}} €
                   {% else %}
-                      {{product.promo}} €<span>{{product.prix}} €</span>
+                      {{product.promoTtc}} €<span>{{product.prixTtc}} €</span>
                   {% endif %}</div>
                   </div>
                 </div>

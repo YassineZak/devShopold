@@ -82,12 +82,12 @@
                   <div class="product_content">
                     {% if product.promo is null %}
                       <div class="product_price">
-                        {{product.prix}}
+                        {{product.prixTtc}}
                         €
                       {% else %}
                         <div class="product_price promoShop">
-                          {{product.promo}}
-                          €<span>{{product.prix}}
+                          {{product.promoTtc}}
+                          €<span>{{product.prixTtc}}
                             €</span>
                         {% endif %}
                       </div>
