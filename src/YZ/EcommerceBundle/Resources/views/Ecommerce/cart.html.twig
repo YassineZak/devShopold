@@ -5,7 +5,6 @@ Panier - {{ parent() }}
 {% endblock %}
 {% block body %}
 {% set totalTva = [] %}
-{{dump(cartProducts| sommePrix(20))}}
 
 
 <!-- Cart -->
@@ -54,12 +53,13 @@ Panier - {{ parent() }}
                       </div>
                     </form></td>
                     <td><a href="{{ path('yz_ecommerce_removecart', {'id': cartProduct.id}) }}"><i class="fas fa-trash-alt"></i></a></td>
+                    {% if cartProduct.promoTtc is null %}
                     <td>{{cartProduct.prixTtc}} €</td>
                     <td>{{cartProduct.prixTtc * app.session.get('panier')[cartProduct.id]}} €</td>
-                    {% set totalTva = [cartProduct.prixTva * app.session.get('panier')[cartProduct.id]] %}
-                    {% for cartProduct in cartProducts %}
-                        {% set totalTva = totalTva + [cartProduct.prixTva * app.session.get('panier')[cartProduct.id]] %}
-                    {% endfor %}
+                    {% else %}
+                    <td>{{cartProduct.promoTtc}} €</td>
+                    <td>{{cartProduct.promoTtc * app.session.get('panier')[cartProduct.id]}} €</td>
+                    {% endif %}
                   </tr>
                   {% endfor %}
                 </tbody>
@@ -72,7 +72,7 @@ Panier - {{ parent() }}
           <div class="order_total">
             <div class="order_total_content text-md-right">
               <div class="order_total_title">Commande TTC:</div>
-              <div class="order_total_amount">$2000</div>
+              <div class="order_total_amount">$2000 <small class="tva"> dont {{sommeTva}} € Tva </small></div>
             </div>
           </div>
 

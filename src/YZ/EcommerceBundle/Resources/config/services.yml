@@ -1,9 +1,3 @@
 services:
-#    yz_ecommerce.example:
-#        class: YZ\EcommerceBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
-
-  SommePrix:
-    class: YZ\EcommerceBundle\Twig\Extension\SommePrixExtension
-    tag:
-      - { name: twig.extension }
+  yz_somme_tva:
+    class: YZ\EcommerceBundle\Extension\SommePrix

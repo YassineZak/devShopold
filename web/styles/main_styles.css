@@ -3773,3 +3773,8 @@ color: #4286f4;
 .fa-trash-alt{
 	color: red;
 }
+.tva{
+	font-size: 12px;
+	padding-left: 5px;
+	color: grey;
+}
