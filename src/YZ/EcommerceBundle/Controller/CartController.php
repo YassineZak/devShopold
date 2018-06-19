@@ -13,15 +13,21 @@ class CartController extends Controller
   {
     $session = $request->getSession();
     $panier = $session->get('panier');
+    $totalprixTva = array();
     $repository = $this->getDoctrine()
     ->getManager()
     ->getRepository('YZEcommerceBundle:Product');
     $cartProducts = $repository->findByArray(array_keys($panier));
+    foreach ($cartProducts as $product) {
+      $prixTvaProduit = ($product->getPrixTva()) * $panier[$product->getId()];
+      array_push($totalprixTva, $prixTvaProduit);
+    }
+    $totalprixTva = array_sum($totalprixTva);
     $repository = $this->getDoctrine()
     ->getManager()
     ->getRepository('YZEcommerceBundle:Category');
     $categories = $repository->findAll();
-    return $this->render('YZEcommerceBundle:Ecommerce:cart.html.twig', array('cartProducts' => $cartProducts, 'categories' => $categories));
+    return $this->render('YZEcommerceBundle:Ecommerce:cart.html.twig', array('cartProducts' => $cartProducts, 'categories' => $categories, 'totalprixTva' => $totalprixTva));
   }
 
   public function addToCartAction($id, Request $request){

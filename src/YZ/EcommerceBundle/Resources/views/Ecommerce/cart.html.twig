@@ -4,6 +4,8 @@
 Panier - {{ parent() }}
 {% endblock %}
 {% block body %}
+{% set totalTva = [] %}
+{{dump(cartProducts| sommePrix(20))}}
 
 
 <!-- Cart -->
@@ -44,7 +46,7 @@ Panier - {{ parent() }}
                         <select id="selectCart" name="qte" onchange="submit()">
                           {% for i in 1.. 9 %}
                           {% if i == qte %}
-                          <option value="{{qte}}" selected style="">{{qte}}</option>
+                          <option value="{{qte}}" selected style="display: none;">{{qte}}</option>
                           {% endif %}
                           <option value="{{i}}" {% if i == qte %}{% endif %}>{{i}}</option>
                           {% endfor %}
@@ -54,6 +56,10 @@ Panier - {{ parent() }}
                     <td><a href="{{ path('yz_ecommerce_removecart', {'id': cartProduct.id}) }}"><i class="fas fa-trash-alt"></i></a></td>
                     <td>{{cartProduct.prixTtc}} €</td>
                     <td>{{cartProduct.prixTtc * app.session.get('panier')[cartProduct.id]}} €</td>
+                    {% set totalTva = [cartProduct.prixTva * app.session.get('panier')[cartProduct.id]] %}
+                    {% for cartProduct in cartProducts %}
+                        {% set totalTva = totalTva + [cartProduct.prixTva * app.session.get('panier')[cartProduct.id]] %}
+                    {% endfor %}
                   </tr>
                   {% endfor %}
                 </tbody>

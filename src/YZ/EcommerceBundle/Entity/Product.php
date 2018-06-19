@@ -588,6 +588,7 @@ class Product
     /**
      * Set prixTva.
      * @ORM\PrePersist
+     * @ORM\PreUpdate
      * @param float $prixTva
      *
      * @return Product
@@ -633,6 +634,7 @@ class Product
      *
      * @param int $promoTtc
      * @ORM\PrePersist
+     * @ORM\PreUpdate
      *
      * @return Product
      */
@@ -655,6 +657,7 @@ class Product
 
     /**
     * @ORM\PrePersist
+    * @ORM\PreUpdate
     * @return Product
     */
     public function setPrixTtc($prixTtc)
