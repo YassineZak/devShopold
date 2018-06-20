@@ -151,11 +151,9 @@
                       <div class="cart_icon">
                         <img src="{{ asset('images/cart.png')}}" alt="">
                         <div class="cart_count">
-                          {% if sommeproduits is defined %}
-                              <span>{{sommeproduits}}</span></div>
-                              {% else %}
-                                  <span>0</span></div>
-                              {% endif %}
+                          {% if get_somme_produit() is null %}<span>0</span></div>{% else %}
+                              <span>{{get_somme_produit()}}</span></div>
+                            {% endif %}
                       </div>
                       <div class="cart_content">
                         <div class="cart_text">

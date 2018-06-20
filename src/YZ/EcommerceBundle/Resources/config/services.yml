@@ -7,3 +7,12 @@ services:
 
   yz_somme_prix:
     class: YZ\EcommerceBundle\Extension\SommePrix
+
+  twig.extension.user_profile:
+    class: YZ\EcommerceBundle\Extension\UserProfileExtension
+    arguments:
+      - '@doctrine.orm.entity_manager'
+      - '@request_stack'
+      - '@yz_somme_produits'
+    tags:
+      - { name: twig.extension }
