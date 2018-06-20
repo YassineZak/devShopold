@@ -151,9 +151,11 @@
                       <div class="cart_icon">
                         <img src="{{ asset('images/cart.png')}}" alt="">
                         <div class="cart_count">
-                          {% if app.session.get('panier') is empty %}<span>0</span></div>{% else %}
-                              <span>{{app.session.get('panier')|length}}</span></div>
-                            {% endif %}
+                          {% if sommeproduits is defined %}
+                              <span>{{sommeproduits}}</span></div>
+                              {% else %}
+                                  <span>0</span></div>
+                              {% endif %}
                       </div>
                       <div class="cart_content">
                         <div class="cart_text">

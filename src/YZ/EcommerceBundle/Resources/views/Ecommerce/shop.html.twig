@@ -12,7 +12,11 @@
     <div class="home_overlay"></div>
     <div class="home_content d-flex flex-column align-items-center justify-content-center">
       {% if app.request.get('_route') == 'yz_ecommerce_categorypage' %}
+      {% if products[0].category.name is defined %}
       <h2 class="home_title">{{products[0].category.name|capitalize}}</h2>
+      {% else %}
+          <h2 class="home_title"> Aucun produit disponible </h2>
+          {% endif %}
       {% else %}
       <h2 class="home_title">Devshop Boutique</h2>
       {% endif %}
