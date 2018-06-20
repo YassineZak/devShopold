@@ -1,3 +1,6 @@
 services:
   yz_somme_tva:
+    class: YZ\EcommerceBundle\Extension\SommeTva
+
+  yz_somme_prix:
     class: YZ\EcommerceBundle\Extension\SommePrix

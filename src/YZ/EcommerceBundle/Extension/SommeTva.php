@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  *
  */
-class SommePrix
+class SommeTva
 {
 
   function somme(Request $request, array $produits ){
@@ -15,15 +15,9 @@ class SommePrix
     $panier = $session->get('panier');
   $totalPrix = array();
   foreach ($produits as $produit) {
-    if ($produit->getPromoTtc() !== null) {
-      $prixProduit = ($produit->getPromoTtc()) * $panier[$produit->getId()];
+      $prixProduit = ($produit->getPrixTva()) * $panier[$produit->getId()];
+      array_push($totalPrix, $prixProduit);
     }
-    else {
-      $prixProduit = ($produit->getPrixTtc()) * $panier[$produit->getId()];
-    }
-    array_push($totalPrix, $prixProduit);
-    }
-
 //  }
   $totalPrix = array_sum($totalPrix);
   return $totalPrix;
