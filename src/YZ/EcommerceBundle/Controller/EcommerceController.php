@@ -49,7 +49,6 @@ class EcommerceController extends Controller
 
     public function productAction($slug)
     {
-      $session = $request->getSession();
       $repository = $this->getDoctrine()
       ->getManager()
       ->getRepository('YZEcommerceBundle:Product');

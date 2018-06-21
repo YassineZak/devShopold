@@ -42,13 +42,13 @@ public function getMyCustomVar()
     $request = $this->requestStack->getCurrentRequest();
     $session = $request->getSession();
     if (!$session->has('panier')) {
-    $panier = $session->set('panier', array());
+      $somme = 0;
     }
     else{
       $panier = $session->get('panier');
+      $cartProducts = $this->entityManager->getRepository('YZEcommerceBundle:Product')->findByArray(array_keys($panier));
+      $somme = $this->sommeProduits->somme($request, $cartProducts);
     }
-     $cartProducts = $this->entityManager->getRepository('YZEcommerceBundle:Product')->findByArray(array_keys($panier));
-    $somme = $this->sommeProduits->somme($request, $cartProducts);
 
     return $somme;
 }
