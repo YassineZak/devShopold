@@ -42,7 +42,7 @@ public function getMySommeProduits()
     $request = $this->requestStack->getCurrentRequest();
     $session = $request->getSession();
     if (!$session->has('panier')) {
-      $somme = 0;
+      $sommeProduits = 0;
     }
     else{
       $panier = $session->get('panier');

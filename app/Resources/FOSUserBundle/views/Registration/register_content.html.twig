@@ -3,15 +3,17 @@
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register login_container'}}) }}
 <div class="global-form">
   <div class="left-column">
-    {{ form_row(form.email) }}
     {{ form_row(form.username) }}
     {{ form_row(form.plainPassword) }}
-  </div>
-  <div class="right-column">
     {{ form_row(form.nom) }}
     {{ form_row(form.prenom) }}
+  </div>
+  <div class="right-column">
+    {{ form_row(form.email) }}
     {{ form_row(form.telephone) }}
     {{ form_row(form.adresse) }}
+    {{ form_row(form.ville) }}
+    {{ form_row(form.codePostal) }}
   </div>
   </div>
 <div>

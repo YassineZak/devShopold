@@ -42,7 +42,7 @@ public function getMySommePrix()
     $request = $this->requestStack->getCurrentRequest();
     $session = $request->getSession();
     if (!$session->has('panier')) {
-      $somme = 0;
+      $sommePrix = 0;
     }
     else{
       $panier = $session->get('panier');

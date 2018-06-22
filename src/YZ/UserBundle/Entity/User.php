@@ -50,11 +50,25 @@ class User extends BaseUser
 
 
       /**
-         * @ORM\Column(type="text")
+         * @ORM\Column(type="string")
          *
-         * @Assert\NotBlank(message="Veuillez saisir votre adresse.", groups={"Registration", "Profile"})
+         * @Assert\NotBlank(message="Veuillez saisir votre ville.", groups={"Registration", "Profile"})
          */
-        protected $adresse;
+        protected $ville;
+
+        /**
+           * @ORM\Column(type="string")
+           *
+           * @Assert\NotBlank(message="Veuillez saisir votre code postal.", groups={"Registration", "Profile"})
+           */
+          protected $codePostal;
+
+        /**
+           * @ORM\Column(type="string")
+           *
+           * @Assert\NotBlank(message="Veuillez saisir votre adresse.", groups={"Registration", "Profile"})
+           */
+          protected $adresse;
 
 
         /**
@@ -167,5 +181,53 @@ class User extends BaseUser
     public function getTelephone()
     {
         return $this->telephone;
+    }
+
+    /**
+     * Set ville.
+     *
+     * @param string $ville
+     *
+     * @return User
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville.
+     *
+     * @return string
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+
+    /**
+     * Set codePostal.
+     *
+     * @param string $codePostal
+     *
+     * @return User
+     */
+    public function setCodePostal($codePostal)
+    {
+        $this->codePostal = $codePostal;
+
+        return $this;
+    }
+
+    /**
+     * Get codePostal.
+     *
+     * @return string
+     */
+    public function getCodePostal()
+    {
+        return $this->codePostal;
     }
 }
