@@ -159,7 +159,8 @@
                         <div class="cart_text">
                           <a href="{{path('yz_ecommerce_cartpage')}}">Panier</a>
                         </div>
-                        <div class="cart_price">$85</div>
+                        <div class="cart_price">{% if get_somme_prix() is null %}0 €{% else %}
+                        {{get_somme_prix()}}  €{% endif %}</div>
                       </div>
                     </div>
                   </div>

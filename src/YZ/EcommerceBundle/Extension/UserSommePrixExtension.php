@@ -2,10 +2,10 @@
 namespace YZ\EcommerceBundle\Extension;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\RequestStack;
-use YZ\EcommerceBundle\Extension\sommeProduits as SommeProduits;
+use YZ\EcommerceBundle\Extension\sommePrix as SommePrix;
 use Doctrine\ORM\EntityManager;
 
-class UserProfileExtension extends \Twig_Extension
+class UserSommePrixExtension extends \Twig_Extension
 {
 /**
  * @var EntityManager
@@ -17,11 +17,11 @@ protected $requestStack;
 /**
  * @param UserProfileDataService $userProfileDataService
  */
-public function __construct(EntityManager $entityManager, RequestStack $requestStack, SommeProduits $sommeProduits )
+public function __construct(EntityManager $entityManager, RequestStack $requestStack, SommePrix $sommePrix )
 {
     $this->entityManager = $entityManager;
     $this->requestStack = $requestStack;
-    $this->sommeProduits = $sommeProduits;
+    $this->sommePrix = $sommePrix;
 }
 
 /**
@@ -30,14 +30,14 @@ public function __construct(EntityManager $entityManager, RequestStack $requestS
 public function getFunctions()
 {
     return array(
-        new \Twig_SimpleFunction('get_somme_produit', array($this, 'getMyCustomVar')),
+        new \Twig_SimpleFunction('get_somme_prix', array($this, 'getMySommePrix')),
     );
 }
 
 /**
  * @return array
  */
-public function getMyCustomVar()
+public function getMySommePrix()
 {
     $request = $this->requestStack->getCurrentRequest();
     $session = $request->getSession();
@@ -47,10 +47,10 @@ public function getMyCustomVar()
     else{
       $panier = $session->get('panier');
       $cartProducts = $this->entityManager->getRepository('YZEcommerceBundle:Product')->findByArray(array_keys($panier));
-      $somme = $this->sommeProduits->somme($request, $cartProducts);
+      $sommePrix = $this->sommePrix->somme($request, $cartProducts);
     }
 
-    return $somme;
+    return $sommePrix;
 }
 
 /**
@@ -60,6 +60,6 @@ public function getMyCustomVar()
  */
 public function getName()
 {
-    return 'user_profile_extension';
+    return 'user_somme_prix';
 }
 }
