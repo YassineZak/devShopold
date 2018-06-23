@@ -53,7 +53,7 @@ Panier - {{ parent() }}
                       </div>
                     </form></td>
                     <td><a href="{{ path('yz_ecommerce_removecart', {'id': cartProduct.id}) }}"><i class="fas fa-trash-alt"></i></a></td>
-                    {% if cartProduct.promoTtc is null %}
+                    {% if cartProduct.promo is null %}
                     <td>{{cartProduct.prixTtc}} €</td>
                     <td>{{cartProduct.prixTtc * app.session.get('panier')[cartProduct.id]}} €</td>
                     {% else %}
