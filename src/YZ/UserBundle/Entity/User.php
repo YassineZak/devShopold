@@ -49,19 +49,7 @@ class User extends BaseUser
       protected $prenom;
 
 
-      /**
-         * @ORM\Column(type="string")
-         *
-         * @Assert\NotBlank(message="Veuillez saisir votre ville.", groups={"Registration", "Profile"})
-         */
-        protected $villeFacturation;
 
-        /**
-           * @ORM\Column(type="string")
-           *
-           * @Assert\NotBlank(message="Veuillez saisir votre code postal.", groups={"Registration", "Profile"})
-           */
-          protected $codePostalFacturation;
 
           /**
           * @ORM\Column(type="string")
@@ -76,17 +64,7 @@ class User extends BaseUser
            */
           protected $adresseLivraison;
 
-          /**
-             * @ORM\Column(type="string", nullable=true)
-             *
-             */
-            protected $villeLivraison;
 
-            /**
-               * @ORM\Column(type="string", nullable=true)
-               *
-               */
-              protected $codePostalLivraison;
 
 
 
@@ -203,102 +181,6 @@ class User extends BaseUser
     }
 
     /**
-     * Set ville.
-     *
-     * @param string $ville
-     *
-     * @return User
-     */
-    public function setVille($ville)
-    {
-        $this->ville = $ville;
-
-        return $this;
-    }
-
-    /**
-     * Get ville.
-     *
-     * @return string
-     */
-    public function getVille()
-    {
-        return $this->ville;
-    }
-
-    /**
-     * Set codePostal.
-     *
-     * @param string $codePostal
-     *
-     * @return User
-     */
-    public function setCodePostal($codePostal)
-    {
-        $this->codePostal = $codePostal;
-
-        return $this;
-    }
-
-    /**
-     * Get codePostal.
-     *
-     * @return string
-     */
-    public function getCodePostal()
-    {
-        return $this->codePostal;
-    }
-
-    /**
-     * Set villeFacturation.
-     *
-     * @param string $villeFacturation
-     *
-     * @return User
-     */
-    public function setVilleFacturation($villeFacturation)
-    {
-        $this->villeFacturation = $villeFacturation;
-
-        return $this;
-    }
-
-    /**
-     * Get villeFacturation.
-     *
-     * @return string
-     */
-    public function getVilleFacturation()
-    {
-        return $this->villeFacturation;
-    }
-
-    /**
-     * Set codePostalFacturation.
-     *
-     * @param string $codePostalFacturation
-     *
-     * @return User
-     */
-    public function setCodePostalFacturation($codePostalFacturation)
-    {
-        $this->codePostalFacturation = $codePostalFacturation;
-
-        return $this;
-    }
-
-    /**
-     * Get codePostalFacturation.
-     *
-     * @return string
-     */
-    public function getCodePostalFacturation()
-    {
-        return $this->codePostalFacturation;
-    }
-
-    /**
      * Set adresseLivraison.
      *
      * @param string $adresseLivraison
@@ -321,55 +203,6 @@ class User extends BaseUser
     {
         return $this->adresseLivraison;
     }
-
-    /**
-     * Set villeLivraison.
-     *
-     * @param string $villeLivraison
-     *
-     * @return User
-     */
-    public function setVilleLivraison($villeLivraison)
-    {
-        $this->villeLivraison = $villeLivraison;
-
-        return $this;
-    }
-
-    /**
-     * Get villeLivraison.
-     *
-     * @return string
-     */
-    public function getVilleLivraison()
-    {
-        return $this->villeLivraison;
-    }
-
-    /**
-     * Set codePostalLivraison.
-     *
-     * @param string $codePostalLivraison
-     *
-     * @return User
-     */
-    public function setCodePostalLivraison($codePostalLivraison)
-    {
-        $this->codePostalLivraison = $codePostalLivraison;
-
-        return $this;
-    }
-
-    /**
-     * Get codePostalLivraison.
-     *
-     * @return string
-     */
-    public function getCodePostalLivraison()
-    {
-        return $this->codePostalLivraison;
-    }
-
     /**
      * Set adresseFacturation.
      *

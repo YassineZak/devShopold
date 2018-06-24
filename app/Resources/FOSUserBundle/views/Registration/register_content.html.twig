@@ -15,20 +15,16 @@
     <div class="left-column">
       {{ form_row(form.nom)}}
       {{ form_row(form.prenom) }}
-      {{ form_row(form.telephone) }}
     </div>
-    <div class="right-column">
-      {{ form_row(form.adresseFacturation) }}
-      {{ form_row(form.villeFacturation) }}
-      {{ form_row(form.codePostalFacturation) }}
+    <div class="right-column" id="address">
+      {{ form_row(form.telephone, {'attr': {'label': 'Adresse'}} )}}
+      {{ form_row(form.adresseFacturation, {'id': 'autocompleteLivraison', 'attr': {'onFocus': 'geolocate()'}} )}}
     </div>
   </div>
   <input type="checkbox" name="" value="" class="checkboxLivraison"> Adresse de Livraison Différentre
   <div class="adresseLivraison">
     <h3>Adresse de Livraison</h3>
-    {{ form_row(form.adresseLivraison) }}
-    {{ form_row(form.villeLivraison) }}
-    {{ form_row(form.codePostalLivraison) }}
+    {{ form_row(form.adresseLivraison, {'id': 'autocompleteFacturation', 'attr': {'onFocus': 'geolocate()'}} )}}
   </div>
 <div>
     <input type="submit" class="btn btn-primary btn-registration" value="{{ 'registration.submit'|trans }}" />
