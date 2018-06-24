@@ -4,19 +4,33 @@
 <div class="global-form">
   <div class="left-column">
     {{ form_row(form.username) }}
-    {{ form_row(form.plainPassword) }}
-    {{ form_row(form.nom) }}
-    {{ form_row(form.prenom) }}
+    {{ form_row(form.email) }}
   </div>
   <div class="right-column">
-    {{ form_row(form.email) }}
-    {{ form_row(form.telephone) }}
-    {{ form_row(form.adresse) }}
-    {{ form_row(form.ville) }}
-    {{ form_row(form.codePostal) }}
+    {{ form_row(form.plainPassword) }}
   </div>
+  </div>
+  <h2>Coordonnées Personnelles</h2>
+  <div class="global-form">
+    <div class="left-column">
+      {{ form_row(form.nom)}}
+      {{ form_row(form.prenom) }}
+      {{ form_row(form.telephone) }}
+    </div>
+    <div class="right-column">
+      {{ form_row(form.adresseFacturation) }}
+      {{ form_row(form.villeFacturation) }}
+      {{ form_row(form.codePostalFacturation) }}
+    </div>
+  </div>
+  <input type="checkbox" name="" value="" class="checkboxLivraison"> Adresse de Livraison Différentre
+  <div class="adresseLivraison">
+    <h3>Adresse de Livraison</h3>
+    {{ form_row(form.adresseLivraison) }}
+    {{ form_row(form.villeLivraison) }}
+    {{ form_row(form.codePostalLivraison) }}
   </div>
 <div>
     <input type="submit" class="btn btn-primary btn-registration" value="{{ 'registration.submit'|trans }}" />
+    {{ form_end(form) }}
 </div>
-{{ form_end(form) }}

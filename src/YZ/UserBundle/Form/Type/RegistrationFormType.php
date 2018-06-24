@@ -13,9 +13,12 @@ class RegistrationFormType extends AbstractType
         $builder
         ->add('prenom')
         ->add('nom')
-        ->add('adresse')
-        ->add('ville')
-        ->add('codePostal')
+        ->add('adresseFacturation')
+        ->add('villeFacturation')
+        ->add('codePostalFacturation')
+        ->add('adresseLivraison')
+        ->add('villeLivraison')
+        ->add('codePostalLivraison')
         ->add('telephone');
     }
 

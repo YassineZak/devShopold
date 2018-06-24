@@ -175,9 +175,13 @@ easy_admin:
             - { property: telephone, type: tel, label: Téléphone }
             - { property: 'roles', template: 'admin/fields/tag_collection.html.twig',
                         label_colors: ['primary', 'success', 'info'] }
-            - { property: adresse, type: text, label: Adresse }
+            - { property: adresseFacturation, type: text, label: Adresse de facturation }
+            - { property: villeFacturation, type: text, label: Ville }
+            - { property: codePostalFacturation, type: text, label: Code postal }
             - { property: enabled, label: actif }
-            - { property: lastLogin, label: Dernière Connexion, type: datetimetz, format: 'd M Y h:m:i'}
+            - { property: adresseLivraison, type: text, label: Adresse de livraison }
+            - { property: villeLivraison, type: text, label: Ville }
+            - { property: codePostalLivraison, type: text, label: Code postal }
 
         list:
           title: 'liste des membres'
