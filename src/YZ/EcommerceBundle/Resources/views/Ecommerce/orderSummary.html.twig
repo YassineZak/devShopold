@@ -14,21 +14,14 @@ Panier - {{ parent() }}
     <div class="row">
       <div class="col-lg-12">
         <div class="cart_container">
-          <div class="cart_title">Panier d'achat</div>
+          <div class="cart_title">Récapitulatif de votre Commande</div>
           <div class="cart_items">
-            {% if app.session.get('panier') is empty %}
-
-                <div class="">
-                  Votre Panier est Vide !!
-                </div>
-                {% else %}
                   <table id="cart_table" class="table">
                     <thead class="thead-light">
                       <tr>
                         <th scope="col">Miniature</th>
                         <th scope="col">Produit</th>
                         <th scope="col">Quantitée</th>
-                        <th scope="col">Supprimer</th>
                         <th scope="col">Prix Unitaire</th>
                         <th scope="col">Prix Total</th>
                       </tr>
@@ -52,7 +45,6 @@ Panier - {{ parent() }}
                         </select><i id="fontAwesome" class="fas fa-angle-down"></i>
                       </div>
                     </form></td>
-                    <td><a href="{{ path('yz_ecommerce_removecart', {'id': cartProduct.id}) }}"><i class="fas fa-trash-alt"></i></a></td>
                     {% if cartProduct.promo is null %}
                     <td>{{cartProduct.prixTtc}} €</td>
                     <td>{{cartProduct.prixTtc * app.session.get('panier')[cartProduct.id]}} €</td>
@@ -65,7 +57,6 @@ Panier - {{ parent() }}
                 </tbody>
               </table>
                 </div>
-            {% endif %}
           </div>
 
           <!-- Order Total -->
@@ -79,7 +70,7 @@ Panier - {{ parent() }}
           <div class="cart_buttons">
 
             <a href="{{ path('yz_ecommerce_shoppage')}}"><button type="button" class="button cart_button_clear">Continuer vos achats</button></a>
-            <a href="{{ path('yz_ecommerce_ordersummary')}}"><button type="button" class="button cart_button_checkout">Passer Commande</button></a>
+            <button type="button" class="button cart_button_checkout">Passer Commande</button>
           </div>
         </div>
       </div>

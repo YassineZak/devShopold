@@ -39,3 +39,7 @@ yz_ecommerce_categorypage:
 
     path:     /category/{slug}
     defaults: { _controller: YZEcommerceBundle:Ecommerce:category}
+
+yz_ecommerce_ordersummary:
+    path: /order/summary
+    defaults: { _controller: YZEcommerceBundle:Order:summary }
