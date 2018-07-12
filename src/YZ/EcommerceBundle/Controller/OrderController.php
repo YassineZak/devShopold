@@ -8,6 +8,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\Session\Session;
 use YZ\Userbundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use YZ\EcommerceBundle\Entity\Commande;
 
 class OrderController extends Controller
 {
@@ -63,17 +64,26 @@ class OrderController extends Controller
         $cartProducts = $repository->findByArray(array_keys($panier));
         $sommePrix = $this->container->get('yz_somme_prix');
         $sommePrix = $sommePrix->somme($request, $cartProducts);
-        $sommePrix = $sommePrix*100;
         $user = $this->container->get('security.token_storage')->getToken()->getUser()->getNom();
+        $em = $this->getDoctrine()->getManager();
 
         // Create a charge: this will charge the user's card
         try {
             $charge = \Stripe\Charge::create(array(
-                "amount" => $sommePrix, // Amount in cents
+                "amount" => $sommePrix*100, // Amount in cents
                 "currency" => "eur",
                 "source" => $token,
                 "description" => $user
             ));
+
+            $commande = new commande;
+            $commande->setUser($this->container->get('security.token_storage')->getToken()->getUser());
+            $commande->setReference('1');
+            $commande->setProducts($cartProducts);
+            $commande->setValidation(true);
+            $commande->setAmount($sommePrix);
+            $em->persist($commande);
+            $em->flush();
             $this->addFlash("success","Merci pour votre achat");
             $session->remove('panier');
             return $this->redirectToRoute("yz_ecommerce_orderbills");
