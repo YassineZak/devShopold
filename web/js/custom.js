@@ -1105,3 +1105,21 @@ var placeSearch, autocompleteLivraison, autocompleteFacturation;
           });
         }
       }
+
+/////////////////////// stripe api payment /////////////////
+Stripe.setPublishableKey('pk_test_x1NfcAikGMjooiPD92QRHpnF');
+var $form = $('#payment_form');
+$form.submit(function(e){
+	e.preventDefault()
+	Stripe.card.createToken($form, function(status, response){
+		if (response.error) {
+			$form.find('.message').remove();
+			$form.prepend('<p class="alert alert-danger payment-error" role="alert">' + response.error.message + '</p>')
+		}
+		else {
+			var token = response.id;
+			$form.append($('<input type="hidden" name="stripeToken">').val(token));
+			$form.get(0).submit();
+		}
+	})
+})

@@ -43,3 +43,15 @@ yz_ecommerce_categorypage:
 yz_ecommerce_ordersummary:
     path: /order/summary
     defaults: { _controller: YZEcommerceBundle:Order:summary }
+
+yz_ecommerce_orderpayment:
+    path: /order/payment
+    defaults: { _controller: YZEcommerceBundle:Order:payment }
+
+yz_ecommerce_ordercheckout:
+    path: /order/checkout
+    defaults: { _controller: YZEcommerceBundle:Order:checkout }
+
+yz_ecommerce_orderbills:
+    path: /order/bills
+    defaults: { _controller: YZEcommerceBundle:Order:bills }

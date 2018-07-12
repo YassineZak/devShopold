@@ -79,7 +79,10 @@ Panier - {{ parent() }}
           <div class="cart_buttons">
 
             <a href="{{ path('yz_ecommerce_shoppage')}}"><button type="button" class="button cart_button_clear">Continuer vos achats</button></a>
+            {% if app.session.get('panier') is empty %}
+            {% else %}
             <a href="{{ path('yz_ecommerce_ordersummary')}}"><button type="button" class="button cart_button_checkout">Passer Commande</button></a>
+            {% endif %}
           </div>
         </div>
       </div>

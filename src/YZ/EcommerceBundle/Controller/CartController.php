@@ -19,10 +19,16 @@ class CartController extends Controller
       $panier = $session->get('panier');
     }
     $totalprixTva = array();
+    $cartProducts = array();
     $repository = $this->getDoctrine()
     ->getManager()
     ->getRepository('YZEcommerceBundle:Product');
-    $cartProducts = $repository->findByArray(array_keys($panier));
+    if ($panier !== null) {
+      $cartProducts = $repository->findByArray(array_keys($panier));
+    }
+    else {
+      $cartProducts == 0;
+    }
     $sommeTva = $this->container->get('yz_somme_tva');
     $sommeTva = $sommeTva->somme($request, $cartProducts);
     $sommePrix = $this->container->get('yz_somme_prix');
