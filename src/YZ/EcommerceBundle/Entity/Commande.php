@@ -40,7 +40,7 @@ class Commande
     private $dateCommande;
 
     /**
-   * @ORM\ManyToOne(targetEntity="YZ\UserBundle\Entity\User")
+   * @ORM\ManyToOne(targetEntity="YZ\UserBundle\Entity\User", inversedBy="commandes")
    * @ORM\JoinColumn(nullable=false)
    */
     private $user;

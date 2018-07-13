@@ -231,40 +231,4 @@ class User extends BaseUser
     {
         return $this->adresseFacturation;
     }
-
-    /**
-     * Add commande.
-     *
-     * @param \YZ\EcommerceBundle\Entity\Commande $commande
-     *
-     * @return User
-     */
-    public function addCommande(\YZ\EcommerceBundle\Entity\Commande $commande)
-    {
-        $this->commandes[] = $commande;
-        $commande->setUser($this);
-        return $this;
-    }
-
-    /**
-     * Remove commande.
-     *
-     * @param \YZ\EcommerceBundle\Entity\Commande $commande
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
-     */
-    public function removeCommande(\YZ\EcommerceBundle\Entity\Commande $commande)
-    {
-        return $this->commandes->removeElement($commande);
-    }
-
-    /**
-     * Get commandes.
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCommandes()
-    {
-        return $this->commandes;
-    }
 }

@@ -66,7 +66,10 @@ class OrderController extends Controller
         $sommePrix = $sommePrix->somme($request, $cartProducts);
         $user = $this->container->get('security.token_storage')->getToken()->getUser()->getNom();
         $em = $this->getDoctrine()->getManager();
-
+        $repository = $this->getDoctrine()
+        ->getManager()
+        ->getRepository('YZEcommerceBundle:Commande');
+        $lastCommande = $repository->findLastCommande();
         // Create a charge: this will charge the user's card
         try {
             $charge = \Stripe\Charge::create(array(
@@ -78,7 +81,7 @@ class OrderController extends Controller
 
             $commande = new commande;
             $commande->setUser($this->container->get('security.token_storage')->getToken()->getUser());
-            $commande->setReference('1');
+            $commande->setReference($lastCommande->getReference() + 1);
             $commande->setProducts($cartProducts);
             $commande->setValidation(true);
             $commande->setAmount($sommePrix);

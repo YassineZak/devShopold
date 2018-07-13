@@ -1,5 +1,5 @@
-.table th{
-  text-align: center;
+.table th, body.list table td{
+  text-align: center !important;
 }
 body.list table thead th.sorted a {
     background: #333333;

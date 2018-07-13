@@ -10,4 +10,10 @@ namespace YZ\EcommerceBundle\Repository;
  */
 class CommandeRepository extends \Doctrine\ORM\EntityRepository
 {
+  public function findLastCommande()
+  {
+    $qb = $this->createQueryBuilder('c')
+    ->orderBy('c.id', 'DESC');
+   return $qb->getQuery()->getSingleResult();
+  }
 }

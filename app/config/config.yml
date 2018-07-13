@@ -102,6 +102,21 @@ fos_user:
 
 easy_admin:
     entities:
+      Commande:
+        templates:
+          field_datetimetz: 'admin/fields/_datetimetz.html.twig'
+          show: 'admin/_show.html.twig'
+          field_text: 'admin/fields/_text.html.twig'
+        class: YZ\EcommerceBundle\Entity\Commande
+        label: Commandes
+        list:
+          fields:
+            - { property: 'reference', label: 'Numéro de commande' }
+            - { property: 'dateCommande', type: datetimetz }
+            - { property: 'amount', label: 'Montant'}
+            - { property: 'validation', label: 'Validée'}
+            - { property: 'user', label: 'Utilisateur'}
+
       Tva:
         class: YZ\EcommerceBundle\Entity\Tva
       Category:
