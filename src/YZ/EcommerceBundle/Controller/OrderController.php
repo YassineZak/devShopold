@@ -81,7 +81,7 @@ class OrderController extends Controller
 
             $commande = new commande;
             $commande->setUser($this->container->get('security.token_storage')->getToken()->getUser());
-            $commande->setReference($lastCommande->getReference() + 1);
+            $commande->setReference($lastCommande[0]['c_reference'] + 1);
             $commande->setProducts($cartProducts);
             $commande->setValidation(true);
             $commande->setAmount($sommePrix);
@@ -104,5 +104,12 @@ class OrderController extends Controller
   public function billsAction(){
     $user = $this->container->get('security.token_storage')->getToken()->getUser();
     return $this->render('YZEcommerceBundle:Ecommerce:orderBills.html.twig', array('user' => $user));
+    }
+  public function userOrdersAction($id){
+    $repository = $this->getDoctrine()
+    ->getManager()
+    ->getRepository('YZEcommerceBundle:Commande');
+    $userOrder = $repository->findOrderByUser($id);
+      return $this->render('YZEcommerceBundle:Ecommerce:userOrders.html.twig', array('userOrders'=>$userOrder));
     }
   }

@@ -13,7 +13,16 @@ class CommandeRepository extends \Doctrine\ORM\EntityRepository
   public function findLastCommande()
   {
     $qb = $this->createQueryBuilder('c')
-    ->orderBy('c.id', 'DESC');
-   return $qb->getQuery()->getSingleResult();
+    ->orderBy('c.id', 'DESC')
+    ->setMaxResults( 1 );
+   return $qb->getQuery()->getScalarResult();
+  }
+  public function findOrderByUser($id){
+      $qb = $this->createQueryBuilder('c')
+      ->leftJoin('c.user', 'u')
+      ->addSelect('u')
+      ->where('u.id = :id')
+      ->setParameter('id', $id);
+     return $qb->getQuery()->getResult();
   }
 }

@@ -55,3 +55,7 @@ yz_ecommerce_ordercheckout:
 yz_ecommerce_orderbills:
     path: /order/bills
     defaults: { _controller: YZEcommerceBundle:Order:bills }
+
+yz_ecommerce_userorders:
+    path: /order/user/{id}
+    defaults: { _controller: YZEcommerceBundle:Order:userOrders }

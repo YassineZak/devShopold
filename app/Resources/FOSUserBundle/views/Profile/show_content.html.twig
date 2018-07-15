@@ -28,7 +28,7 @@
     </tr>
     </table>
     <div class="">
-      <a href="#">Historique de vos commandes</a>
+      <a href="{{path('yz_ecommerce_userorders', {'id': app.user.id })}}">Historique de vos commandes</a>
     </div>
     <a href="{{path('fos_user_profile_edit')}}"><button class="btn btn-primary btn-length" type="button" name="button">Editer profil</button></a>
   </div>
