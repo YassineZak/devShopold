@@ -59,3 +59,7 @@ yz_ecommerce_orderbills:
 yz_ecommerce_userorders:
     path: /order/user/{id}
     defaults: { _controller: YZEcommerceBundle:Order:userOrders }
+
+yz_ecommerce_orderpdf:
+    path: /order/{id}
+    defaults: { _controller: YZEcommerceBundle:Order:orderPdf }

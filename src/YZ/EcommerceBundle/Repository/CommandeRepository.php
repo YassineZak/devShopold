@@ -25,4 +25,12 @@ class CommandeRepository extends \Doctrine\ORM\EntityRepository
       ->setParameter('id', $id);
      return $qb->getQuery()->getResult();
   }
+  public function findOrder($id){
+    $qb = $this->createQueryBuilder('c')
+    ->leftJoin('c.user', 'u')
+    ->addSelect('u')
+    ->where('c.id = :id')
+    ->setParameter('id', $id);
+    return $qb->getQuery()->getSingleResult();
+  }
 }

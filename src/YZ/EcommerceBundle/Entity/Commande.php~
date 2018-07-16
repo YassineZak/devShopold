@@ -227,28 +227,4 @@ class Commande
     {
         return $this->amount;
     }
-
-    /**
-     * Set qteProduct.
-     *
-     * @param array $qteProduct
-     *
-     * @return Commande
-     */
-    public function setQteProduct($qteProduct)
-    {
-        $this->qteProduct = $qteProduct;
-
-        return $this;
-    }
-
-    /**
-     * Get qteProduct.
-     *
-     * @return array
-     */
-    public function getQteProduct()
-    {
-        return $this->qteProduct;
-    }
 }

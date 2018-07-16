@@ -69,20 +69,36 @@ class OrderController extends Controller
         $repository = $this->getDoctrine()
         ->getManager()
         ->getRepository('YZEcommerceBundle:Commande');
+        $qteProduct = array();
+        $productsName = array();
         $lastCommande = $repository->findLastCommande();
+        if ($lastCommande == null) {
+          $lastCommande = 0;
+        }
+        else {
+          $lastCommande = $lastCommande[0]['c_reference'];
+        }
+        foreach ($cartProducts as $cartProduct) {
+          array_push($qteProduct, $panier[$cartProduct->getId()]);
+        }
+        foreach ($cartProducts as $cartProduct) {
+          array_push($productsName, $cartProduct->getTitre());
+        }
         // Create a charge: this will charge the user's card
         try {
             $charge = \Stripe\Charge::create(array(
-                "amount" => $sommePrix*100, // Amount in cents
+                "amount" => $sommePrix*100, // Amount cents
                 "currency" => "eur",
                 "source" => $token,
                 "description" => $user
             ));
 
+
             $commande = new commande;
             $commande->setUser($this->container->get('security.token_storage')->getToken()->getUser());
-            $commande->setReference($lastCommande[0]['c_reference'] + 1);
+            $commande->setReference($lastCommande + 1);
             $commande->setProducts($cartProducts);
+            $commande->setQteProduct(array_combine($productsName,$qteProduct));
             $commande->setValidation(true);
             $commande->setAmount($sommePrix);
             $em->persist($commande);
@@ -112,4 +128,19 @@ class OrderController extends Controller
     $userOrder = $repository->findOrderByUser($id);
       return $this->render('YZEcommerceBundle:Ecommerce:userOrders.html.twig', array('userOrders'=>$userOrder));
     }
+  public function orderPdfAction($id){
+    $repository = $this->getDoctrine()
+    ->getManager()
+    ->getRepository('YZEcommerceBundle:Commande');
+    $order = $repository->findOrder($id);
+    $userId = $this->container->get('security.token_storage')->getToken()->getUser()->getId();
+    if ($order === null) {
+      throw new NotFoundHttpException("Cette page n'existe pas.");
+    }
+    if ($userId !== $order->getUser()->getId()) {
+      throw new NotFoundHttpException("Cette page n'existe pas.");
+    }
+
+    return $this->render('YZEcommerceBundle:Ecommerce:OrderPdf.html.twig', array('order'=>$order));
+  }
   }
