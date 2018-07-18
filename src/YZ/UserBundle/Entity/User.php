@@ -137,29 +137,6 @@ class User extends BaseUser
       return trim($this->getNom(). ' '.$this->getPrenom());
     }
 
-    /**
-     * Set adresse.
-     *
-     * @param string $adresse
-     *
-     * @return User
-     */
-    public function setAdresse($adresse)
-    {
-        $this->adresse = $adresse;
-
-        return $this;
-    }
-
-    /**
-     * Get adresse.
-     *
-     * @return string
-     */
-    public function getAdresse()
-    {
-        return $this->adresse;
-    }
 
     /**
      * Set telephone.
