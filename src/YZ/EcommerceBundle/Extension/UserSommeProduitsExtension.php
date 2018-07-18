@@ -5,7 +5,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 use YZ\EcommerceBundle\Extension\sommeProduits as SommeProduits;
 use Doctrine\ORM\EntityManager;
 
-class UserProfileExtension extends \Twig_Extension
+class UserSommeProduitsExtension extends \Twig_Extension
 {
 /**
  * @var EntityManager
@@ -30,27 +30,27 @@ public function __construct(EntityManager $entityManager, RequestStack $requestS
 public function getFunctions()
 {
     return array(
-        new \Twig_SimpleFunction('get_somme_produit', array($this, 'getMyCustomVar')),
+        new \Twig_SimpleFunction('get_somme_produit', array($this, 'getMySommeProduits')),
     );
 }
 
 /**
  * @return array
  */
-public function getMyCustomVar()
+public function getMySommeProduits()
 {
     $request = $this->requestStack->getCurrentRequest();
     $session = $request->getSession();
     if (!$session->has('panier')) {
-      $somme = 0;
+      $sommeProduits = 0;
     }
     else{
       $panier = $session->get('panier');
       $cartProducts = $this->entityManager->getRepository('YZEcommerceBundle:Product')->findByArray(array_keys($panier));
-      $somme = $this->sommeProduits->somme($request, $cartProducts);
+      $sommeProduits = $this->sommeProduits->somme($request, $cartProducts);
     }
 
-    return $somme;
+    return $sommeProduits;
 }
 
 /**
@@ -60,6 +60,6 @@ public function getMyCustomVar()
  */
 public function getName()
 {
-    return 'user_profile_extension';
+    return 'user_somme_produit';
 }
 }

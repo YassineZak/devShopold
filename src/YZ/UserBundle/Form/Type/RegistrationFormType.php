@@ -5,6 +5,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use FOS\UserBundle\Util\LegacyFormHelper;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 class RegistrationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -13,7 +14,8 @@ class RegistrationFormType extends AbstractType
         $builder
         ->add('prenom')
         ->add('nom')
-        ->add('adresse')
+        ->add('adresseFacturation', TextType::class, array('label' => 'Adresse'))
+        ->add('adresseLivraison')
         ->add('telephone');
     }
 

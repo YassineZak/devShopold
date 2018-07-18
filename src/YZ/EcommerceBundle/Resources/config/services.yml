@@ -8,11 +8,25 @@ services:
   yz_somme_prix:
     class: YZ\EcommerceBundle\Extension\SommePrix
 
-  twig.extension.user_profile:
-    class: YZ\EcommerceBundle\Extension\UserProfileExtension
+  twig.extension.user_somme_produit:
+    class: YZ\EcommerceBundle\Extension\UserSommeProduitsExtension
     arguments:
       - '@doctrine.orm.entity_manager'
       - '@request_stack'
       - '@yz_somme_produits'
     tags:
+      - { name: twig.extension }
+
+  twig.extension.user_somme_prix:
+    class: YZ\EcommerceBundle\Extension\UserSommePrixExtension
+    arguments:
+      - '@doctrine.orm.entity_manager'
+      - '@request_stack'
+      - '@yz_somme_prix'
+    tags:
+      - { name: twig.extension }
+
+  twig.extension.intl:
+      class: Twig_Extensions_Extension_Intl
+      tags:
       - { name: twig.extension }

@@ -3778,3 +3778,59 @@ color: #4286f4;
 	padding-left: 5px;
 	color: grey;
 }
+.adresseLivraison{
+	display: none;
+
+}
+.checkboxLivraison{
+	display: inline !important;
+}
+.orderLivraison{
+	text-align: center;
+}
+.orderInfos{
+	margin-top: 30px;
+	padding-top: 10px;
+	text-align: center;
+}
+.orderInfos span {
+	font-size: 18px;
+	font-weight: bold;
+	color: #0e8ce4;
+	margin-right: 10px;
+}
+.paymentsinfo{
+	width: 100%;
+	margin-left: 100px;
+}
+.orderInfos i{
+	color: green;
+}
+.login_payment{
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: 3%;
+	color: #0e8ce4;
+	font-size: 30px;
+}
+.stripe-logo{
+	display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 10px;
+}
+.payment-error{
+	width: 25%;
+	text-align: center;
+}
+.UserOrder_title{
+
+}
+.containerExpedition{
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+.table-striped{
+	margin-top: 30px !important;
+}

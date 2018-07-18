@@ -32,7 +32,7 @@ $(document).ready(function()
 {
 	"use strict";
 
-	/* 
+	/*
 
 	1. Vars and Inits
 
@@ -69,7 +69,7 @@ $(document).ready(function()
 		initTabLines();
 	});
 
-	/* 
+	/*
 
 	2. Set Header
 
@@ -100,7 +100,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	3. Init Custom Dropdown
 
@@ -165,7 +165,7 @@ $(document).ready(function()
 		});
 	}
 
-	/* 
+	/*
 
 	4. Init Page Menu
 
@@ -241,7 +241,7 @@ $(document).ready(function()
 		menuActive = false;
 	}
 
-	/* 
+	/*
 
 	5. Init Deals Slider
 
@@ -271,7 +271,7 @@ $(document).ready(function()
 				prev.on('click', function()
 				{
 					dealsSlider.trigger('prev.owl.carousel');
-				});	
+				});
 			}
 
 			if($('.deals_slider_next').length)
@@ -280,12 +280,12 @@ $(document).ready(function()
 				next.on('click', function()
 				{
 					dealsSlider.trigger('next.owl.carousel');
-				});	
+				});
 			}
 		}
 	}
 
-	/* 
+	/*
 
 	6. Init Tab Lines
 
@@ -324,7 +324,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	7. Init Tabs
 
@@ -370,13 +370,13 @@ $(document).ready(function()
 								initASlider(slider);
 							}
 						});
-					});	
+					});
 				});
 			});
 		}
 	}
 
-	/* 
+	/*
 
 	8. Init Featured Slider
 
@@ -392,7 +392,7 @@ $(document).ready(function()
 				var featuredSlider = $(this);
 				initFSlider(featuredSlider);
 			});
-				
+
 		}
 	}
 
@@ -469,7 +469,7 @@ $(document).ready(function()
 		});
 	}
 
-	/* 
+	/*
 
 	9. Init Favorites
 
@@ -489,7 +489,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	10. Init ZIndex
 
@@ -499,7 +499,7 @@ $(document).ready(function()
 	{
 		// Hide slider dots on item hover
 		var items = document.getElementsByClassName('featured_slider_item');
-		
+
 		for(var x = 0; x < items.length; x++)
 		{
 			var item = items[x];
@@ -515,7 +515,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	11. Init Popular Categories Slider
 
@@ -563,7 +563,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	12. Init Banner 2 Slider
 
@@ -586,7 +586,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	13. Init Arrivals Slider
 
@@ -601,8 +601,8 @@ $(document).ready(function()
 			{
 				var arrivalsSlider = $(this);
 				initASlider(arrivalsSlider);
-			});	
-			
+			});
+
 		}
 	}
 
@@ -679,7 +679,7 @@ $(document).ready(function()
 		});
 	}
 
-	/* 
+	/*
 
 	14. Init Arrivals Slider ZIndex
 
@@ -689,7 +689,7 @@ $(document).ready(function()
 	{
 		// Hide slider dots on item hover
 		var items = document.getElementsByClassName('arrivals_slider_item');
-		
+
 		for(var x = 0; x < items.length; x++)
 		{
 			var item = items[x];
@@ -705,7 +705,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	15. Init Best Sellers Slider
 
@@ -721,7 +721,7 @@ $(document).ready(function()
 				var bestsellersSlider = $(this);
 
 				initBSSlider(bestsellersSlider);
-			})	
+			})
 		}
 	}
 
@@ -772,7 +772,7 @@ $(document).ready(function()
 		});
 	}
 
-	/* 
+	/*
 
 	16. Init Trends Slider
 
@@ -824,7 +824,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	17. Init Reviews Slider
 
@@ -855,7 +855,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	18. Init Recently Viewed Slider
 
@@ -905,7 +905,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	19. Init Brands Slider
 
@@ -949,7 +949,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	20. Init Timer
 
@@ -994,16 +994,16 @@ $(document).ready(function()
 				    var current_date = new Date().getTime();
 				    var seconds_left = (target_date - current_date) / 1000;
 				    console.log(seconds_left);
-				 
+
 				    // do some time calculations
 				    days = parseInt(seconds_left / 86400);
 				    seconds_left = seconds_left % 86400;
-				    
+
 				    hours = parseInt(seconds_left / 3600);
 				    hours = hours + days * 24;
 				    seconds_left = seconds_left % 3600;
-				    
-				     
+
+
 				    minutes = parseInt(seconds_left / 60);
 				    seconds = parseInt(seconds_left % 60);
 
@@ -1023,10 +1023,103 @@ $(document).ready(function()
 				    // display results
 				    h.text(hours);
 				    m.text(minutes);
-				    s.text(seconds); 
-				 
+				    s.text(seconds);
+
 				}, 1000);
-    		});	
-    	}	
+    		});
+    	}
     }
 });
+/*********** adresse livraison *******************/
+$(".checkboxLivraison").click(function(){
+	if(this.checked) {
+		$(".adresseLivraison").css("display", "block");
+    }
+	else if (!this.checked) {
+		{
+			$(".adresseLivraison").css("display", "none");
+	    }
+	}
+});
+/************** api google map autocomplete ***************/
+var placeSearch, autocompleteLivraison, autocompleteFacturation;
+      var componentForm = {
+        street_number: 'short_name',
+        route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+      };
+
+      function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocompleteLivraison = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocompleteLivraison')),
+            {types: ['geocode']});
+
+						autocompleteFacturation = new google.maps.places.Autocomplete(
+		            /** @type {!HTMLInputElement} */(document.getElementById('autocompleteFacturation')),
+		            {types: ['geocode']});
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+      }
+
+      function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
+
+        for (var component in componentForm) {
+          document.getElementById(component).value = '';
+          document.getElementById(component).disabled = false;
+        }
+
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        for (var i = 0; i < place.address_components.length; i++) {
+          var addressType = place.address_components[i].types[0];
+          if (componentForm[addressType]) {
+            var val = place.address_components[i][componentForm[addressType]];
+            document.getElementById(addressType).value = val;
+          }
+        }
+      }
+
+      // Bias the autocomplete object to the user's geographical location,
+      // as supplied by the browser's 'navigator.geolocation' object.
+      function geolocate() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geolocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            var circle = new google.maps.Circle({
+              center: geolocation,
+              radius: position.coords.accuracy
+            });
+            autocomplete.setBounds(circle.getBounds());
+          });
+        }
+      }
+
+/////////////////////// stripe api payment /////////////////
+Stripe.setPublishableKey('pk_test_x1NfcAikGMjooiPD92QRHpnF');
+var $form = $('#payment_form');
+$form.submit(function(e){
+	e.preventDefault()
+	Stripe.card.createToken($form, function(status, response){
+		if (response.error) {
+			$form.find('.message').remove();
+			$form.prepend('<p class="alert alert-danger payment-error" role="alert">' + response.error.message + '</p>')
+		}
+		else {
+			var token = response.id;
+			$form.append($('<input type="hidden" name="stripeToken">').val(token));
+			$form.get(0).submit();
+		}
+	})
+})

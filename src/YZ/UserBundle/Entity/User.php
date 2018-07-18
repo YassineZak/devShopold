@@ -49,16 +49,27 @@ class User extends BaseUser
       protected $prenom;
 
 
-      /**
-         * @ORM\Column(type="text")
-         *
-         * @Assert\NotBlank(message="Veuillez saisir votre adresse.", groups={"Registration", "Profile"})
-         */
-        protected $adresse;
+
+
+          /**
+          * @ORM\Column(type="string")
+          *
+          * @Assert\NotBlank(message="Veuillez saisir votre adresse.", groups={"Registration", "Profile"})
+          */
+          protected $adresseFacturation;
+
+        /**
+           * @ORM\Column(type="string", nullable=true)
+           *
+           */
+          protected $adresseLivraison;
+
+
+
 
 
         /**
-           * @ORM\Column(type="integer")
+           * @ORM\Column(type="string")
            *
            * @Assert\NotBlank(message="Veuillez saisir votre adresse.", groups={"Registration", "Profile"})
            * @Assert\Type(
@@ -66,6 +77,11 @@ class User extends BaseUser
            * message="Veuillez saisir un numéro de téléphone")
            */
           protected $telephone;
+
+           /**
+            *@ORM\OneToMany(targetEntity="YZ\EcommerceBundle\Entity\Commande", mappedBy="user")
+            */
+          protected $commandes;
 
 
 
@@ -121,29 +137,6 @@ class User extends BaseUser
       return trim($this->getNom(). ' '.$this->getPrenom());
     }
 
-    /**
-     * Set adresse.
-     *
-     * @param string $adresse
-     *
-     * @return User
-     */
-    public function setAdresse($adresse)
-    {
-        $this->adresse = $adresse;
-
-        return $this;
-    }
-
-    /**
-     * Get adresse.
-     *
-     * @return string
-     */
-    public function getAdresse()
-    {
-        return $this->adresse;
-    }
 
     /**
      * Set telephone.
@@ -167,5 +160,88 @@ class User extends BaseUser
     public function getTelephone()
     {
         return $this->telephone;
+    }
+
+    /**
+     * Set adresseLivraison.
+     *
+     * @param string $adresseLivraison
+     *
+     * @return User
+     */
+    public function setAdresseLivraison($adresseLivraison)
+    {
+        $this->adresseLivraison = $adresseLivraison;
+
+        return $this;
+    }
+
+    /**
+     * Get adresseLivraison.
+     *
+     * @return string
+     */
+    public function getAdresseLivraison()
+    {
+        return $this->adresseLivraison;
+    }
+    /**
+     * Set adresseFacturation.
+     *
+     * @param string $adresseFacturation
+     *
+     * @return User
+     */
+    public function setAdresseFacturation($adresseFacturation)
+    {
+        $this->adresseFacturation = $adresseFacturation;
+
+        return $this;
+    }
+
+    /**
+     * Get adresseFacturation.
+     *
+     * @return string
+     */
+    public function getAdresseFacturation()
+    {
+        return $this->adresseFacturation;
+    }
+
+    /**
+     * Add commande.
+     *
+     * @param \YZ\EcommerceBundle\Entity\Commande $commande
+     *
+     * @return User
+     */
+    public function addCommande(\YZ\EcommerceBundle\Entity\Commande $commande)
+    {
+        $this->commandes[] = $commande;
+        $commande->setUser($this);
+        return $this;
+    }
+
+    /**
+     * Remove commande.
+     *
+     * @param \YZ\EcommerceBundle\Entity\Commande $commande
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeCommande(\YZ\EcommerceBundle\Entity\Commande $commande)
+    {
+        return $this->commandes->removeElement($commande);
+    }
+
+    /**
+     * Get commandes.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCommandes()
+    {
+        return $this->commandes;
     }
 }

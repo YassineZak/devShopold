@@ -11,10 +11,25 @@
       <td>{{ user.email }}</td>
     </tr>
     <tr>
-      <th>{{ 'profile.show.name'|trans }}</th>
-      <td>{{ user.firstname }}</td>
+      <th> Nom Complet </th>
+      <td>{{ user.prenom|capitalize }}  {{user.nom|capitalize}}</td>
+    </tr>
+    <tr>
+      <th> Téléphone </th>
+      <td>+33{{ user.telephone }}</td>
+    </tr>
+    <tr>
+      <th> Adresse de Facturation </th>
+      <td>{{ user.adresseFacturation }}</td>
+    </tr>
+    <tr>
+      <th> Adresse de Livraison </th>
+      <td>{{ user.adresseLivraison }}</td>
     </tr>
     </table>
+    <div class="">
+      <a href="{{path('yz_ecommerce_userorders', {'id': app.user.id })}}">Historique de vos commandes</a>
+    </div>
     <a href="{{path('fos_user_profile_edit')}}"><button class="btn btn-primary btn-length" type="button" name="button">Editer profil</button></a>
   </div>
 </div>

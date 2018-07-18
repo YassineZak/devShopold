@@ -1,0 +1,47 @@
+{% extends "YZEcommerceBundle::layout.html.twig" %}
+
+{% block title %}
+Panier - {{ parent() }}
+{% endblock %}
+{% block body %}
+
+
+<!-- Cart -->
+
+<div class="cart_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        {% for message in app.session.flashbag.get('success') %}
+          <div class="alert alert-success" role="alert">
+            {{ message }}
+          </div>
+        {% endfor %}
+        <div class="cart_container">
+          <h3 class="login_title" >Infos Facture</h3>
+          <!-- Order info -->
+            <div >
+              <div class="orderInfos">
+                <span>Nom & prénom : </span>
+                {{user.nom}} {{user.prenom}} <br><br>
+                <span>Téléphone : </span>0{{user.telephone}} <br><br>
+                <span>Email : </span>{{user.email}} <br><br>
+                {% if user.adresseLivraison is not null %}
+                <span>Adresse de Livraison : </span>{{user.adresseLivraison}} <br><br>
+                {% else %}
+                <span>Adresse de Livraison : </span>{{user.adresseFacturation}} <br><br>
+                {% endif %}
+                <span>Adresse de Facturation : </span>{{user.adresseFacturation}} <br><br>
+                <span>Status : </span>Validée <i class="fas fa-check"></i><br><br>
+              </div>
+            </div>
+          </div>
+          <div class="cart_buttons">
+            <a href=""><button type="button" class="button cart_button_checkout">Téléchargement de la facture</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
