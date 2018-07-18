@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 use YZ\Userbundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use YZ\EcommerceBundle\Entity\Commande;
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 
 class OrderController extends Controller
 {
@@ -141,6 +142,42 @@ class OrderController extends Controller
       throw new NotFoundHttpException("Cette page n'existe pas.");
     }
 
+
     return $this->render('YZEcommerceBundle:Ecommerce:OrderPdf.html.twig', array('order'=>$order));
+    }
+    public function pdfAction($id)
+{
+  $repository = $this->getDoctrine()
+  ->getManager()
+  ->getRepository('YZEcommerceBundle:Commande');
+  $order = $repository->findOrder($id);
+  $userId = $this->container->get('security.token_storage')->getToken()->getUser()->getId();
+  if ($order === null) {
+    throw new NotFoundHttpException("Cette page n'existe pas.");
   }
+  if ($userId !== $order->getUser()->getId()) {
+    throw new NotFoundHttpException("Cette page n'existe pas.");
+  }
+    $html = $this->renderView('YZEcommerceBundle:Ecommerce:Pdf.html.twig', array(
+        'order'  => $order
+    ));
+
+    $html = $this->renderView('YZEcommerceBundle:Ecommerce:Pdf.html.twig', array(
+        'order'  => $order));
+        $pdfGenerator = $this->get('knp_snappy.pdf');
+
+
+        $user= $this->container->get('security.token_storage')->getToken()->getUser();
+        $user = $user->getNom();
+
+        $date = date("d_M_Y_");
+
+        $filename = $user.'_'.$date;
+
+        return new PdfResponse(
+            $this->get('knp_snappy.pdf')->getOutputFromHtml($html),
+            'file.pdf'
+        );
+
+}
   }

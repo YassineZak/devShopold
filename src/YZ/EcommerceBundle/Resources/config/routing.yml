@@ -63,3 +63,10 @@ yz_ecommerce_userorders:
 yz_ecommerce_orderpdf:
     path: /order/{id}
     defaults: { _controller: YZEcommerceBundle:Order:orderPdf }
+
+yz_ecommerce_pdf:
+    path: /orderprint/{id}
+    defaults:
+      _controller: YZEcommerceBundle:Order:pdf
+    requirements:
+      id: \d*
