@@ -106,7 +106,11 @@ class OrderController extends Controller
             $em->flush();
             $this->addFlash("success","Merci pour votre achat");
             $session->remove('panier');
-            return $this->redirectToRoute("yz_ecommerce_orderbills");
+            $lastCommande = $repository->findLastCommande();
+            dump($lastCommande);
+            $orderId = $lastCommande[0]['c_id'];
+
+            return $this->redirectToRoute('yz_ecommerce_orderpdf', array('id' => $orderId));
         } catch(\Stripe\Error\Card $e) {
 
             $this->addFlash("error", "Une erreur s'est produite");
@@ -118,10 +122,6 @@ class OrderController extends Controller
         return $this->redirectToRoute("yz_ecommerce_homepage");
       }
   }
-  public function billsAction(){
-    $user = $this->container->get('security.token_storage')->getToken()->getUser();
-    return $this->render('YZEcommerceBundle:Ecommerce:orderBills.html.twig', array('user' => $user));
-    }
   public function userOrdersAction($id){
     $repository = $this->getDoctrine()
     ->getManager()

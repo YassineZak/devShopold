@@ -33,4 +33,5 @@ class CommandeRepository extends \Doctrine\ORM\EntityRepository
     ->setParameter('id', $id);
     return $qb->getQuery()->getSingleResult();
   }
+  
 }
