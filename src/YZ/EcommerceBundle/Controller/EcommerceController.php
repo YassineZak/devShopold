@@ -39,6 +39,7 @@ class EcommerceController extends Controller
       ->getManager()
       ->getRepository('YZEcommerceBundle:Product');
       $products = $repository->getProducts($page, $nbPerPage);
+
       $nbPages = ceil(count($products) / $nbPerPage);
       if ($page > $nbPages) {
       throw $this->createNotFoundException("La page ".$page." n'existe pas.");

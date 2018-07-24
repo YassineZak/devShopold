@@ -143,7 +143,7 @@ class OrderController extends Controller
     }
 
 
-    return $this->render('YZEcommerceBundle:Ecommerce:OrderPdf.html.twig', array('order'=>$order));
+    return $this->render('YZEcommerceBundle:Ecommerce:orderPdf.html.twig', array('order'=>$order));
     }
     public function pdfAction($id)
 {
@@ -151,33 +151,28 @@ class OrderController extends Controller
   ->getManager()
   ->getRepository('YZEcommerceBundle:Commande');
   $order = $repository->findOrder($id);
-  $userId = $this->container->get('security.token_storage')->getToken()->getUser()->getId();
+  $user = $this->container->get('security.token_storage')->getToken()->getUser();
+  $userId = $user->getId();
   if ($order === null) {
     throw new NotFoundHttpException("Cette page n'existe pas.");
   }
   if ($userId !== $order->getUser()->getId()) {
     throw new NotFoundHttpException("Cette page n'existe pas.");
   }
-    $html = $this->renderView('YZEcommerceBundle:Ecommerce:Pdf.html.twig', array(
-        'order'  => $order
-    ));
-
-    $html = $this->renderView('YZEcommerceBundle:Ecommerce:Pdf.html.twig', array(
+    $html = $this->renderView('YZEcommerceBundle:Ecommerce:pdf.html.twig', array(
         'order'  => $order));
-        $pdfGenerator = $this->get('knp_snappy.pdf');
-
-
-        $user= $this->container->get('security.token_storage')->getToken()->getUser();
-        $user = $user->getNom();
-
+        $userName = $user->getNom();
         $date = date("d_M_Y_");
-
-        $filename = $user.'_'.$date;
-
-        return new PdfResponse(
-            $this->get('knp_snappy.pdf')->getOutputFromHtml($html),
-            'file.pdf'
-        );
+        $filename = $userName.'_'.$date;
+         $snappy = $this->get('knp_snappy.pdf');
+        return new Response(
+        $snappy->getOutputFromHtml($html),
+        200,
+        array(
+            'Content-Type'          => 'application/pdf',
+            'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"'
+        )
+    );
 
 }
   }

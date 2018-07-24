@@ -262,10 +262,9 @@ Accueil - {{ parent() }}
 
               <!-- Best Sellers Item -->
               {% for product in products %}
-
               <div class="bestsellers_item discount">
                 <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                  <div class="bestsellers_image"><img src="/devshop/web{{ vich_uploader_asset(product, 'imageFile') }}" alt=""></div>
+                  <div class="bestsellers_image"><img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile') }}" alt=""></div>
                   <div class="bestsellers_content">
                     <div class="bestsellers_category"><a href="#">{{product.category.name}}</a></div>
                     <div class="bestsellers_name"><a href="{{ path('yz_ecommerce_productpage', {'slug': product.slug}) }}">{{product.titre}}</a></div>
@@ -279,8 +278,11 @@ Accueil - {{ parent() }}
                 </div>
                 <div class="bestsellers_fav active"><i class="fa fa-heart"></i></div>
                 <ul class="bestsellers_marks">
+                  {% if product.promo is null %}
+                  <li class="bestsellers_mark bestsellers_discount" style="background: #42b6f4;">new</li>
+                  {% else %}
                   <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                  <li class="bestsellers_mark bestsellers_new">new</li>
+                  {% endif %}
                 </ul>
               </div>
               {% endfor %}

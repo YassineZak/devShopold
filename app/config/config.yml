@@ -103,6 +103,7 @@ fos_user:
 easy_admin:
     entities:
       Commande:
+        disabled_actions: ['edit', 'new']
         templates:
           field_datetimetz: 'admin/fields/_datetimetz.html.twig'
           show: 'admin/_show.html.twig'
@@ -110,12 +111,19 @@ easy_admin:
         class: YZ\EcommerceBundle\Entity\Commande
         label: Commandes
         list:
+          actions: ['show']
           fields:
             - { property: 'reference', label: 'Numéro de commande' }
             - { property: 'dateCommande', type: datetimetz }
             - { property: 'amount', label: 'Montant'}
             - { property: 'validation', label: 'Validée'}
             - { property: 'user', label: 'Utilisateur'}
+        form:
+          fields:
+            - { property: 'reference', label: 'Commande numéro' }
+            - { property: 'dateCommande', label: 'Date de la commande' }
+            - { property: 'user', label: 'Client' }
+            - { property: 'amount', label: 'Montant' }
 
       Tva:
         class: YZ\EcommerceBundle\Entity\Tva
@@ -143,7 +151,7 @@ easy_admin:
             - { property: 'titre', label: 'Titre' }
             - { property: 'resume', label: 'Resume', type: text }
             - { property: 'prixTtc', label: 'Prix TTC', type: decimal }
-            - { property: 'imageProduit', type: 'image', base_path: '/devshop/web%app.path.product_images%'}
+            - { property: 'imageProduit', type: 'image', base_path: '/devShop/web%app.path.product_images%'}
         show:
           fields:
             - { property: 'titre', label: 'Titre' }
@@ -157,9 +165,9 @@ easy_admin:
             - { property: 'tva', label: 'Tva' }
             - { property: 'stock', label: 'Stock', type: integer }
             - { property: 'reference', label: 'Reférence', type: text }
-            - { property: 'imageProduit', type: 'image', base_path: '/devshop/web%app.path.product_images%', label: 'Image principale'}
-            - { property: 'imageProduit2', type: 'image', base_path: '/devshop/web%app.path.product_images%', label: 'Images additionnelles'}
-            - { property: 'imageProduit3', type: 'image', base_path: '/devshop/web%app.path.product_images%', label: 'Images additionnelles'}
+            - { property: 'imageProduit', type: 'image', base_path: '/devShop/web%app.path.product_images%', label: 'Image principale'}
+            - { property: 'imageProduit2', type: 'image', base_path: '/devShop/web%app.path.product_images%', label: 'Images additionnelles'}
+            - { property: 'imageProduit3', type: 'image', base_path: '/devShop/web%app.path.product_images%', label: 'Images additionnelles'}
         form:
           fields:
             - { property: 'titre', label: 'Titre', type: text }
@@ -261,6 +269,6 @@ stof_doctrine_extensions:
 knp_snappy:
     pdf:
         enabled:    true
-        binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\""
+        binary:     "/usr/local/bin/wkhtmltopdf"
         options:
           encoding: UTF-8
