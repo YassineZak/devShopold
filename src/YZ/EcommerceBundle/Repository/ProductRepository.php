@@ -59,4 +59,13 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
       ->setParameter('array', $array);
       return $qb->getQuery()->getResult();
   }
+  public function findByTerm($term){
+    $qb = $this->createQueryBuilder('p')
+    ->leftJoin('p.category', 'c')
+    ->addSelect('c')
+    ->where('p.titre LIKE :term')
+    ->setParameter( 'term', "%$term%")
+    ->orderBy('p.titre');
+    return $qb->getQuery()->getResult();
+  }
 }

@@ -33,11 +33,7 @@ class CartController extends Controller
     $sommeTva = $sommeTva->somme($request, $cartProducts);
     $sommePrix = $this->container->get('yz_somme_prix');
     $sommePrix = $sommePrix->somme($request, $cartProducts);
-    $repository = $this->getDoctrine()
-    ->getManager()
-    ->getRepository('YZEcommerceBundle:Category');
-    $categories = $repository->findAll();
-    return $this->render('YZEcommerceBundle:Ecommerce:cart.html.twig', array('cartProducts' => $cartProducts, 'categories' => $categories, 'sommeTva' => $sommeTva, 'sommePrix' => $sommePrix));
+    return $this->render('YZEcommerceBundle:Ecommerce:cart.html.twig', array('cartProducts' => $cartProducts, 'sommeTva' => $sommeTva, 'sommePrix' => $sommePrix));
   }
 
   public function addToCartAction($id, Request $request){

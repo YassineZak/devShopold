@@ -1,3 +1,7 @@
+yz_search:
+    resource: "@YZSearchBundle/Resources/config/routing.yml"
+    prefix:   /
+
 
 
 yz_ecommerce:

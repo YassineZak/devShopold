@@ -33,13 +33,9 @@ class OrderController extends Controller
     $sommePrix = $sommePrix->somme($request, $cartProducts);
     $repository = $this->getDoctrine()
     ->getManager()
-    ->getRepository('YZEcommerceBundle:Category');
-    $categories = $repository->findAll();
-    $repository = $this->getDoctrine()
-    ->getManager()
     ->getRepository('YZUserBundle:User');
     $user = $this->container->get('security.token_storage')->getToken()->getUser();
-    return $this->render('YZEcommerceBundle:Ecommerce:orderSummary.html.twig', array('cartProducts' => $cartProducts, 'categories' => $categories, 'sommeTva' => $sommeTva, 'sommePrix' => $sommePrix, 'user' => $user));
+    return $this->render('YZEcommerceBundle:Ecommerce:orderSummary.html.twig', array('cartProducts' => $cartProducts, 'sommeTva' => $sommeTva, 'sommePrix' => $sommePrix, 'user' => $user));
   }
 
   public function paymentAction() {

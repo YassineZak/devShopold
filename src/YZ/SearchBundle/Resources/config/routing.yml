@@ -1,0 +1,4 @@
+yz_handle_search:
+    defaults: { _controller: YZSearchBundle:Search:handleSearch }
+    path:     /search
+    methods: get
