@@ -8,6 +8,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class SearchController extends Controller{
 
@@ -30,6 +31,22 @@ class SearchController extends Controller{
     ->getRepository('YZEcommerceBundle:Product');
     $searchresult = $repository->findByTerm($term);
     return $this->render('YZEcommerceBundle:Ecommerce:shop.html.twig', array('products' => $searchresult));
+  }
+
+  /**
+  * @param Request $request
+  * @Method("GET")
+  */
+  public function jsonResultSearchAction(Request $request){
+
+    $term = $request->get('form')['search'];
+    $repository = $this->getDoctrine()
+    ->getManager()
+    ->getRepository('YZEcommerceBundle:Product');
+    $searchresult = $repository->findByTerm($term);
+    $response = new JsonResponse();
+    $response->setData($searchresult);
+    return $response;
   }
 
 

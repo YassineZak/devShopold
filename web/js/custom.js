@@ -1123,3 +1123,40 @@ $form.submit(function(e){
 		}
 	})
 })
+////////////////////////// ajax searchBar autocomplete ////////////////
+
+$( document ).ready(function() {
+    $(".search").keyup(function(){
+			if ($(this).val().length > 5) {
+				$.ajax({
+					type: 'get',
+					url: 'http://localhost/devShop/web/app_dev.php/json/search?form[search]='+ $(this).val(),
+					dataType: 'json',
+					beforeSend:  function(){
+					},
+					success: function(data){
+						for(var i in data){
+							var searchWord= data[i].titre;
+						if ($( "#search-result ul li" ).hasClass( data[i].slug )) {
+						}
+						else {
+							$("#search-result ul").append("<li class =" + data[i].slug + "><a href='/devShop/web/app_dev.php/product/" + data[i].slug + "'><span>" + data[i].titre +  "</span><img class='text-right' src='/devShop/web/uploads/images/products/" + data[i].imageProduit + "' alt=''></a></li>");
+
+						}
+					}
+					/*	<li>
+		          iphone X "http://localhost/devShop/web/uploads/images/products/5b5850d67343b864510184.jpg"
+
+
+		        </li>*/
+						$("#search-result").show();
+					}
+
+				});
+			} else {
+				$(".search").val();
+				$("#search-result ul li").remove();
+				$("#search-result").hide();
+			}
+		})
+});

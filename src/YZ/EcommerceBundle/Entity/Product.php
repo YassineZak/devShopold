@@ -6,6 +6,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use JsonSerializable;
 
 /**
  * Product
@@ -15,7 +16,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * @ORM\HasLifecycleCallbacks()
  * @Vich\Uploadable
  */
-class Product
+class Product implements JsonSerializable
 {
     /**
      * @var int
@@ -664,5 +665,25 @@ class Product
 
       $this->prixTtc = $this->getPrixTva() + $this->getPrix();
       return $this;
+    }
+
+    public function jsonSerialize()
+    {
+        return array(
+            'id' => $this->id,
+            'titre' => $this->titre,
+            'slug'=> $this->slug,
+            'resume'=> $this->resume,
+            'description'=> $this->description,
+            'prix'=> $this->prix,
+            'prixTtc'=> $this->prixTtc,
+            'promo'=> $this->promo,
+            'promoTtc'=> $this->promoTtc,
+            'dateCreation'=> $this->dateCreation,
+            'stock'=> $this->stock,
+            'reference'=> $this->reference,
+            'category'=> $this->category,
+            'imageProduit'=> $this->imageProduit,
+        );
     }
 }
