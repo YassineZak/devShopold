@@ -9,6 +9,14 @@ yz_ecommerce_shoppage:
     requirements:
       page: \d*
 
+
+yz_ecommerce_promopage:
+
+    path:     /promo/{page}
+    defaults: { _controller: YZEcommerceBundle:Ecommerce:promo, page: 1 }
+    requirements:
+      page: \d*
+
 yz_ecommerce_productpage:
 
     path:     /product/{slug}

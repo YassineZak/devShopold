@@ -68,6 +68,24 @@ class EcommerceController extends Controller
       return $this->render('YZEcommerceBundle:Ecommerce:shop.html.twig', array('products' => $products));
     }
 
+    public function promoAction($page){
+
+      if ($page < 1) {
+      throw $this->createNotFoundException("La page ".$page." n'existe pas.");
+    }
+    $nbPerPage = 10;
+      $repository = $this->getDoctrine()
+      ->getManager()
+      ->getRepository('YZEcommerceBundle:Product');
+      $products = $repository->getProductsPromo($page, $nbPerPage);
+
+      $nbPages = ceil(count($products) / $nbPerPage);
+      if ($page > $nbPages) {
+      throw $this->createNotFoundException("La page ".$page." n'existe pas.");
+    }
+      return $this->render('YZEcommerceBundle:Ecommerce:shop.html.twig', array('products' => $products,'nbPages'=> $nbPages,'page'=> $page));
+    }
+
 
 
 

@@ -111,7 +111,7 @@
                       {% if product.promo is null %}
                         <li class="product_mark product_new">new</li>
                       {% else %}
-                        <li class="product_mark product_new" style="background: red;">-25%</li>
+                        <li class="product_mark product_new" style="background: red;">-{{product.promoAvg}}%</li>
                       {% endif %}
                     </ul>
                   </div>

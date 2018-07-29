@@ -68,4 +68,19 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
     ->orderBy('p.titre');
     return $qb->getQuery()->getResult();
   }
+  public function getProductsPromo($page, $nbPerPage)
+  {
+    $products = $this->createQueryBuilder('p')
+      ->leftJoin('p.category', 'c')
+      ->addSelect('c')
+      ->where('p.promo IS NOT NULL')
+      ->orderBy('p.dateCreation', 'DESC')
+      ->getQuery();
+    $products
+    ->setFirstResult(($page-1) * $nbPerPage)
+    ->setMaxResults($nbPerPage);
+    return new Paginator($products, true);
+  }
+
+
 }

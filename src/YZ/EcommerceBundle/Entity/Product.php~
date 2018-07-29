@@ -694,36 +694,4 @@ class Product implements JsonSerializable
             'imageProduit'=> $this->imageProduit,
         );
     }
-
-    /**
-     * Set promoAvg.
-     *
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     * @param int|null $promoAvg
-     *
-     * @return Product
-     */
-    public function setPromoAvg($promoAvg = null)
-    {
-
-        if ($this->getPromoTtc() !== null ) {
-          $prixPromoTtc = $this->getPromoTtc();
-          $prixTtc = $this->getPrixTtc();
-          $montantRemise = $prixTtc - $prixPromoTtc;
-          $this->promoAvg= ($montantRemise*100)/$prixTtc;
-        }
-
-        return $this;
-    }
-
-    /**
-     * Get promoAvg.
-     *
-     * @return int|null
-     */
-    public function getPromoAvg()
-    {
-        return $this->promoAvg;
-    }
 }
