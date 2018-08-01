@@ -41,7 +41,7 @@ class ContactController extends Controller
 
     private function sendEmail($data){
         $myappContactMail = 'devshop@zakari-yassine.fr';
-        $myappContactPassword = '';
+        $myappContactPassword = 'Sniper159';
 
         $transport = \Swift_SmtpTransport::newInstance('smtp.phpnet.org', 465,'ssl')
             ->setUsername($myappContactMail)

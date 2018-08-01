@@ -32,7 +32,7 @@ class ContactType extends AbstractType
                     new Email(array("message" => "Your email doesn't seems to be valid")),
                 )
             ))
-            ->add('message', CKEditorType::class, array('attr' => array('placeholder' => 'Your message here'),
+            ->add('message', TextareaType::class, array('attr' => array('placeholder' => 'Your message here'),
                 'constraints' => array(
                     new NotBlank(array("message" => "Please provide a message here")),
                 )

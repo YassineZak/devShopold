@@ -2,7 +2,7 @@
 <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
   <div class="header_search">
     <div class="header_search_content">
-      <div class="header_search_form_container">
+      <div class="form-group">
           {{ form_start(form, {'action': path('yz_handle_search'), 'method': 'get', 'attr': {'class': 'header_search_form clearfix'}}) }}
           {{ form_widget(form.search, {'attr': {'class': 'header_search_input search', 'name': 'search', 'autocomplete': 'off', 'placeholder': 'Plus de 1000 articles disponibles en stock ...'}} )}}
 
@@ -19,6 +19,7 @@
                       <a class="clc" href="#">{{category.name|capitalize}}</a>
                     </li>
                   {% endfor %}
+
 
                 <li>
                   <a class="clc" href="#">Laptops</a>

@@ -159,6 +159,7 @@ easy_admin:
             - { property: 'imageProduit', type: 'image', base_path: '/devShop/web%app.path.product_images%'}
         show:
           fields:
+            - { property: 'id', label: 'Id' }
             - { property: 'titre', label: 'Titre' }
             - { property: 'description', label: 'Description', type: text }
             - { property: 'resume', label: 'Resume', type: text }

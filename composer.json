@@ -40,7 +40,8 @@
         "stripe/stripe-php": "^6.10",
         "knplabs/knp-snappy-bundle": "^1.5",
         "knplabs/knp-snappy": "^1.0",
-        "symfony/intl": "^4.1"
+        "symfony/intl": "^4.1",
+        "fabpot/goutte": "^3.2"
 
     },
     "require-dev": {
