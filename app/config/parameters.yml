@@ -1,12 +1,12 @@
 # This file is auto-generated during the composer install
 parameters:
-    database_host: cl1-sql20.phpnet.org
+    database_host: ---------------------
     database_port: null
-    database_name: shp77292
-    database_user: shp77292
-    database_password: 3hDTRb7wRn4
+    database_name: ------------
+    database_user: -------------
+    database_password: --------
     mailer_transport: smtp
     mailer_host: smtp.phpnet.org
     mailer_user: devshop@zakari-yassine.fr
     mailer_password: null
-    secret: a51958429c702975518cd44f03f6c6bab28419ea
+    secret: ------------------------------------
