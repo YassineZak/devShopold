@@ -2,10 +2,7 @@ language: php
 php:
   - '7.2.7'
 script:
-  - composer install
   - php bin/console ckeditor:install
+  - composer install
   - ./vendor/bin/simple-phpunit
-  - git checkout master
-  - git merge dev-environment
-  - git checkout dev-environment
 
