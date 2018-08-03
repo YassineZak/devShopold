@@ -1,5 +1,5 @@
 Command line:
-"travis -help"
+"travis -encrypt -r user/repo GITHUB_SECRET_TOKEN=dfe48656548443901f1dd7dfe01e2c4842a6c59b"
 
 
    ________                                 __
@@ -24,19 +24,21 @@ Command line:
 
      There is absolutely no warranty on any results obtained from TRAVIS.
 
-  #  Running on ubuntu at Fri Aug  3 22:21:31 2018 (PID 9814).
+  #  Running on ubuntu at Fri Aug  3 19:05:08 2018 (PID 5315).
   #  Running in /var/www/html/devShop
   #  Code version: Aug 12 2017, compiled at Jan 14 2018 01:39:14, compiler "7.2.0", GCC 7.2.0
   #  Target platform: Linux, compile flags: DEBUG_ARRAYS 
   #  Machine: int=4b, long=8b, addr=8b, 0xA0B0C0D0=D0,C0,B0,A0.
-  #  User home: /home/yassine, executable: /usr/local/bin/travis
+  #  User home: /home/yassine, executable: /usr/bin/travis
   #  Input from terminal, Output to terminal
 
  >>> Please use a color scheme with dark background or specify "-nocolor"! <<<
 
     Loading configuration from /home/yassine/.travis.conf ...
 
-[Renaming existing File input.txt to #8#input.txt ...OK.]
+[Renaming existing File input.txt to #1#input.txt ...OK.]
+Unknown parameter: "-encrypt".
+
     List of supported command line options:
 
       -p <file>       Loads position data from the specified trajectory file.

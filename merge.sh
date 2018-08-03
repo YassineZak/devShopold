@@ -1,12 +1,12 @@
 #! /bin/bash
 # Merge pushes to development branch to stable branch
 if [ ! -n $2 ] ; then
-    echo "Usage: merge.sh <YassineZak> <Sniper159>"
+    echo "Usage: merge.sh <username> <password>"
     exit 1;
 fi
 
-GIT_USER="YassineZak"
-GIT_PASS="Sniper159"
+GIT_USER="$1"
+GIT_PASS="$2"
 
 # Specify the development branch and stable branch names
 FROM_BRANCH="dev-environment"

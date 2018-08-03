@@ -1,5 +1,5 @@
 Command line:
-"travis -help"
+"travis encrypt SOMEVAR=secretvalue -r owner/project"
 
 
    ________                                 __
@@ -24,7 +24,7 @@ Command line:
 
      There is absolutely no warranty on any results obtained from TRAVIS.
 
-  #  Running on ubuntu at Fri Aug  3 22:21:31 2018 (PID 9814).
+  #  Running on ubuntu at Fri Aug  3 22:16:13 2018 (PID 9421).
   #  Running in /var/www/html/devShop
   #  Code version: Aug 12 2017, compiled at Jan 14 2018 01:39:14, compiler "7.2.0", GCC 7.2.0
   #  Target platform: Linux, compile flags: DEBUG_ARRAYS 
@@ -36,7 +36,9 @@ Command line:
 
     Loading configuration from /home/yassine/.travis.conf ...
 
-[Renaming existing File input.txt to #8#input.txt ...OK.]
+[Renaming existing File input.txt to #7#input.txt ...OK.]
+Unknown parameter: "encrypt".
+
     List of supported command line options:
 
       -p <file>       Loads position data from the specified trajectory file.
