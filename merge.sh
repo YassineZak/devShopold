@@ -37,7 +37,7 @@ if [ "$CURRENT_BRANCH" = "$FROM_BRANCH" ] ; then
 
     # Push changes back to remote vcs
     echo "Pushing changes..." && \
-    git push $PUSH_URL && \
+    git push $URL && \
     echo "Merge complete!" || \
     echo "Error Occurred. Merge failed"
 else
