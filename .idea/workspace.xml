@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be924ee7-ac1a-42f3-a0c4-fc1960014da6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/merge.sh" beforeDir="false" afterPath="$PROJECT_DIR$/merge.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +92,7 @@
           <entry key="sh" value="156" />
           <entry key="twig" value="541" />
           <entry key="txt" value="57" />
-          <entry key="yml" value="555" />
+          <entry key="yml" value="556" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -104,7 +103,7 @@
           <entry key="PLAIN_TEXT" value="83" />
           <entry key="Twig" value="541" />
           <entry key="XML" value="1" />
-          <entry key="YAML" value="555" />
+          <entry key="YAML" value="556" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -131,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="343">
-              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+              <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -211,8 +210,8 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/../../../lib/gems/2.5.0/extensions/x86_64-linux/2.5.0/ffi-1.9.25/mkmf.log" />
         <option value="$PROJECT_DIR$/tests/YZ/ContactFormBundle/Controller/ContactControllerTest.php" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/merge.sh" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -483,7 +482,7 @@
       <workItem from="1533238350209" duration="5607000" />
       <workItem from="1533314482140" duration="4684000" />
       <workItem from="1533324988527" duration="2766000" />
-      <workItem from="1533332986087" duration="5391000" />
+      <workItem from="1533332986087" duration="5719000" />
     </task>
     <task id="LOCAL-00001" summary="retour a l'ancienne version du fichier de config travis">
       <created>1533320034509</created>
@@ -507,7 +506,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72397000" />
+    <option name="totallyTimeSpent" value="72725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
@@ -792,7 +791,7 @@
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+          <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
         </state>
       </provider>
     </entry>
