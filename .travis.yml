@@ -28,5 +28,8 @@ after_success:
   - git fetch origin master:master
   - git checkout master
   - git merge dev-environment
+  - git remote add origin https://github.com/YassineZak/devShop.git
+  - git add .
+  - git commit -m " premier commit "
   - git push --set-upstream origin master $GITHUB_USERNAME $GITHUB_SECRET_TOKEN
   - ./merge.sh $USERNAME $PASSWORD
