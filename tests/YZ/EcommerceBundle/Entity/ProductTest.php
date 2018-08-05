@@ -56,7 +56,6 @@ class ProductTest Extends TestCase
         $product->setPrixTva(2);
         $product->setPromoTtc(12);
         $this->assertSame(12, $product->getPromoTtc());
-
     }
 
 }

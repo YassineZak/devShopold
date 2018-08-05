@@ -279,7 +279,6 @@ class Product implements JsonSerializable
 
   {
 
-    // Par défaut, la date de l'annonce est la date d'aujourd'hui
 
     $this->dateCreation = new \Datetime();
 
