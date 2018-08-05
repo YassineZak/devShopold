@@ -20,5 +20,5 @@ after_success:
   - git fetch origin master:master
   - git checkout master
   - git merge dev-environment
-  - git push --force
+  - git push --set-upstream origin master
   - ./merge.sh $USERNAME $PASSWORD
