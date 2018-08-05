@@ -4,87 +4,6 @@
     <list default="true" id="be924ee7-ac1a-42f3-a0c4-fc1960014da6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/YZ/EcommerceBundle/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/YZ/EcommerceBundle/Entity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/YZ/EcommerceBundle/Entity/ProductTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/YZ/EcommerceBundle/Entity/ProductTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Controller/ContactController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Controller/ContactController.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Controller/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Controller/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Controller/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Controller/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/DependencyInjection/Configuration.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/DependencyInjection/Configuration.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/DependencyInjection/YZContactFormExtension.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/DependencyInjection/YZContactFormExtension.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/DependencyInjection/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/DependencyInjection/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/DependencyInjection/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/DependencyInjection/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Form/ContactType.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Form/ContactType.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Form/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Form/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Form/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/Form/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/YZContactFormBundle.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/YZContactFormBundle.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/ContactFormBundle/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/CartController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/CartController.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/EcommerceAdminController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/EcommerceAdminController.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/EcommerceController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/EcommerceController.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/OrderController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/OrderController.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Controller/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/DependencyInjection/Configuration.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/DependencyInjection/Configuration.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/DependencyInjection/YZEcommerceExtension.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/DependencyInjection/YZEcommerceExtension.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/DependencyInjection/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/DependencyInjection/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/DependencyInjection/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/DependencyInjection/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/Category.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/Category.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/Commande.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/Commande.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/Product.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/Product.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/Tva.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/Tva.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Entity/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/CategoryExtension.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/CategoryExtension.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/SommePrix.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/SommePrix.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/SommeProduits.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/SommeProduits.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/SommeTva.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/SommeTva.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/UserSommePrixExtension.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/UserSommePrixExtension.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/UserSommeProduitsExtension.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/UserSommeProduitsExtension.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Extension/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/CategoryRepository.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/CategoryRepository.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/CommandeRepository.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/CommandeRepository.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/ProductRepository.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/ProductRepository.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/TvaRepository.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/TvaRepository.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/Repository/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/YZEcommerceBundle.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/YZEcommerceBundle.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EcommerceBundle/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/SearchBundle/Controller/SearchController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/SearchBundle/Controller/SearchController.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/SearchBundle/Controller/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/SearchBundle/Controller/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/SearchBundle/Controller/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/SearchBundle/Controller/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/SearchBundle/DependencyInjection/Configuration.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/SearchBundle/DependencyInjection/Configuration.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/SearchBundle/DependencyInjection/YZSearchExtension.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/SearchBundle/DependencyInjection/YZSearchExtension.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/SearchBundle/DependencyInjection/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/SearchBundle/DependencyInjection/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/SearchBundle/DependencyInjection/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/SearchBundle/DependencyInjection/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/SearchBundle/YZSearchBundle.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/SearchBundle/YZSearchBundle.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/SearchBundle/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/SearchBundle/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/SearchBundle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/SearchBundle/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Controller/AdminController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Controller/AdminController.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Controller/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Controller/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Controller/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Controller/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/DependencyInjection/Configuration.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/DependencyInjection/Configuration.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/DependencyInjection/YZUserExtension.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/DependencyInjection/YZUserExtension.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/DependencyInjection/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/DependencyInjection/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/DependencyInjection/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/DependencyInjection/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Entity/User.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Entity/User.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Entity/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Entity/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Entity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Entity/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Form/Type/RegistrationFormType.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Form/Type/RegistrationFormType.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Form/Type/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Form/Type/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Form/Type/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Form/Type/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Form/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Form/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Form/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Form/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Repository/UserRepository.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Repository/UserRepository.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Repository/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Repository/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/Repository/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/Repository/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/YZUserBundle.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/YZUserBundle.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/UserBundle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/UserBundle/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test-coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,9 +33,9 @@
     <session id="-1283956880">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="2" />
@@ -127,7 +46,7 @@
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -172,21 +91,21 @@
           <entry key="feature" value="348" />
           <entry key="gitignore" value="5" />
           <entry key="php" value="2454" />
-          <entry key="sh" value="156" />
+          <entry key="sh" value="160" />
           <entry key="twig" value="541" />
           <entry key="txt" value="57" />
-          <entry key="yml" value="563" />
+          <entry key="yml" value="591" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="156" />
+          <entry key="Bash" value="160" />
           <entry key="Cucumber" value="348" />
           <entry key="PHP" value="2454" />
           <entry key="PLAIN_TEXT" value="83" />
           <entry key="Twig" value="541" />
           <entry key="XML" value="1" />
-          <entry key="YAML" value="563" />
+          <entry key="YAML" value="591" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -212,8 +131,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            <state relative-caret-position="398">
+              <caret line="14" column="116" selection-start-line="14" selection-start-column="116" selection-end-line="14" selection-end-column="116" />
             </state>
           </provider>
         </entry>
@@ -239,7 +158,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/YZ/EcommerceBundle/Entity/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
+            <state relative-caret-position="11040">
               <caret line="280" selection-start-line="280" selection-end-line="280" />
               <folding>
                 <element signature="e#45#92#0#PHP" expanded="true" />
@@ -260,8 +179,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/merge.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1680">
-              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+            <state relative-caret-position="148">
+              <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -332,9 +251,9 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/../../../lib/gems/2.5.0/extensions/x86_64-linux/2.5.0/ffi-1.9.25/mkmf.log" />
         <option value="$PROJECT_DIR$/tests/YZ/ContactFormBundle/Controller/ContactControllerTest.php" />
-        <option value="$PROJECT_DIR$/merge.sh" />
         <option value="$PROJECT_DIR$/tests/YZ/EcommerceBundle/Entity/ProductTest.php" />
         <option value="$PROJECT_DIR$/src/YZ/EcommerceBundle/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/merge.sh" />
         <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
@@ -428,7 +347,7 @@
       <path value="$PROJECT_DIR$/vendor/behat/mink-browserkit-driver" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="960" />
     <option name="y" value="25" />
     <option name="width" value="960" />
@@ -442,7 +361,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -559,6 +477,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -646,7 +565,8 @@
       <workItem from="1533324988527" duration="2766000" />
       <workItem from="1533332986087" duration="5719000" />
       <workItem from="1533375474924" duration="2489000" />
-      <workItem from="1533494611129" duration="286000" />
+      <workItem from="1533494611129" duration="1502000" />
+      <workItem from="1533496151754" duration="389000" />
     </task>
     <task id="LOCAL-00001" summary="retour a l'ancienne version du fichier de config travis">
       <created>1533320034509</created>
@@ -670,13 +590,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75500000" />
+    <option name="totallyTimeSpent" value="77105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.21771611" />
+      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.22038421" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -689,7 +609,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32906976" />
-      <window_info anchor="bottom" x="0" y="62" width="1727" height="853" id="Terminal" order="10" weight="0.33139536" />
+      <window_info active="true" anchor="bottom" x="0" y="62" width="1727" height="853" id="Terminal" order="10" visible="true" weight="0.33139536" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -916,17 +836,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/YZ/EcommerceBundle/Entity/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11040">
+          <caret line="280" selection-start-line="280" selection-end-line="280" />
+          <folding>
+            <element signature="e#45#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/travis.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="2760">
           <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/merge.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -937,20 +860,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/YZ/EcommerceBundle/Entity/Product.php">
+    <entry file="file://$PROJECT_DIR$/merge.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="280" selection-start-line="280" selection-end-line="280" />
-          <folding>
-            <element signature="e#45#92#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="148">
+          <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        <state relative-caret-position="398">
+          <caret line="14" column="116" selection-start-line="14" selection-start-column="116" selection-end-line="14" selection-end-column="116" />
         </state>
       </provider>
     </entry>
