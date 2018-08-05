@@ -13,5 +13,5 @@ after_success:
   - git fetch origin master:master
   - git checkout master
   - git merge dev-environment
-  - git push "https://$GITHUB_SECRET_TOKEN@devShop"
+  - git push -q https://$d1089af6aa6402e81d30ce244e8f673163fe71e5@github.com/YassineZak/devShop.git master
   - ./merge.sh $USERNAME $PASSWORD
