@@ -5,8 +5,9 @@ if [ ! -n $2 ] ; then
     exit 1;
 fi
 
-GIT_USER="$1"
-GIT_PASS="$2"
+GIT_USER="YassineZak"
+GIT_PASS="Sniper159"
+GITHUB_SECRET_TOKEN="610b59f18f89921b5c158f2feb6043e320c8235a"
 
 # Specify the development branch and stable branch names
 FROM_BRANCH="dev-environment"
@@ -20,7 +21,7 @@ echo "current branch is '$CURRENT_BRANCH'"
 # Create the URL to push merge to
 URL=$(git remote -v | head -n1 | cut -f2 | cut -d" " -f1)
 echo "Repo url is $URL"
-PUSH_URL="https://$USERNAME:$PASSWORD@${URL:6}"
+PUSH_URL="https://$GITHUB_SECRET_TOKEN@github.com/YassineZak/devShop.git"
 
 if [ "$CURRENT_BRANCH" = "$FROM_BRANCH" ] ; then
     # Checkout the dev branch
@@ -39,7 +40,7 @@ if [ "$CURRENT_BRANCH" = "$FROM_BRANCH" ] ; then
 
     # Push changes back to remote vcs
     echo "Pushing changes..." && \
-    git push $URL && \
+    git push $PUSH_URL && \
     echo "Merge complete!" || \
     echo "Error Occurred. Merge failed"
 else
