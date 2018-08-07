@@ -20,7 +20,7 @@ echo "current branch is '$CURRENT_BRANCH'"
 # Create the URL to push merge to
 URL=$(git remote -v | head -n1 | cut -f2 | cut -d" " -f1)
 echo "Repo url is $URL"
-PUSH_URL="https://$GIT_USER:$GIT_PASS@${URL:6}"
+PUSH_URL="https://$USERNAME:$PASSWORD@${URL:6}"
 
 if [ "$CURRENT_BRANCH" = "$FROM_BRANCH" ] ; then
     # Checkout the dev branch
@@ -28,7 +28,7 @@ if [ "$CURRENT_BRANCH" = "$FROM_BRANCH" ] ; then
     #echo "Checking out $TO_BRANCH..." && \
 
     # Checkout the latest stable
-    git fetch origin $TO_BRANCH:$TO_BRANCH && \
+    git fetch origin "dev-environment":$TO_BRANCH && \
     git checkout $TO_BRANCH && \
 
     # Merge the dev into latest stable

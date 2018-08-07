@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be924ee7-ac1a-42f3-a0c4-fc1960014da6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/merge.sh" beforeDir="false" afterPath="$PROJECT_DIR$/merge.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/YZ/ContactFormBundle/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/YZ/ContactFormBundle/Form/ContactType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/YZ/EcommerceBundle/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/YZ/EcommerceBundle/Controller/OrderController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,26 +36,26 @@
     <session id="-1283956880">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.16" value="3" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.checkout.local" value="1" />
+          <entry key="git.branch.checkout.local" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -63,25 +67,25 @@
           <entry key="icls" value="3" />
           <entry key="json" value="3" />
           <entry key="log" value="4" />
-          <entry key="php" value="45" />
-          <entry key="sh" value="1" />
+          <entry key="php" value="50" />
+          <entry key="sh" value="2" />
           <entry key="twig" value="3" />
           <entry key="txt" value="2" />
-          <entry key="yml" value="13" />
+          <entry key="yml" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="1" />
+          <entry key="Bash" value="2" />
           <entry key="Cucumber" value="1" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="3" />
           <entry key="Log" value="4" />
-          <entry key="PHP" value="45" />
+          <entry key="PHP" value="50" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="Twig" value="3" />
           <entry key="XML" value="3" />
-          <entry key="YAML" value="13" />
+          <entry key="YAML" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -90,22 +94,22 @@
           <entry key="dummy" value="21" />
           <entry key="feature" value="348" />
           <entry key="gitignore" value="5" />
-          <entry key="php" value="2454" />
-          <entry key="sh" value="160" />
+          <entry key="php" value="2456" />
+          <entry key="sh" value="251" />
           <entry key="twig" value="541" />
           <entry key="txt" value="57" />
-          <entry key="yml" value="797" />
+          <entry key="yml" value="851" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="160" />
+          <entry key="Bash" value="251" />
           <entry key="Cucumber" value="348" />
-          <entry key="PHP" value="2454" />
+          <entry key="PHP" value="2456" />
           <entry key="PLAIN_TEXT" value="83" />
           <entry key="Twig" value="541" />
           <entry key="XML" value="1" />
-          <entry key="YAML" value="797" />
+          <entry key="YAML" value="851" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -128,50 +132,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/YZ/EcommerceBundle/Controller/EcommerceControllerTest.php">
+        <entry file="file://$PROJECT_DIR$/src/YZ/EcommerceBundle/Controller/EcommerceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/YZ/EcommerceBundle/Entity/ProductTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2240">
-              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/YZ/EcommerceBundle/Entity/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11040">
-              <caret line="280" selection-start-line="280" selection-end-line="280" />
+            <state relative-caret-position="3528">
+              <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
               <folding>
-                <element signature="e#45#92#0#PHP" expanded="true" />
+                <element signature="e#49#106#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/travis.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="2760">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -179,17 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/merge.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-92">
-              <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/YZ/ContactFormBundle/Controller/ContactControllerTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="920">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state relative-caret-position="-11">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -227,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/YZ/SearchBundle/Resources/views/Search/searchBar.html.twig" />
         <option value="$PROJECT_DIR$/tests/SearchBundle/Controller/SearchControllerTest.php" />
         <option value="$PROJECT_DIR$/tests/EcommerceBundle/Controller/EcommerceControllerTest.php" />
-        <option value="$PROJECT_DIR$/src/YZ/ContactFormBundle/Form/ContactType.php" />
         <option value="$PROJECT_DIR$/src/YZ/ContactFormBundle/Controller/ContactController.php" />
         <option value="$PROJECT_DIR$/tests/ContactFormBundle/Controller/ContactControllerTest.php" />
         <option value="$PROJECT_DIR$/features/cards.feature" />
@@ -253,6 +220,8 @@
         <option value="$PROJECT_DIR$/tests/YZ/ContactFormBundle/Controller/ContactControllerTest.php" />
         <option value="$PROJECT_DIR$/tests/YZ/EcommerceBundle/Entity/ProductTest.php" />
         <option value="$PROJECT_DIR$/src/YZ/EcommerceBundle/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/src/YZ/EcommerceBundle/Controller/OrderController.php" />
+        <option value="$PROJECT_DIR$/src/YZ/ContactFormBundle/Form/ContactType.php" />
         <option value="$PROJECT_DIR$/merge.sh" />
         <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
@@ -376,12 +345,6 @@
             <path>
               <item name="devShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="devShop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devShop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -389,6 +352,21 @@
               <item name="devShop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="YZ" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="devShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="devShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="YZ" type="462c0819:PsiDirectoryNode" />
+              <item name="ContactFormBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="devShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="devShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="YZ" type="462c0819:PsiDirectoryNode" />
+              <item name="ContactFormBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="devShop" type="b2602c69:ProjectViewProjectNode" />
@@ -403,7 +381,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="YZ" type="462c0819:PsiDirectoryNode" />
               <item name="EcommerceBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="devShop" type="b2602c69:ProjectViewProjectNode" />
@@ -448,29 +426,6 @@
             <path>
               <item name="devShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="devShop" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="YZ" type="462c0819:PsiDirectoryNode" />
-              <item name="EcommerceBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devShop" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="YZ" type="462c0819:PsiDirectoryNode" />
-              <item name="EcommerceBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devShop" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="YZ" type="462c0819:PsiDirectoryNode" />
-              <item name="EcommerceBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devShop" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -483,7 +438,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/autoload.php" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -567,7 +522,9 @@
       <workItem from="1533375474924" duration="2489000" />
       <workItem from="1533494611129" duration="1502000" />
       <workItem from="1533496151754" duration="1400000" />
-      <workItem from="1533497943987" duration="3838000" />
+      <workItem from="1533497943987" duration="4833000" />
+      <workItem from="1533561781681" duration="389000" />
+      <workItem from="1533636399017" duration="1732000" />
     </task>
     <task id="LOCAL-00001" summary="retour a l'ancienne version du fichier de config travis">
       <created>1533320034509</created>
@@ -591,13 +548,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81954000" />
+    <option name="totallyTimeSpent" value="85070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.2230523" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.22838847" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -610,7 +567,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32906976" />
-      <window_info active="true" anchor="bottom" x="0" y="62" width="1727" height="853" id="Terminal" order="10" visible="true" weight="0.33139536" />
+      <window_info anchor="bottom" x="0" y="62" width="1727" height="853" id="Terminal" order="10" visible="true" weight="0.33023256" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -670,13 +627,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/YZ/SearchBundle/Resources/views/Search/Atom-Dark.icls" />
     <entry file="file://$PROJECT_DIR$/src/YZ/EcommerceBundle/Tests/Controller/DefaultControllerTest.php" />
-    <entry file="file://$PROJECT_DIR$/src/YZ/EcommerceBundle/Controller/EcommerceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/YZ/SearchBundle/Resources/views/Search/searchBar.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1480">
@@ -700,13 +650,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/resultTest.html" />
-    <entry file="file://$PROJECT_DIR$/src/YZ/ContactFormBundle/Form/ContactType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -731,9 +674,6 @@
           <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/YZ/EcommerceBundle/Controller/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -823,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/YZ/EcommerceBundle/Controller/EcommerceControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/YZ/EcommerceBundle/Entity/ProductTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2240">
@@ -841,9 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11040">
           <caret line="280" selection-start-line="280" selection-end-line="280" />
-          <folding>
-            <element signature="e#45#92#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -854,24 +784,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/YZ/EcommerceBundle/Controller/EcommerceControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/YZ/EcommerceBundle/Controller/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/YZ/ContactFormBundle/Controller/ContactControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
+        <state relative-caret-position="785">
           <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/YZ/ContactFormBundle/Form/ContactType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/merge.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-92">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+        <state relative-caret-position="-11">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/YZ/EcommerceBundle/Controller/EcommerceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3528">
+          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+          <folding>
+            <element signature="e#49#106#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="600">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
         </state>
       </provider>
     </entry>

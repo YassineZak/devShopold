@@ -103,7 +103,6 @@ class OrderController extends Controller
             $this->addFlash("success","Merci pour votre achat");
             $session->remove('panier');
             $lastCommande = $repository->findLastCommande();
-            dump($lastCommande);
             $orderId = $lastCommande[0]['c_id'];
 
             return $this->redirectToRoute('yz_ecommerce_orderpdf', array('id' => $orderId));
