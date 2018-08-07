@@ -28,8 +28,10 @@ if [ "$CURRENT_BRANCH" = "$FROM_BRANCH" ] ; then
     #echo "Checking out $TO_BRANCH..." && \
 
     # Checkout the latest stable
-    git fetch origin "dev-environment":$TO_BRANCH && \
+    git remote add upstream $URL && \
+    git fetch --all && \
     git checkout $TO_BRANCH && \
+
 
     # Merge the dev into latest stable
     echo "Merging changes..." && \
