@@ -15,7 +15,7 @@ env:
 after_success:
   - git config --global user.email "yassine.zakari@hotmail.fr"
   - git config --global user.name "YassineZak"
-  - git remote add master https://610b59f18f89921b5c158f2feb6043e320c8235a@github.com/YassineZak/devShop.git
+  - git remote set-url origin https://610b59f18f89921b5c158f2feb6043e320c8235a@github.com/YassineZak/devShop.git
   - git fetch --all
   - git checkout master
   - git push
