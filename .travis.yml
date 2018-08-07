@@ -13,5 +13,9 @@ env:
   - secure: QYkgj5mDi6f4TXVOjKAxCnIagfe7zQmNI8RveEs+fZhY4PipE0+tAVqO1n9wHcRP1jD91KSJUGeGJ5fDaCLGxvxyXLRILkioUWh45Km6mhpKZlV87fnrfVmrY6sLl1XDOMH3iDdLhFxgLng19E0R0H+YT7wyU2nJq/hEVH0VYMgniWBNKc9DHE3c4RalWbofXLxxx8muSLdwqfVBUbwKW4Rzy6g9fp9EKwkuQJlN1zOTVi8SagS+Rj+Vcmc+ZZX3Dh7BfpjbdHBHC4lLr+78uKGXOae5TeErpHDKSW1P6ffGOlOW0DKkC0yai9ddUcysicM8IoXD3XwX1gNEoH3sGjuWUIT8fkskemuLUKUuNlnDiw7jCZpEysilZ4paoNbnIW543xE5YViAyupaPRkEbsOmso8yaEjWgQHLO9qRQFhq+zxBLqlt3wtG5CEBiO8T3tPttblZoCgmROkCtOjmyiT0+yRkjmrYUoweRPlFVVueReuEI58f+AUB3339IlE4HtOaJu6CLhSK0X4+ODq47U6wv5tXw4waNWywP7PlD+BwyBk6dZ2Exwr6uisuNmojf7nj++McES6sObgqgqapnFcFgnYgmGG2zQ0mKbY+VMFjAAfkyhJclt/YqFyEv/EzWTJ+y8VFz2+NbnO7ceYOkW/sWJCNuPJlZP1ZXSQejqE=
 
 after_success:
-  - ./merge.sh
-  - git push https://610b59f18f89921b5c158f2feb6043e320c8235a@github.com/YassineZak/devShop.git
+  - git config --global user.email "yassine.zakari@hotmail.fr"
+  - git config --global user.name "YassineZak"
+  - git remote add master https://610b59f18f89921b5c158f2feb6043e320c8235a@github.com/YassineZak/devShop.git
+  - git fetch --all
+  - git checkout master
+  - git push

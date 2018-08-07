@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be924ee7-ac1a-42f3-a0c4-fc1960014da6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/merge.sh" beforeDir="false" afterPath="$PROJECT_DIR$/merge.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +95,7 @@
           <entry key="sh" value="577" />
           <entry key="twig" value="541" />
           <entry key="txt" value="57" />
-          <entry key="yml" value="887" />
+          <entry key="yml" value="959" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -106,7 +106,7 @@
           <entry key="PLAIN_TEXT" value="83" />
           <entry key="Twig" value="541" />
           <entry key="XML" value="1" />
-          <entry key="YAML" value="887" />
+          <entry key="YAML" value="959" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -141,20 +141,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+            <state relative-caret-position="364">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/merge.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+            <state relative-caret-position="299">
+              <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -219,8 +219,8 @@
         <option value="$PROJECT_DIR$/src/YZ/EcommerceBundle/Entity/Product.php" />
         <option value="$PROJECT_DIR$/src/YZ/EcommerceBundle/Controller/OrderController.php" />
         <option value="$PROJECT_DIR$/src/YZ/ContactFormBundle/Form/ContactType.php" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/merge.sh" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -522,7 +522,7 @@
       <workItem from="1533497943987" duration="4833000" />
       <workItem from="1533561781681" duration="389000" />
       <workItem from="1533636399017" duration="4783000" />
-      <workItem from="1533654254355" duration="3875000" />
+      <workItem from="1533654254355" duration="4747000" />
     </task>
     <task id="LOCAL-00001" summary="retour a l'ancienne version du fichier de config travis">
       <created>1533320034509</created>
@@ -546,7 +546,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91996000" />
+    <option name="totallyTimeSpent" value="92868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
@@ -816,17 +816,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/merge.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+        <state relative-caret-position="299">
+          <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/merge.sh">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        <state relative-caret-position="364">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
