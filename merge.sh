@@ -29,6 +29,7 @@ if [ "$CURRENT_BRANCH" = "$FROM_BRANCH" ] ; then
     #echo "Checking out $TO_BRANCH..." && \
 
     # Checkout the latest stable
+    git remote add $PUSH_URL
     git fetch --all && \
     git checkout $TO_BRANCH && \
     echo $GITHUB_SECRET_TOKEN && \

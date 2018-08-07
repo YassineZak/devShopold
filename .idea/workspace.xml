@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be924ee7-ac1a-42f3-a0c4-fc1960014da6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/merge.sh" beforeDir="false" afterPath="$PROJECT_DIR$/merge.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,7 +51,7 @@
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.checkout.local" value="5" />
+          <entry key="git.branch.checkout.local" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -92,7 +91,7 @@
           <entry key="feature" value="348" />
           <entry key="gitignore" value="5" />
           <entry key="php" value="2456" />
-          <entry key="sh" value="530" />
+          <entry key="sh" value="567" />
           <entry key="twig" value="541" />
           <entry key="txt" value="57" />
           <entry key="yml" value="875" />
@@ -100,7 +99,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="530" />
+          <entry key="Bash" value="567" />
           <entry key="Cucumber" value="348" />
           <entry key="PHP" value="2456" />
           <entry key="PLAIN_TEXT" value="83" />
@@ -153,8 +152,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/merge.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="23" column="61" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
+            <state relative-caret-position="214">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -522,7 +521,7 @@
       <workItem from="1533497943987" duration="4833000" />
       <workItem from="1533561781681" duration="389000" />
       <workItem from="1533636399017" duration="4783000" />
-      <workItem from="1533654254355" duration="1586000" />
+      <workItem from="1533654254355" duration="3088000" />
     </task>
     <task id="LOCAL-00001" summary="retour a l'ancienne version du fichier de config travis">
       <created>1533320034509</created>
@@ -546,7 +545,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89707000" />
+    <option name="totallyTimeSpent" value="91209000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
@@ -825,8 +824,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/merge.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="23" column="61" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
+        <state relative-caret-position="214">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
         </state>
       </provider>
     </entry>
