@@ -7,7 +7,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
@@ -32,7 +31,7 @@ class ContactType extends AbstractType
                     new Email(array("message" => "Your email doesn't seems to be valid")),
                 )
             ))
-            ->add('message', CKEditorType::class, array('attr' => array('placeholder' => 'Your message here'),
+            ->add('message', TextareaType::class, array('attr' => array('placeholder' => 'Your message here'),
                 'constraints' => array(
                     new NotBlank(array("message" => "Please provide a message here")),
                 )
