@@ -36,7 +36,7 @@ Panier - {{ parent() }}
                     <tbody>
                       <tr>
                     {% for cartProduct in cartProducts %}
-                    <td class=" miniature"><a href="{{ path('yz_ecommerce_productpage', {'slug': cartProduct.slug}) }}"><img src="/devShop/web{{ vich_uploader_asset(cartProduct, 'imageFile') }}" alt=""></a></td>
+                    <td class=" miniature"><a href="{{ path('yz_ecommerce_productpage', {'slug': cartProduct.slug}) }}"><img src="{{ vich_uploader_asset(cartProduct, 'imageFile') }}" alt=""></a></td>
 
                     <td>{{cartProduct.titre}}</td>
                     <td><form action="{{ path('yz_ecommerce_addcart', {'id': cartProduct.id}) }}" method="get">

@@ -17,11 +17,11 @@
         {% set image1 = "/devShop/web" ~ vich_uploader_asset(product, 'imageFile') %}
         {% set image2 = "/devShop/web" ~ vich_uploader_asset(product, 'imageFile2') %}
         {% set image3 = "/devShop/web" ~ vich_uploader_asset(product, 'imageFile3') %}
-          <li data-image="{{image1}}"><img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile') }}" /></li>
+          <li data-image="{{image1}}"><img src="{{ vich_uploader_asset(product, 'imageFile') }}" /></li>
           {% if product.imageProduit2 != null  %}
-          <li data-image="{{image2}}"><img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile2') }}" /></li>{% endif %}
+          <li data-image="{{image2}}"><img src="{{ vich_uploader_asset(product, 'imageFile2') }}" /></li>{% endif %}
           {% if product.imageProduit3 != null  %}
-          <li data-image="{{image3}}"><img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile3') }}" /></li>
+          <li data-image="{{image3}}"><img src="{{ vich_uploader_asset(product, 'imageFile3') }}" /></li>
           {% endif %}
         </ul>
       </div>
@@ -29,7 +29,7 @@
       <!-- Selected Image -->
       <div class="col-lg-5 order-lg-2 order-1">
         <div class="image_selected">
-    <img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile') }}" /></div>
+    <img src="{{ vich_uploader_asset(product, 'imageFile') }}" /></div>
       </div>
 
       <!-- Description -->
