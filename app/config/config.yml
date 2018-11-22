@@ -156,7 +156,7 @@ easy_admin:
             - { property: 'titre', label: 'Titre' }
             - { property: 'resume', label: 'Resume', type: text }
             - { property: 'prixTtc', label: 'Prix TTC', type: decimal }
-            - { property: 'imageProduit', type: 'image', base_path: '/devShop/web%app.path.product_images%'}
+            - { property: 'imageProduit', type: 'image', base_path: '%app.path.product_images%'}
         show:
           fields:
             - { property: 'id', label: 'Id' }
@@ -171,9 +171,9 @@ easy_admin:
             - { property: 'tva', label: 'Tva' }
             - { property: 'stock', label: 'Stock', type: integer }
             - { property: 'reference', label: 'Reférence', type: text }
-            - { property: 'imageProduit', type: 'image', base_path: '/devShop/web%app.path.product_images%', label: 'Image principale'}
-            - { property: 'imageProduit2', type: 'image', base_path: '/devShop/web%app.path.product_images%', label: 'Images additionnelles'}
-            - { property: 'imageProduit3', type: 'image', base_path: '/devShop/web%app.path.product_images%', label: 'Images additionnelles'}
+            - { property: 'imageProduit', type: 'image', base_path: '%app.path.product_images%', label: 'Image principale'}
+            - { property: 'imageProduit2', type: 'image', base_path: '%app.path.product_images%', label: 'Images additionnelles'}
+            - { property: 'imageProduit3', type: 'image', base_path: '%app.path.product_images%', label: 'Images additionnelles'}
         form:
           fields:
             - { property: 'titre', label: 'Titre', type: text }
