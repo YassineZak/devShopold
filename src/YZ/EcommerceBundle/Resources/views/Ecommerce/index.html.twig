@@ -281,7 +281,7 @@ Accueil - {{ parent() }}
                       {% if app.environment == 'dev' %}
                       <img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile') }}" alt="">
                       {% else %}
-                      <img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile') }}" alt="">
+                      <img src="{{ vich_uploader_asset(product, 'imageFile') }}" alt="">
                       {% endif %}
                   </div>
                   <div class="bestsellers_content">
@@ -292,7 +292,8 @@ Accueil - {{ parent() }}
                     {{product.prixTtc}} €
                   {% else %}
                       {{product.promoTtc}} €<span>{{product.prixTtc}} €</span>
-                  {% endif %}</div>
+                  {% endif %}
+                    </div>
                   </div>
                 </div>
                 <div class="bestsellers_fav active"><i class="fa fa-heart"></i></div>
