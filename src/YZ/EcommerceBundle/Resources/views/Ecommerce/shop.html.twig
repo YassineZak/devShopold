@@ -81,7 +81,13 @@
 
                 <div class="product_item is_new">
                   <div class="product_border"></div>
-                  <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile') }}" alt=""></div>
+                  <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                      {% if app.environment == 'dev' %}
+                    <img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile') }}" alt="">
+                      {% else %}
+                    <img src="{{ vich_uploader_asset(product, 'imageFile') }}" alt="">
+                      {% endif %}
+                  </div>
                   <div class="product_content">
                     {% if product.promo is null %}
                       <div class="product_price">

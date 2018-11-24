@@ -10,7 +10,17 @@ Accueil - {{ parent() }}
   <div class="banner_background" style="background-image:url({{ asset('images/banner_background.jpg')}} )"></div>
   <div class="container fill_height">
     <div class="row fill_height">
-      <div class="banner_product_image"><img src="{{ asset('images/banner_product.png')}}" alt=""></div>
+      <div class="banner_product_image">
+          {% if app.environment == 'dev' %}
+          <img src="{{ asset('/devShop/web/images/banner_product.png')}}" alt="">
+          {% else %}
+          <img src="{{ asset('images/banner_product.png')}}" alt="">
+          {% endif %}
+
+
+
+
+      </div>
       <div class="col-lg-5 offset-lg-4 fill_height">
         <div class="banner_content">
           <div class="banner_price"><span>938€</span>838€</div>
@@ -267,7 +277,13 @@ Accueil - {{ parent() }}
               {% for product in products %}
               <div class="bestsellers_item discount">
                 <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                  <div class="bestsellers_image"><img src="{{ vich_uploader_asset(product, 'imageFile') }}" alt=""></div>
+                  <div class="bestsellers_image">
+                      {% if app.environment == 'dev' %}
+                      <img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile') }}" alt="">
+                      {% else %}
+                      <img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile') }}" alt="">
+                      {% endif %}
+                  </div>
                   <div class="bestsellers_content">
                     <div class="bestsellers_category"><a href="{{ path('yz_ecommerce_categorypage', {'slug': product.category.slug}) }}">{{product.category.name}}</a></div>
                     <div class="bestsellers_name"><a href="{{ path('yz_ecommerce_productpage', {'slug': product.slug}) }}">{{product.titre}}</a></div>
