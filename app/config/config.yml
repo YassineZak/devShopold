@@ -117,9 +117,3 @@ stof_doctrine_extensions:
     orm:
         default:
             sluggable: true
-knp_snappy:
-    pdf:
-        enabled:    true
-        binary:     "/usr/local/bin/wkhtmltopdf"
-        options:
-          encoding: UTF-8
