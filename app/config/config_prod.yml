@@ -22,7 +22,7 @@ monolog:
 knp_snappy:
     pdf:
         enabled:    true
-        binary:     "/usr/bin/wkhtmltopdf"
+        binary:     /usr/bin/xvfb-run /usr/bin/wkhtmltopdf
         options:
           encoding: UTF-8
 
