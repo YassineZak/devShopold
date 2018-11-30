@@ -1142,16 +1142,16 @@
         },
         {
             "name": "easycorp/easyadmin-bundle",
-            "version": "v1.17.16",
+            "version": "v1.17.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EasyCorp/EasyAdminBundle.git",
-                "reference": "4594ee30d9a7368539530292387bc8374a6d85c1"
+                "reference": "8151a185e5783b464847d539c715d29182ef0569"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/4594ee30d9a7368539530292387bc8374a6d85c1",
-                "reference": "4594ee30d9a7368539530292387bc8374a6d85c1",
+                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/8151a185e5783b464847d539c715d29182ef0569",
+                "reference": "8151a185e5783b464847d539c715d29182ef0569",
                 "shasum": ""
             },
             "require": {
@@ -1223,7 +1223,7 @@
                 "backend",
                 "generator"
             ],
-            "time": "2018-11-23T19:01:56+00:00"
+            "time": "2018-11-29T19:23:25+00:00"
         },
         {
             "name": "fabpot/goutte",
@@ -2756,16 +2756,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v6.22.1",
+            "version": "v6.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "ea40f3aded584285b273c3f74b3883088dbdf336"
+                "reference": "e608b6538b45d233db66838c389c6548c1152a27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/ea40f3aded584285b273c3f74b3883088dbdf336",
-                "reference": "ea40f3aded584285b273c3f74b3883088dbdf336",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/e608b6538b45d233db66838c389c6548c1152a27",
+                "reference": "e608b6538b45d233db66838c389c6548c1152a27",
                 "shasum": ""
             },
             "require": {
@@ -2807,7 +2807,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2018-11-20T19:29:47+00:00"
+            "time": "2018-11-28T16:32:29+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3517,16 +3517,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.4.18",
+            "version": "v3.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "ee054aa62e535b7905c5b8e90cb49a1ad65dbfd8"
+                "reference": "a8ff5a534372763544031ae68c981d396ffeb43f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/ee054aa62e535b7905c5b8e90cb49a1ad65dbfd8",
-                "reference": "ee054aa62e535b7905c5b8e90cb49a1ad65dbfd8",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/a8ff5a534372763544031ae68c981d396ffeb43f",
+                "reference": "a8ff5a534372763544031ae68c981d396ffeb43f",
                 "shasum": ""
             },
             "require": {
@@ -3668,7 +3668,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-11-03T10:03:29+00:00"
+            "time": "2018-11-26T14:07:44+00:00"
         },
         {
             "name": "twig/extensions",
@@ -3794,21 +3794,20 @@
         },
         {
             "name": "vich/uploader-bundle",
-            "version": "1.8.4",
+            "version": "1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dustin10/VichUploaderBundle.git",
-                "reference": "944072e9e5ea8a4b550e0fa3338ce89aac8f7998"
+                "reference": "ee1ffe8264d4ea09f97756580963d059809bb941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dustin10/VichUploaderBundle/zipball/944072e9e5ea8a4b550e0fa3338ce89aac8f7998",
-                "reference": "944072e9e5ea8a4b550e0fa3338ce89aac8f7998",
+                "url": "https://api.github.com/repos/dustin10/VichUploaderBundle/zipball/ee1ffe8264d4ea09f97756580963d059809bb941",
+                "reference": "ee1ffe8264d4ea09f97756580963d059809bb941",
                 "shasum": ""
             },
             "require": {
                 "behat/transliterator": "^1.2",
-                "doctrine/annotations": "^1.6",
                 "jms/metadata": "^1.6",
                 "php": "^7.1",
                 "symfony/config": "^3.4|^4.0",
@@ -3827,10 +3826,10 @@
                 "doctrine/orm": "^2.5",
                 "ext-sqlite3": "*",
                 "knplabs/knp-gaufrette-bundle": "^0.5",
-                "matthiasnoback/symfony-dependency-injection-test": "^2.3",
+                "matthiasnoback/symfony-dependency-injection-test": "^2.3|^3.0",
                 "mikey179/vfsstream": "^1.6",
                 "oneup/flysystem-bundle": "^3.0",
-                "phpunit/phpunit": "^6.5",
+                "phpunit/phpunit": "^6.5|^7.0",
                 "symfony/browser-kit": "^3.4|^4.0",
                 "symfony/css-selector": "^3.4|^4.0",
                 "symfony/doctrine-bridge": "^3.4|^4.0",
@@ -3883,7 +3882,7 @@
                 "file uploads",
                 "upload"
             ],
-            "time": "2018-11-02T16:51:12+00:00"
+            "time": "2018-11-27T10:24:51+00:00"
         }
     ],
     "packages-dev": [
@@ -3943,16 +3942,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v4.1.7",
+            "version": "v4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "2474c5d4a5e3431fee2f6f0dddde9d34983d9ceb"
+                "reference": "3f03b625710f24071e2937e88112e9a19099c9eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/2474c5d4a5e3431fee2f6f0dddde9d34983d9ceb",
-                "reference": "2474c5d4a5e3431fee2f6f0dddde9d34983d9ceb",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/3f03b625710f24071e2937e88112e9a19099c9eb",
+                "reference": "3f03b625710f24071e2937e88112e9a19099c9eb",
                 "shasum": ""
             },
             "require": {
@@ -3971,7 +3970,7 @@
             "type": "symfony-bridge",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 },
                 "thanks": {
                     "name": "phpunit/phpunit",
@@ -4005,7 +4004,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2018-10-02T12:40:59+00:00"
+            "time": "2018-11-26T10:55:26+00:00"
         }
     ],
     "aliases": [],
