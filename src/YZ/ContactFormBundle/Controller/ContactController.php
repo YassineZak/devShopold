@@ -4,6 +4,7 @@ namespace YZ\ContactFormBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\Dotenv\Dotenv;
 
 class ContactController extends Controller
 {
@@ -40,10 +41,11 @@ class ContactController extends Controller
     }
 
     private function sendEmail($data){
-        $myappContactMail = 'devshop@zakari-yassine.fr';
-        $myappContactPassword = 'Sniper159';
-
-        $transport = \Swift_SmtpTransport::newInstance('smtp.phpnet.org', 465,'ssl')
+        $dotenv = new Dotenv();
+        $dotenv->load('/var/www/html/devShop/.env');
+        $myappContactMail = getenv('MAILER_USER');
+        $myappContactPassword = getenv('MAILER_PASSWORD');
+        $transport = \Swift_SmtpTransport::newInstance(getenv('MAILER_HOST'), 465,'ssl')
             ->setUsername($myappContactMail)
             ->setPassword($myappContactPassword);
 
