@@ -19,13 +19,6 @@ monolog:
             level: debug
         console:
             type:  console
-knp_snappy:
-    pdf:
-        enabled:    true
-        binary:     /usr/bin/xvfb-run /usr/bin/wkhtmltopdf
-        options:
-          encoding: UTF-8
-
 easy_admin:
     entities:
       Commande:

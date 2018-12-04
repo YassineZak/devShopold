@@ -87,6 +87,12 @@ assetic:
   debug:          '%kernel.debug%'
   use_controller: '%kernel.debug%'
 
+knp_snappy:
+    pdf:
+        enabled:    true
+        binary:     /usr/bin/xvfb-run /usr/bin/wkhtmltopdf
+        options:
+          encoding: UTF-8
 
 
 fos_user:

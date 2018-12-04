@@ -22,12 +22,6 @@ monolog:
             type:   console
             channels: ["!event", "!doctrine"]
 
-knp_snappy:
-    pdf:
-        enabled:    true
-        binary:     "/usr/local/bin/wkhtmltopdf"
-        options:
-          encoding: UTF-8
 
 
 easy_admin:
