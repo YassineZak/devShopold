@@ -1,4 +1,4 @@
-/app/config/parameters.yml
+app/config/parameters.yml
 /var/*
 !/var/cache
 /var/cache/*
@@ -11,3 +11,4 @@
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
 /vendor/
+/app/config/parameters.yml
