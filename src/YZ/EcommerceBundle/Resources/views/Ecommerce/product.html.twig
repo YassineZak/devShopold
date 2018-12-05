@@ -14,9 +14,15 @@
       <!-- Images -->
       <div class="col-lg-2 order-lg-1 order-2">
         <ul class="image_list">
+            {% if app.environment == 'dev' %}
         {% set image1 = "/devShop/web" ~ vich_uploader_asset(product, 'imageFile') %}
         {% set image2 = "/devShop/web" ~ vich_uploader_asset(product, 'imageFile2') %}
         {% set image3 = "/devShop/web" ~ vich_uploader_asset(product, 'imageFile3') %}
+            {% else %}
+        {% set image1 = vich_uploader_asset(product, 'imageFile') %}
+        {% set image2 = vich_uploader_asset(product, 'imageFile2') %}
+        {% set image3 = vich_uploader_asset(product, 'imageFile3') %}
+            {% endif %}
           <li data-image="{{image1}}">
           {% if app.environment == 'dev' %}
             <img src="/devShop/web{{ vich_uploader_asset(product, 'imageFile') }}" />
