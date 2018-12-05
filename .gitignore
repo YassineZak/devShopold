@@ -13,3 +13,4 @@ app/config/parameters.yml
 /vendor/
 /app/config/parameters.yml
 parameters.yml
+.env
