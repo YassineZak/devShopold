@@ -1,4 +1,4 @@
-app/config/parameters.yml
+
 /var/*
 !/var/cache
 /var/cache/*
@@ -11,8 +11,6 @@ app/config/parameters.yml
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
 /vendor/
-/app/config/parameters.yml
-parameters.yml
 .env
 web/uploads/*
 .idea/workspace.xml
